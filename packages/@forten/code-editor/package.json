@@ -4,7 +4,6 @@
   "description": "wrapper around codemirror for forten",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fortenjs/forten.git"
