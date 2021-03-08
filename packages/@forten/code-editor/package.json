@@ -1,0 +1,35 @@
+{
+  "name": "@forten/code-editor",
+  "version": "0.0.0",
+  "description": "wrapper around codemirror for forten",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fortenjs/forten.git"
+  },
+  "author": "Maia Taewana <maia@pawijs.org>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -p setup/tsconfig.${NODE_ENV:=development}.json",
+    "postbuild": "cp package.json ../../node_modules/@forten/code-editor",
+    "clean": "rimraf .cache dist coverage ../../node_modules/@forten/code-editor",
+    "prepare": "rimraf dist && cp -r ../../node_modules/@forten/code-editor/dist dist",
+    "stories": "parcel serve --port 8888 --no-autoinstall src/stories/index.html",
+    "test": "jest -c setup/jest.js",
+    "test:watch": "jest -c setup/jest.js --watch --coverage false"
+  },
+  "dependencies": {
+    "@forten/build": "next",
+    "@forten/editor": "next",
+    "@forten/locale": "next",
+    "@forten/theme": "next",
+    "@forten/styled": "next",
+    "codemirror": "^5.58.0"
+  },
+  "devDependencies": {
+    "@forten/story": "next",
+    "@types/codemirror": "0.0.98"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "@forten/shortcuts",
+  "version": "0.0.0",
+  "description": "Handle keyboard shortcuts.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fortenjs/forten.git"
+  },
+  "author": "Maia Taewana <maia@pawijs.org>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "tsc -p setup/tsconfig.${NODE_ENV:=development}.json",
+    "clean": "rimraf .cache dist coverage ../../node_modules/@forten/shortcuts",
+    "postbuild": "cp package.json ../../node_modules/@forten/shortcuts",
+    "prepare": "rimraf dist && cp -r ../../node_modules/@forten/shortcuts/dist dist",
+    "stories": "parcel serve --port 8888 --no-autoinstall src/stories/index.html",
+    "test:watch": "jest -c setup/jest.js --watch --coverage false",
+    "test": "jest -c setup/jest.js"
+  },
+  "dependencies": {
+    "@forten/build": "next",
+    "@forten/useragent": "next"
+  },
+  "devDependencies": {
+    "@forten/story": "next",
+    "@forten/styled": "next"
+  }
+}

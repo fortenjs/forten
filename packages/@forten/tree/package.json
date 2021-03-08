@@ -1,0 +1,29 @@
+{
+  "name": "@forten/tree",
+  "version": "0.0.0",
+  "description": "Out-tree structure and handling",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fortenjs/forten.git"
+  },
+  "author": "Maia Taewana <maia@pawijs.org>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -p setup/tsconfig.${NODE_ENV:=development}.json",
+    "postbuild": "cp package.json ../../node_modules/@forten/tree",
+    "clean": "rimraf .cache dist coverage ../../node_modules/@forten/tree",
+    "prepare": "rimraf dist && cp -r ../../node_modules/@forten/tree/dist dist",
+    "test": "jest -c setup/jest.js",
+    "test:watch": "jest -c setup/jest.js --watch --coverage false"
+  },
+  "dependencies": {
+    "@forten/build": "next",
+    "@forten/hooks": "next",
+    "@forten/tree-type": "next",
+    "nanoid": "^3.1.12",
+    "string-hash": "^1.1.3"
+  },
+  "devDependencies": {}
+}

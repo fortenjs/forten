@@ -1,0 +1,2 @@
+- [ ] Build modules with lib and es
+- [ ] .npmignore in all published modules

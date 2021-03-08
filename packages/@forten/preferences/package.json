@@ -1,0 +1,30 @@
+{
+  "name": "@forten/preferences",
+  "version": "0.0.0",
+  "description": "An easy way to save and get back user preferences.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fortenjs/forten.git"
+  },
+  "author": "Maia Taewana <maia@pawijs.org>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "tsc -p setup/tsconfig.${NODE_ENV:=development}.json",
+    "postbuild": "cp package.json ../../node_modules/@forten/preferences",
+    "prepare": "rimraf dist && cp -r ../../node_modules/@forten/preferences/dist dist",
+    "clean": "rimraf .cache dist coverage ../../node_modules/@forten/preferences",
+    "test": "jest -c setup/jest.js",
+    "test:watch": "jest -c setup/jest.js --watch --coverage false"
+  },
+  "dependencies": {
+    "@forten/build": "next",
+    "@forten/hooks": "next",
+    "dexie": "^3.0.2"
+  },
+  "devDependencies": {
+    "fake-indexeddb": "^3.1.2"
+  }
+}
