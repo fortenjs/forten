@@ -13,16 +13,18 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "tsc -p setup/tsconfig.${NODE_ENV:=development}.json",
-    "postbuild": "cp package.json ../../node_modules/@forten/editor",
-    "prepare": "rimraf dist && cp -r ../../node_modules/@forten/editor/dist dist",
-    "clean": "rimraf .cache dist coverage ../../node_modules/@forten/editor",
+    "build": "tsc",
+    "clean": "rimraf .cache dist coverage",
     "stories": "webpack-dev-server --config=./setup/stories.webpack.js --port 8888 --mode development --hot --inline",
     "-- coverage tests are super slow. Only run when needed --": "",
     "test": "jest -c setup/jest.js --coverage false",
     "test:coverage": "jest -c setup/jest.js",
     "test:watch": "jest -c setup/jest.js --watch --coverage false"
   },
+  "files": [
+    "dist",
+    "src"
+  ],
   "dependencies": {
     "@forten/build": "next",
     "@forten/dragdrop": "next",

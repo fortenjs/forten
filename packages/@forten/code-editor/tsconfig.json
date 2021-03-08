@@ -38,6 +38,8 @@
     "../lucidity/src/lucidity/actions/save.ts"
   ],
   "exclude": [
+    "src/stories",
+    "**/*.test.ts",
     "node_modules",
     "dist"
   ]

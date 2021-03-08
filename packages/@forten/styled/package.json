@@ -14,14 +14,16 @@
   "private": false,
   "scripts": {
     "build:watch": "tsc -w -p setup/tsconfig.${NODE_ENV:=development}.json",
-    "build": "tsc -p setup/tsconfig.${NODE_ENV:=development}.json",
-    "clean": "rimraf .cache dist coverage ../../node_modules/@forten/styled",
-    "postbuild": "cp package.json ../../node_modules/@forten/styled",
-    "prepare": "rimraf dist && cp -r ../../node_modules/@forten/styled/dist dist",
+    "build": "tsc",
+    "clean": "rimraf .cache dist coverage",
     "stories": "parcel serve --port 8888 --no-autoinstall src/stories/index.html",
     "test:watch": "jest -c setup/jest.js --watch --coverage false",
     "test": "jest -c setup/jest.js"
   },
+  "files": [
+    "dist",
+    "src"
+  ],
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-regular-svg-icons": "^5.14.0",

@@ -13,13 +13,15 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "tsc -p setup/tsconfig.${NODE_ENV:=development}.json",
-    "postbuild": "cp package.json ../../node_modules/@forten/preferences",
-    "prepare": "rimraf dist && cp -r ../../node_modules/@forten/preferences/dist dist",
-    "clean": "rimraf .cache dist coverage ../../node_modules/@forten/preferences",
+    "build": "tsc",
+    "clean": "rimraf .cache dist coverage",
     "test": "jest -c setup/jest.js",
     "test:watch": "jest -c setup/jest.js --watch --coverage false"
   },
+  "files": [
+    "dist",
+    "src"
+  ],
   "dependencies": {
     "@forten/build": "next",
     "@forten/hooks": "next",

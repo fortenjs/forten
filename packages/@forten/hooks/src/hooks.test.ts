@@ -2,8 +2,8 @@ import { Block, build, settings } from '@forten/build'
 import { IAction } from 'overmind'
 import { describe, it, restore } from 'test'
 import { hooks } from '.'
-import { makeAsyncHook, makeHook } from './helpers'
-import { AsyncHook, Hook, HooksConfig, HooksSettings } from './types'
+import { makeHook, makeSyncHook } from './helpers'
+import { SyncHook, Hook, HooksConfig, HooksSettings } from './types'
 
 // ================ BAR Block definition
 
@@ -13,9 +13,9 @@ const bar_asynchook = 'bar:asynchook'
 const bar_badhook = 'bar:badhook'
 
 interface BarHooks {
-  [bar_hook]?: Hook<{ test: string[] }>
-  [bar_asynchook]?: AsyncHook<{ test: string[] }>
-  [bar_badhook]?: Hook<{ test: string[] }>
+  [bar_hook]?: SyncHook<{ test: string[] }>
+  [bar_asynchook]?: Hook<{ test: string[] }>
+  [bar_badhook]?: SyncHook<{ test: string[] }>
 }
 
 interface BarConfig {
@@ -44,11 +44,11 @@ const bar: Block<BarConfig> = {
   actions: {
     hooks: {
       // hooks
-      myHook: makeHook(bar_hook),
-      asyncHook: makeAsyncHook(bar_asynchook),
-      badHook: makeHook(bar_badhook),
-      voidHook: makeHook('bad_key'),
-      voidAsyncHook: makeAsyncHook('other_bad_key'),
+      myHook: makeSyncHook(bar_hook),
+      asyncHook: makeHook(bar_asynchook),
+      badHook: makeSyncHook(bar_badhook),
+      voidHook: makeSyncHook('bad_key'),
+      voidAsyncHook: makeHook('other_bad_key'),
     },
   },
   dependencies: [hooks],
@@ -72,7 +72,7 @@ const foo = {
       },
       [bar_badhook]: function foo(ctx, { test }) {
         // bad async hook in sync
-        return new Promise(resolve => {
+        return new Promise<void>(resolve => {
           test.push('bar:asynchook in foo')
           resolve()
         }) as any

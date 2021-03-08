@@ -38,6 +38,8 @@
     "src/**/*"
   ],
   "exclude": [
+    "src/stories",
+    "**/*.test.ts",
     "node_modules",
     "dist"
   ]

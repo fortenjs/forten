@@ -14,14 +14,16 @@
   "author": "Maia Taewana <maia@fortenjs.org>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc -p setup/tsconfig.${NODE_ENV:=development}.json",
-    "postbuild": "cp package.json ../../node_modules/@forten/code-editor",
-    "clean": "rimraf .cache dist coverage ../../node_modules/@forten/code-editor",
-    "prepare": "rimraf dist && cp -r ../../node_modules/@forten/code-editor/dist dist",
+    "build": "tsc",
+    "clean": "rimraf .cache dist coverage",
     "stories": "parcel serve --port 8888 --no-autoinstall src/stories/index.html",
     "test": "jest -c setup/jest.js",
     "test:watch": "jest -c setup/jest.js --watch --coverage false"
   },
+  "files": [
+    "dist",
+    "src"
+  ],
   "dependencies": {
     "@forten/build": "next",
     "@forten/editor": "next",
