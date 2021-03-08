@@ -114,7 +114,7 @@ export const Library: Comp<LibraryProps> = ({ className }) => {
               {...draggable(ctx, {
                 className: colorName(el.name),
                 drag: 'tree',
-                payload: { block: el },
+                payload: { library: el },
               })}
             >
               {el.name}

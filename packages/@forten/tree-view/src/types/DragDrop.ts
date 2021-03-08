@@ -9,13 +9,6 @@ export interface TreeDrag {
   nodeId: string
 }
 
-export interface LibraryDrag {
-  block: {
-    name: string
-    content: any
-  }
-}
-
 export interface TreeDrop {
   // The tree on which to drop.
   target: Reference<TreeType>

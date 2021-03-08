@@ -17,12 +17,19 @@ export interface SlotInfo {
   slotIdx: number
 }
 
+export interface LibraryElement {
+  // tree type
+  type: string
+  name: string
+  content: any
+}
+
 export interface TreeViewConfig {
   state: {
     treeView: {
       dropTarget: DropTargetInfoById
       libraryTree?: TreeType
-      library: { name: string; content: any }[]
+      library: LibraryElement[]
       // Cached uimap
       uimap: {
         [key: string]: UITreeType

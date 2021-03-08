@@ -2,7 +2,7 @@ import { reference, resolve } from '@forten/build'
 import { DragdropHooks } from '@forten/dragdrop'
 import { cutBranch, newTree } from '@forten/tree'
 import { Context } from '../../../app'
-import { LibraryDrag, TreeDrag } from '../../../types'
+import { LibraryElement, TreeDrag } from '../../../types'
 
 export const start: DragdropHooks['start'] = (ctx: Context) => {
   const { state } = ctx
@@ -10,16 +10,15 @@ export const start: DragdropHooks['start'] = (ctx: Context) => {
   if (!drag) {
     return
   }
-  if (drag.payload.block) {
-    const payload = drag.payload as LibraryDrag
-    const tree = newTree('forten', payload.block)
+  if (drag.payload.library) {
+    const lib: LibraryElement = drag.payload.library
+    const tree = newTree(lib.type, { name: lib.name, content: lib.content })
     ctx.state.treeView.libraryTree = tree
     const newPayload: TreeDrag = {
       origin: reference(ctx.state.treeView.libraryTree),
       tree,
       nodeId: tree.entry,
     }
-    console.log('>>>>', newPayload)
     drag.payload = newPayload
   }
 

@@ -4,11 +4,12 @@
   "description": "Out-tree-type structure types",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "sideEffects": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fortenjs/forten.git"
   },
-  "author": "Maia Taewana <maia@pawijs.org>",
+  "author": "Maia Taewana <maia@fortenjs.org>",
   "license": "MIT",
   "scripts": {
     "build": "tsc -p setup/tsconfig.${NODE_ENV:=development}.json",
