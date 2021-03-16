@@ -1,11 +1,11 @@
-import { getSiblings } from './getSiblings'
-import { makeRef } from './makeRef'
+import { getSiblings } from './getSiblings.js'
+import { makeRef } from './makeRef.js'
 import {
   CompositionType,
   ElementOptionsType,
   ElementRefType,
   StringElementType,
-} from './types'
+} from './types.js'
 
 function positionBetween(a: ElementRefType, b?: ElementRefType): number {
   if (b) {

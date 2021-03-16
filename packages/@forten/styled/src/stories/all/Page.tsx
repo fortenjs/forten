@@ -1,13 +1,13 @@
 import * as React from 'react'
+import { styled } from '../../app.js'
 import {
   Page as component,
   PageContent,
   PageFooter,
   PageHeader,
   PageProps as Props,
-} from '../..'
-import { styled } from '../../app'
-import { config, Stories } from '../helpers'
+} from '../../index.js'
+import { config, Stories } from '../helpers.js'
 
 const MyFooter = styled(PageFooter)`
   background: #d8ebfd;

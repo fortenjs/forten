@@ -1,6 +1,7 @@
 import { Hook } from '@forten/hooks'
-import * as actions from './actions'
-import { hooksActions } from './hooksActions'
+import * as actions from './actions/index.js'
+import { hooksActions } from './hooksActions.js'
+
 export const PREFERENCES_KEY = 'forten/preferences'
 export const preferences_restore = 'preferences_restore'
 export const preferences_clear = 'preferences_clear'
@@ -13,6 +14,15 @@ export interface PreferencesPaths {
   // We use an object so that libraries can
   // overwride previous settings with 'false'.
   [path: string]: boolean
+}
+
+export interface PrefsDb {
+  delete: () => Promise<void>
+  setValue: (path: string, value: any) => Promise<void>
+  getValues: () => Promise<{ path: string; value: any }[]>
+  close: () => Promise<void>
+  // For testing
+  reset: () => Promise<void>
 }
 
 export interface PreferencesSettings {
@@ -47,6 +57,7 @@ const actionsNotReadonly = { ...actions }
 export interface PreferencesConfig {
   state: {
     preferences: {
+      db: PrefsDb
       appName: string
       appWebsite: string
 

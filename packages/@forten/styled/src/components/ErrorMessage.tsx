@@ -1,7 +1,7 @@
 import classnames from 'classnames'
 import * as React from 'react'
-import { Comp, styled, theme } from '../app'
-import { Message } from './Message'
+import { Comp, styled, theme } from '../app.js'
+import { Message } from './Message.js'
 
 export interface ErrorMessageProps {
   // Styling

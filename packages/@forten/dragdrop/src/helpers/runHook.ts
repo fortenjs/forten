@@ -1,5 +1,5 @@
-import { Context } from '../app'
-import { DragdropHooks } from '../types'
+import { Context } from '../app.js'
+import { DragdropHooks } from '../types.js'
 
 export function runHook(name: keyof DragdropHooks, ctx: Context, value: any) {
   const { dragdrop } = ctx.state

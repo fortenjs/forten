@@ -1,2 +1,2 @@
-export * from './CodeEditor'
-export * from './CodeIcon'
+export * from './CodeEditor.js'
+export * from './CodeIcon.js'

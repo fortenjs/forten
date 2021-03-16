@@ -1,9 +1,12 @@
-import { IconDefinition, library } from '@fortawesome/fontawesome-svg-core'
-import { faSquare } from '@fortawesome/free-regular-svg-icons/faSquare'
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons/faAngleDown'
-import { faAngleRight } from '@fortawesome/free-solid-svg-icons/faAngleRight'
-import { faCheckSquare } from '@fortawesome/free-solid-svg-icons/faCheckSquare'
-import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons/faQuestionCircle'
+import {
+  IconDefinition,
+  library,
+} from '@fortawesome/fontawesome-svg-core/index.js'
+import { faSquare } from '@fortawesome/free-regular-svg-icons/faSquare.js'
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons/faAngleDown.js'
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons/faAngleRight.js'
+import { faCheckSquare } from '@fortawesome/free-solid-svg-icons/faCheckSquare.js'
+import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons/faQuestionCircle.js'
 
 export const icons: { [key: string]: IconDefinition } = {
   CheckboxOn: faCheckSquare,

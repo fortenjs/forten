@@ -1,5 +1,5 @@
-import { Action } from '../app'
-import { Locales } from '../types'
+import { Action } from '../app.js'
+import { Locales } from '../types.js'
 const SEP = ','
 
 // no need to check coverage for this: it is not used in production

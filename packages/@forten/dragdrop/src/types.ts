@@ -1,5 +1,5 @@
 import { IContext } from 'overmind'
-import * as actions from './actions'
+import * as actions from './actions/index.js'
 
 export type DragdropComponentType =
   | React.ComponentClass<any>
@@ -126,8 +126,8 @@ export interface FileDroppableOptions {
   // overmind and we need to update the div.
   ref: React.RefObject<HTMLElement>
   className?: string
-  onDrop: (args: { files: File[], strings: [] }) => void
-  accept?: (arg: { kind: string, type: string}) => boolean
+  onDrop: (args: { files: File[]; strings: [] }) => void
+  accept?: (arg: { kind: string; type: string }) => boolean
   // Extra payload to add
   payload?: any
 }

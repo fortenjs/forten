@@ -1,6 +1,6 @@
 import * as ts from 'typescript'
-import { CompilerError, LiteralScrub, SCRUBBER_VAR } from './types'
-import { CodeMirror } from './CodeMirror'
+import { CodeMirror } from './CodeMirror.js'
+import { CompilerError, LiteralScrub, SCRUBBER_VAR } from './types.js'
 
 const UNARY_AFTER = ['=', '(', '?', ':', '[', '*', '/', '+']
 const SCRUB_PREFIX = `declare var ${SCRUBBER_VAR}: number[]\n`

@@ -1,6 +1,6 @@
-import { Action, AsyncAction } from '../app'
-import { appUpdate, AppUpdateInfo } from '../helpers'
-import { useragent_restart } from '../types'
+import { Action, AsyncAction } from '../app.js'
+import { appUpdate, AppUpdateInfo } from '../helpers/index.js'
+import { useragent_restart } from '../types.js'
 
 export const updateChanged: Action<AppUpdateInfo> = (ctx, arg) => {
   console.log('updateChanged', arg)

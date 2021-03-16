@@ -1,5 +1,5 @@
 import { BlockDefinition, TreeType } from '@forten/tree-type'
-import { UILayoutType, UINodeSize } from '../types'
+import { UILayoutType, UINodeSize } from '../types/index.js'
 
 /** Compute the minimum size to display the element.
  */

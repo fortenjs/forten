@@ -1,5 +1,5 @@
 import { darken, desaturate, lighten, transparentize } from 'polished'
-import { css, styled } from '../app'
+import { css, styled } from '../app.js'
 import {
   backColor,
   high_front,
@@ -7,7 +7,7 @@ import {
   lsbo,
   pfill,
   wboxlColor,
-} from '../helpers'
+} from '../helpers/index.js'
 
 export const TreeSVG = styled.svg`
   text {

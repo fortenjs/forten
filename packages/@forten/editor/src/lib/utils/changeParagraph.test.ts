@@ -1,8 +1,7 @@
 import { describe, expect, it } from 'test'
-
-import { caretSelection } from './caretSelection'
-import { changeParagraph } from './changeParagraph'
-import { mockComposition } from './testUtils'
+import { caretSelection } from './caretSelection.js'
+import { changeParagraph } from './changeParagraph.js'
+import { mockComposition } from './testUtils.js'
 
 const position = { top: 0, left: 0 }
 

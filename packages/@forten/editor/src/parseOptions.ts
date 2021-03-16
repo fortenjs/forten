@@ -1,17 +1,15 @@
 import * as React from 'react'
-
+import { OperationsKey } from './lib/doOperation.js'
+import { EditorOptions } from './lib/index.js'
 import {
   EditorProvider,
   InternalParagraphOption,
-  ParagraphPayload,
-  Paragraphs,
   isCustomParagraphOption,
   isSelectParagraphOption,
   isSimpleParagraphOption,
-} from './lib/utils/types'
-
-import { EditorOptions } from './lib'
-import { OperationsKey } from './lib/doOperation'
+  ParagraphPayload,
+  Paragraphs,
+} from './lib/utils/types.js'
 
 function prepareParagraphs(
   paragraphs: Paragraphs

@@ -1,10 +1,9 @@
 import {
-  VideoParagraphPopup,
   VideoParagraph as component,
-} from '../../components'
-
-import { CustomParagraphOption } from '../../lib/utils/types'
-import { InitFunction } from '../../lib'
+  VideoParagraphPopup,
+} from '../../components/index.js'
+import { InitFunction } from '../../lib/index.js'
+import { CustomParagraphOption } from '../../lib/utils/types.js'
 
 const VIDEO_REGEXPS: {
   re: RegExp

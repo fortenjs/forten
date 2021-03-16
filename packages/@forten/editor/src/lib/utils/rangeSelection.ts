@@ -1,6 +1,6 @@
-import { caretSelection } from './caretSelection'
-import { getAtPath } from './getAtPath'
-import { getFirstChild, getLastChild } from './getNeighbours'
+import { caretSelection } from './caretSelection.js'
+import { getAtPath } from './getAtPath.js'
+import { getFirstChild, getLastChild } from './getNeighbours.js'
 import {
   CompositionType,
   isRangeSelection,
@@ -9,7 +9,7 @@ import {
   RangeSelectionType,
   SelectionPositionType,
   SelectionType,
-} from './types'
+} from './types.js'
 
 const DUMMY_POSITION = { top: 0, left: 0 }
 

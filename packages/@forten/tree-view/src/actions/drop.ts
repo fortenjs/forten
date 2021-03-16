@@ -1,6 +1,6 @@
 import { resolve } from '@forten/build'
-import { Action } from '../app'
-import { TreeDrag, TreeDrop } from '../types'
+import { Action } from '../app.js'
+import { TreeDrag, TreeDrop } from '../types/index.js'
 
 export type DropArg = TreeDrag & TreeDrop
 

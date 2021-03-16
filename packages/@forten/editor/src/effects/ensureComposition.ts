@@ -1,4 +1,8 @@
-import { CompositionHolder, CompositionType, newComposition } from '../lib'
+import {
+  CompositionHolder,
+  CompositionType,
+  newComposition,
+} from '../lib/index.js'
 
 export function ensureComposition(holder: CompositionHolder) {
   if (!holder.composition) {

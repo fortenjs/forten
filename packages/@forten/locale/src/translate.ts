@@ -1,5 +1,5 @@
-import { derive } from './app'
-import { Translate } from './types'
+import { derive } from './app.js'
+import { Translate } from './types.js'
 
 function replaceWords(text: string, words: { [key: string]: string }) {
   return Object.keys(words).reduce(

@@ -1,5 +1,5 @@
-import { renderStories } from '..'
-import * as stories from './all'
+import { renderStories } from '../index.js'
+import * as stories from './all.js'
 
 declare var module: any
 

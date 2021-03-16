@@ -1,5 +1,5 @@
 import { mockRef, restore } from 'test'
-import { makeRef } from './makeRef'
+import { makeRef } from './makeRef.js'
 
 describe('makeRef', () => {
   it('should create random ids', () => {

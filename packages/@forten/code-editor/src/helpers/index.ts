@@ -1,2 +1,2 @@
-export * from './CodeHelper'
-export * from './CodeMirror'
+export * from './CodeHelper.js'
+export * from './CodeMirror.js'

@@ -1,7 +1,7 @@
 import classnames from 'classnames'
 import * as React from 'react'
-import { Comp, styled, theme, useOvermind } from '../app'
-import { wrapTip } from './Tip'
+import { Comp, styled, theme, useOvermind } from '../app.js'
+import { wrapTip } from './Tip.js'
 
 export interface IconProps extends React.HTMLProps<HTMLSpanElement> {
   className?: string

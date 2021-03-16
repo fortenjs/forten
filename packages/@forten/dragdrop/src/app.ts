@@ -3,8 +3,8 @@ import { IAction, IContext } from 'overmind'
 import { createHook } from 'overmind-react'
 import { FunctionComponent as Comp } from 'react'
 import styled, { css } from 'styled-components'
-import { dragdropTheme } from './theme'
-import { DragdropConfig } from './types'
+import { dragdropTheme } from './theme.js'
+import { DragdropConfig } from './types.js'
 
 export { css, styled, Comp }
 

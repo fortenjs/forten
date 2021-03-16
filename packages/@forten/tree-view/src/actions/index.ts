@@ -1,2 +1,2 @@
-export * from './drop'
-export * from './uimap'
+export * from './drop.js'
+export * from './uimap.js'

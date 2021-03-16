@@ -1,11 +1,11 @@
 import { Block } from '@forten/build'
 import { hooks } from '@forten/hooks'
-import * as actions from './actions'
-import { setup } from './setup'
-import { TreeConfig } from './types'
+import * as actions from './actions/index.js'
+import { setup } from './setup.js'
+import { TreeConfig } from './types.js'
 
-export * from './helpers'
-export { TreeConfig, TreeDefinitions, TreeSettings } from './types'
+export * from './helpers/index.js'
+export { TreeConfig, TreeDefinitions, TreeSettings } from './types.js'
 
 export const tree: Block<TreeConfig> = {
   name: 'tree',

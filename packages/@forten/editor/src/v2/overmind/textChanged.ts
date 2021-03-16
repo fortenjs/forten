@@ -1,8 +1,8 @@
-import { CompositionHolder } from '../..'
-import { Action } from '../../app'
-import { textChanged as op } from '../actions'
-import { sortAscending } from '../helpers'
-import { Composition, Selection } from '../types'
+import { Action } from '../../app.js'
+import { CompositionHolder } from '../../index.js'
+import { textChanged as op } from '../actions/index.js'
+import { sortAscending } from '../helpers/index.js'
+import { Composition, Selection } from '../types/index.js'
 
 export interface TextChangedArg {
   holder: CompositionHolder

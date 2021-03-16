@@ -1,5 +1,5 @@
 import { afterAll, describe, expect, it, mockRandomValues, restore } from 'test'
-import { makeId } from './makeId'
+import { makeId } from './makeId.js'
 
 describe('makeId', () => {
   afterAll(restore)

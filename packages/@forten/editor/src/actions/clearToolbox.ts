@@ -1,5 +1,5 @@
-import { Action } from '../app'
-import { CompositionHolder } from '../lib/utils/types'
+import { Action } from '../app.js'
+import { CompositionHolder } from '../lib/utils/types.js'
 
 export interface ClearToolboxArgs {
   holder: CompositionHolder

@@ -1,6 +1,9 @@
-import { IconDefinition, library } from '@fortawesome/fontawesome-svg-core'
-import { faCircle as faOff } from '@fortawesome/free-regular-svg-icons/faCircle'
-import { faCircle as faOn } from '@fortawesome/free-solid-svg-icons/faCircle'
+import {
+  IconDefinition,
+  library,
+} from '@fortawesome/fontawesome-svg-core/index.js'
+import { faCircle as faOff } from '@fortawesome/free-regular-svg-icons/faCircle.js'
+import { faCircle as faOn } from '@fortawesome/free-solid-svg-icons/faCircle.js'
 
 export const icons: { [key: string]: IconDefinition } = {
   Online: faOn,

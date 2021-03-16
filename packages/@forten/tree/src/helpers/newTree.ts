@@ -1,5 +1,5 @@
 import { TreeType } from '@forten/tree-type'
-import { newBlock } from './newBlock'
+import { newBlock } from './newBlock.js'
 
 export function newTree<T>(
   type: string,

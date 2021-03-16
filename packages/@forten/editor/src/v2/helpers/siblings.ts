@@ -1,5 +1,5 @@
-import { ElementRef, Elements } from '../types'
-import { sortAscending } from './sorting'
+import { ElementRef, Elements } from '../types/index.js'
+import { sortAscending } from './sorting.js'
 
 export function siblings(
   { g }: { g: Elements },

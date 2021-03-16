@@ -1,5 +1,5 @@
-import { Node as component, NodeProps as Props } from '../..'
-import { config, Stories, svgWrapper } from '../helper'
+import { Node as component, NodeProps as Props } from '../../index.js'
+import { config, Stories, svgWrapper } from '../helper.js'
 
 export const node: Stories<Props> = {
   name: 'Node',

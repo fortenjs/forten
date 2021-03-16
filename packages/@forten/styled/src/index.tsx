@@ -1,15 +1,15 @@
 import { Block } from '@forten/build'
 import { locale } from '@forten/locale'
 import { theme } from '@forten/theme'
-import * as actions from './actions'
-import { FaIconComponent } from './components'
-import { settings } from './settings'
-import { setup } from './setup'
-import { StyledConfig } from './types'
+import * as actions from './actions/index.js'
+import { FaIconComponent } from './components/index.js'
+import { settings } from './settings/index.js'
+import { setup } from './setup.js'
+import { StyledConfig } from './types.js'
 
-export * from './components'
-export * from './theme'
-export * from './types'
+export * from './components/index.js'
+export * from './theme.js'
+export * from './types.js'
 
 export const styled: Block<StyledConfig> = {
   name: 'styled',

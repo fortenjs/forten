@@ -1,4 +1,4 @@
-import { Block } from './types'
+import { Block } from './types.js'
 
 function addBlock(
   result: Block[],

@@ -1,11 +1,11 @@
 import * as clipboard from 'clipboard-polyfill'
-import { Action } from '../app'
-import { CompositionHolder } from '../lib'
-import { extractComposition } from '../lib/extractComposition'
-import { toHTML } from '../lib/toHTML'
-import { toText } from '../lib/toText'
-import { makeRangeSelection } from '../lib/utils/rangeSelection'
-import { SelectionType } from '../lib/utils/types'
+import { Action } from '../app.js'
+import { extractComposition } from '../lib/extractComposition.js'
+import { CompositionHolder } from '../lib/index.js'
+import { toHTML } from '../lib/toHTML.js'
+import { toText } from '../lib/toText.js'
+import { makeRangeSelection } from '../lib/utils/rangeSelection.js'
+import { SelectionType } from '../lib/utils/types.js'
 
 export interface CopyArg {
   holder: CompositionHolder

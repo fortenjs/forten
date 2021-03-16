@@ -1,4 +1,4 @@
-import { defaultTheme } from './themes/defaultTheme'
+import { defaultTheme } from './themes/defaultTheme.js'
 
 type DefaultTheme = typeof defaultTheme
 

@@ -1,4 +1,4 @@
-import { Action } from './'
+import { Action } from './index.js'
 
 const submit: Action = ({ state }) => {
   // No props passed to submit

@@ -4,6 +4,7 @@
   "description": "Support for callable hooks in actions (through effects).",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "type": "module",
   "sideEffects": true,
   "repository": {
     "type": "git",

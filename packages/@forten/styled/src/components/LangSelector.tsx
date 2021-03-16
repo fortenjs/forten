@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { Comp, useOvermind } from '../app'
-import { Select } from './Select'
+import { Comp, useOvermind } from '../app.js'
+import { Select } from './Select.js'
 
 export interface LangSelectorProps {
   className?: string

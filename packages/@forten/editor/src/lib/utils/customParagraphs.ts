@@ -1,7 +1,6 @@
-import { CompositionHolder, isCustomElement } from './types'
-
-import { Context } from '../../app'
-import { SortAscending } from './getNeighbours'
+import { Context } from '../../app.js'
+import { SortAscending } from './getNeighbours.js'
+import { CompositionHolder, isCustomElement } from './types.js'
 
 export interface CustomParagraphInfo {
   icon: string

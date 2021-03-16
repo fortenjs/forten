@@ -1,4 +1,4 @@
-import { ChangesType, isStringElement } from './utils/types'
+import { ChangesType, isStringElement } from './utils/types.js'
 
 export function doInput(changes: ChangesType, value: string): ChangesType {
   // ======= Backspace with caret selection

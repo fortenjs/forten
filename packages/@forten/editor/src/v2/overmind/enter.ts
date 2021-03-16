@@ -1,9 +1,9 @@
 import { CommandEvent } from '@forten/shortcuts'
-import { CompositionHolder } from '../..'
-import { Action } from '../../app'
-import { enter as op } from '../actions'
-import { sortAscending } from '../helpers'
-import { Composition } from '../types'
+import { Action } from '../../app.js'
+import { CompositionHolder } from '../../index.js'
+import { enter as op } from '../actions/index.js'
+import { sortAscending } from '../helpers/index.js'
+import { Composition } from '../types/index.js'
 
 export interface EnterArg {
   holder: CompositionHolder

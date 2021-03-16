@@ -1,8 +1,7 @@
-import { Action, Operator } from '../app'
-import { CompositionHolder, getTitle } from '../lib'
 import { createOperator, mutate, pipe } from 'overmind'
-
-import { store as storeState } from '../lib/undoRedo'
+import { Action, Operator } from '../app.js'
+import { CompositionHolder, getTitle } from '../lib/index.js'
+import { store as storeState } from '../lib/undoRedo.js'
 
 export type ChangedArg = CompositionHolder
 

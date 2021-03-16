@@ -1,4 +1,4 @@
-import { Position } from './position'
+import { Position } from './position.js'
 
 export interface CaretSelection {
   anchorPath: string[]
@@ -34,13 +34,18 @@ export function isCaretSelection(
   return selection.type === 'Caret'
 }
 
-export function sameSelection(
-  a: Selection, b:Selection
-) {
-  if (a.anchorOffset === b.anchorOffset && a.type === b.type && a.anchorPath.join('.') === b.anchorPath.join('.')) {
+export function sameSelection(a: Selection, b: Selection) {
+  if (
+    a.anchorOffset === b.anchorOffset &&
+    a.type === b.type &&
+    a.anchorPath.join('.') === b.anchorPath.join('.')
+  ) {
     if (isRangeSelection(a)) {
       const br = b as RangeSelection
-      if (a.focusOffset === br.focusOffset && a.focusPath.join('.') === br.focusPath.join('.')) {
+      if (
+        a.focusOffset === br.focusOffset &&
+        a.focusPath.join('.') === br.focusPath.join('.')
+      ) {
         return true
       }
     } else if (isCaretSelection(b)) {

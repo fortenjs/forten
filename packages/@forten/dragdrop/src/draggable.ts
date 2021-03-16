@@ -1,6 +1,6 @@
-import { Context } from './app'
-import { droppable } from './droppable'
-import { DragdropHooks, DraggableHooks, DroppableSettings } from './types'
+import { Context } from './app.js'
+import { droppable } from './droppable.js'
+import { DragdropHooks, DraggableHooks, DroppableSettings } from './types.js'
 
 const DRAG_DELTA = 10
 
@@ -43,8 +43,8 @@ export function makeDragdropHooks<T = any, U = any>(
     return dropSettings
       ? droppable(ctx, dropSettings)
       : className
-        ? { className, onClick }
-        : { onClick }
+      ? { className, onClick }
+      : { onClick }
   }
 
   if (enable === false) {

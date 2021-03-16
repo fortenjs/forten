@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'test'
-import { deepCopy, unproxy } from './unproxy'
+import { deepCopy, unproxy } from './unproxy.js'
 
 describe('deepCopy', () => {
   it('should make a deep copy', () => {

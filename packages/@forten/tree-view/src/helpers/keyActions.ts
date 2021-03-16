@@ -1,6 +1,6 @@
 import { TreeType } from '@forten/tree-type'
 import * as React from 'react'
-import { Context } from '../app'
+import { Context } from '../app.js'
 
 export const KEY_ACTIONS: {
   [key: string]: (

@@ -1,8 +1,8 @@
 import { TreeType } from '@forten/tree-type'
 import * as React from 'react'
-import { Comp, styled } from '../../app'
-import { Tree } from '../../components'
-import { config, Stories, Wrapper } from '../helper'
+import { Comp, styled } from '../../app.js'
+import { Tree } from '../../components/index.js'
+import { config, Stories, Wrapper } from '../helper.js'
 
 export interface TwoTreesProps {
   className?: string

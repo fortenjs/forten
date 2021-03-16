@@ -1,22 +1,26 @@
-import { caretSelection } from './utils/caretSelection'
-import { getAtPath } from './utils/getAtPath'
-import { getFirstChild } from './utils/getNeighbours'
-import { getPosition } from './utils/getPosition'
-import { BIGGEST_PATH, extractPaths, SMALLEST_PATH } from './utils/inSelection'
-import { makeRef } from './utils/makeRef'
-import { newParagraph } from './utils/newParagraph'
-import { splitText } from './utils/splitText'
-import { trimLeft, trimRight } from './utils/trim'
+import { caretSelection } from './utils/caretSelection.js'
+import { getAtPath } from './utils/getAtPath.js'
+import { getFirstChild } from './utils/getNeighbours.js'
+import { getPosition } from './utils/getPosition.js'
+import {
+  BIGGEST_PATH,
+  extractPaths,
+  SMALLEST_PATH,
+} from './utils/inSelection.js'
+import { makeRef } from './utils/makeRef.js'
+import { newParagraph } from './utils/newParagraph.js'
+import { splitText } from './utils/splitText.js'
+import { trimLeft, trimRight } from './utils/trim.js'
 import {
   CaretSelectionType,
   ChangeType,
   CompositionType,
   GroupElementType,
   isCustomElement,
+  isListItem,
   isStringElement,
   OperationType,
-  isListItem,
-} from './utils/types'
+} from './utils/types.js'
 
 /** Returns the list of operations after enter is pressed. If the composition
  * contains a range selection, we must first apply 'deleteSelection'.

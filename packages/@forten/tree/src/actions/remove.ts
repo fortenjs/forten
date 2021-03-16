@@ -1,6 +1,6 @@
 import { TreeType } from '@forten/tree-type'
-import { Action } from '../app'
-import { cutBranch } from '../helpers'
+import { Action } from '../app.js'
+import { cutBranch } from '../helpers/index.js'
 
 export interface RemoveArg {
   tree: TreeType

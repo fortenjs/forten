@@ -1,13 +1,13 @@
-import { caretSelection } from './caretSelection'
-import { makeRef } from './makeRef'
-import { addDepth } from './mergeElements'
+import { caretSelection } from './caretSelection.js'
+import { makeRef } from './makeRef.js'
+import { addDepth } from './mergeElements.js'
 import {
   ChangesType,
   ChangeType,
   filterChanges,
   isStringElement,
   Type,
-} from './types'
+} from './types.js'
 
 /** Apply an operation on the selected list of elements.
  * Modifies the 'changes' object in place.

@@ -1,13 +1,12 @@
+import { getElementClassName } from '../components/helpers/getElementClassName.js'
+import { getElementTag } from '../components/helpers/getElementTag.js'
 import {
   CompositionType,
   ElementType,
   isGroupElement,
   isListItem,
   isStringElement,
-} from './utils/types'
-
-import { getElementClassName } from '../components/helpers/getElementClassName'
-import { getElementTag } from '../components/helpers/getElementTag'
+} from './utils/types.js'
 
 // TODO: Maybe we should use STRONG and EM instead of styles.
 function elemToHTML(

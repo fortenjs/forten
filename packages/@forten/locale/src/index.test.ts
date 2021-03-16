@@ -1,8 +1,8 @@
+import { locale, LocaleSettings } from '..js'
 import { build, settings } from '@forten/build'
 import { HooksSettings } from '@forten/hooks'
 import { describe, expect, it } from 'test'
-import { locale, LocaleSettings } from '.'
-import { LocaleHooks, locale_set } from './types'
+import { LocaleHooks, locale_set } from './types.js'
 
 export const foo = {
   name: 'foo',

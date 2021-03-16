@@ -1,5 +1,5 @@
-import { toHTML } from './toHTML'
-import { CompositionType } from './utils/types'
+import { toHTML } from './toHTML.js'
+import { CompositionType } from './utils/types.js'
 
 export function toText(composition: CompositionType): string {
   const html = toHTML(composition)

@@ -1,6 +1,6 @@
+import { inSelection } from '..js'
 import { describe, expect, it, mut } from 'test'
-import { inSelection } from '.'
-import { rangeSelection } from './selection'
+import { rangeSelection } from './selection.js'
 
 function test(s: string, l: string[][]) {
   return expect(inSelection(mut(s)).map(r => r.path)).toEqual(l)

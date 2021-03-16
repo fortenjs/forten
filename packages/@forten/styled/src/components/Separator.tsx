@@ -1,4 +1,4 @@
-import { styled, theme } from '../app'
+import { styled, theme } from '../app.js'
 
 export const Separator = styled.div`
   border: ${theme.separatorBorder};

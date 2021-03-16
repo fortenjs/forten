@@ -4,8 +4,8 @@ import 'codemirror/addon/scroll/simplescrollbars.css'
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/theme/bespin.css'
 import * as React from 'react'
-import { styled } from '../app'
-import { makeEditor, sourceChanged } from '../helpers'
+import { styled } from '../app.js'
+import { makeEditor, sourceChanged } from '../helpers/index.js'
 
 export interface CodeEditorProps {
   source: string

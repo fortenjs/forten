@@ -1,4 +1,4 @@
-import { Element, GroupElement, Mutation } from '../types'
+import { Element, GroupElement, Mutation } from '../types/index.js'
 
 /* Return an array with position at each level in path.
  */

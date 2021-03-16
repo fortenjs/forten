@@ -1,6 +1,6 @@
 import classnames from 'classnames'
 import * as React from 'react'
-import { Comp, styled, theme, useOvermind } from '../app'
+import { Comp, styled, theme, useOvermind } from '../app.js'
 
 export interface ResizeArg {
   height?: number

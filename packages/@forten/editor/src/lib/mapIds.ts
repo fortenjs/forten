@@ -1,5 +1,5 @@
-import { CompositionType, ElementsType, isGroupElement } from './utils/types'
-import { makeRef } from './utils/makeRef'
+import { makeRef } from './utils/makeRef.js'
+import { CompositionType, ElementsType, isGroupElement } from './utils/types.js'
 
 function getIds(elem: { g: ElementsType }, allIds: { [id: string]: boolean }) {
   Object.keys(elem.g).forEach(key => {

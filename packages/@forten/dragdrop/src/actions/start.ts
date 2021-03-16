@@ -1,6 +1,6 @@
-import { Action } from '../app'
-import { runHook } from '../helpers'
-import { DragData, Position } from '../types'
+import { Action } from '../app.js'
+import { runHook } from '../helpers/index.js'
+import { DragData, Position } from '../types.js'
 
 export interface StartArg {
   drag: DragData

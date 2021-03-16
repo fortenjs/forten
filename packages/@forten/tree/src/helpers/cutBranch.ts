@@ -1,5 +1,5 @@
 import { BranchDefinition } from '@forten/tree-type'
-import { makeId } from './makeId'
+import { makeId } from './makeId.js'
 
 interface GrabResult {
   trunc: BranchDefinition

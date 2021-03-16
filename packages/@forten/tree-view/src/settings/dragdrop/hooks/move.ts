@@ -1,9 +1,9 @@
 import { Reference, resolve } from '@forten/build'
 import { DragdropHooks, Position } from '@forten/dragdrop'
 import { TreeType } from '@forten/tree-type'
-import { Context } from '../../../app'
-import { defaultUILayout } from '../../../helpers'
-import { SlotInfo, TreeDrag, TreeDrop } from '../../../types'
+import { Context } from '../../../app.js'
+import { defaultUILayout } from '../../../helpers/index.js'
+import { SlotInfo, TreeDrag, TreeDrop } from '../../../types/index.js'
 
 const MIN_TREE_DIST = 2 * 50 * 50 // px
 

@@ -1,7 +1,7 @@
 import { Reference, resolve } from '@forten/build'
 import { TreeType } from '@forten/tree-type'
-import { Action } from '../app'
-import { appendGraph, makeId } from '../helpers'
+import { Action } from '../app.js'
+import { appendGraph, makeId } from '../helpers/index.js'
 
 export interface AppendArg {
   // Thing to append

@@ -1,9 +1,13 @@
-import { ElementRef, Mutation, TypeName, isRangeSelection } from '../types'
-import { getSelection, rangeSelection } from '../helpers'
-
-import { applyToRange } from './applyToRange'
-import { clearSelection } from './clearSelection'
-import { isCustomElement } from '../../lib'
+import { isCustomElement } from '../../lib/index.js'
+import { getSelection, rangeSelection } from '../helpers/index.js'
+import {
+  ElementRef,
+  isRangeSelection,
+  Mutation,
+  TypeName,
+} from '../types/index.js'
+import { applyToRange } from './applyToRange.js'
+import { clearSelection } from './clearSelection.js'
 
 export function applyStyle(m: Mutation, t: TypeName) {
   const selection = getSelection(m)

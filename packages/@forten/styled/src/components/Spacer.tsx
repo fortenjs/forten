@@ -1,4 +1,4 @@
-import { styled } from '../app'
+import { styled } from '../app.js'
 
 export const Spacer = styled.div`
   flex-grow: 1;

@@ -1,4 +1,4 @@
-import { Action } from '../app'
+import { Action } from '../app.js'
 
 export const hasWebUpdate: Action = ctx => {
   const { useragent } = ctx.state

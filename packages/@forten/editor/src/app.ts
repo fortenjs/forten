@@ -7,8 +7,8 @@ import { IAction, IContext, IOperator } from 'overmind'
 import { createHook } from 'overmind-react'
 import { FunctionComponent as Comp } from 'react'
 import styled from 'styled-components'
-import { editorTheme } from './theme'
-import { EditorConfig } from './types'
+import { editorTheme } from './theme.js'
+import { EditorConfig } from './types.js'
 
 export { Comp, styled }
 

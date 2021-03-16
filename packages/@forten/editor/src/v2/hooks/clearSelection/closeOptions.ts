@@ -1,4 +1,4 @@
-import { ClearSelection, MutateHook } from '../../types'
+import { ClearSelection, MutateHook } from '../../types/index.js'
 
 export const closeOptions: MutateHook<ClearSelection> = (_, arg) => {
   const { elem } = arg

@@ -1,5 +1,5 @@
-import { getPosition } from './getPosition'
-import { CompositionType } from './types'
+import { getPosition } from './getPosition.js'
+import { CompositionType } from './types.js'
 
 export function isParagraphStart(
   composition: CompositionType,

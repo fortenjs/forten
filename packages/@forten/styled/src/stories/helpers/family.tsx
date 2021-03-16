@@ -1,4 +1,4 @@
-import { Families, Icon } from '../..'
+import { Families, Icon } from '../../index.js'
 
 export const family: Families = {
   base: {

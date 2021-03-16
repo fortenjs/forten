@@ -1,16 +1,14 @@
 // So that 'async' actions work with parcel
-import 'regenerator-runtime/runtime'
 import * as React from 'react'
 import ReactDOM from 'react-dom'
+import 'regenerator-runtime/runtime'
+import { StoryRouter } from './components/index.js'
+import { Stories } from './types.js'
 
-import { StoryRouter } from './components'
-import { Stories } from './types'
-
-export * from './types'
-export { ComponentWrapper } from './components'
-export * from './theme'
-
-export * from './testing'
+export { ComponentWrapper } from './components/index.js'
+export * from './testing.js'
+export * from './theme.js'
+export * from './types.js'
 
 export interface StoriesDict {
   [key: string]: Stories

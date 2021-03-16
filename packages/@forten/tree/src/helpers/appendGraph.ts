@@ -1,5 +1,5 @@
 import { BlockDefinition, TreeType } from '@forten/tree-type'
-import { makeId } from './makeId'
+import { makeId } from './makeId.js'
 
 interface IdMap {
   [oldId: string]: string

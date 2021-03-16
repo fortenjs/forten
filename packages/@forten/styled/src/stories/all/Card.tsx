@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { styled } from '../../app.js'
 import {
   Button,
   Card as component,
@@ -11,9 +12,8 @@ import {
   Message,
   Spacer,
   TitleText,
-} from '../..'
-import { styled } from '../../app'
-import { config, Stories, useOvermind } from '../helpers'
+} from '../../index.js'
+import { config, Stories, useOvermind } from '../helpers.js'
 
 const wrapper = styled.div`
   background: white;

@@ -1,6 +1,6 @@
 import { TreeType } from '@forten/tree-type'
-import * as actions from './actions'
-import { AddArg, selectBlockArg } from './actions'
+import * as actions from './actions/index.js'
+import { AddArg, selectBlockArg } from './actions/index.js'
 
 export const tree_selectNode = 'tree_selectNode'
 export const tree_treeChanged = 'tree_treeChanged'

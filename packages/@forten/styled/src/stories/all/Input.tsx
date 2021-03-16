@@ -1,7 +1,10 @@
-import { Input as component, InputProps as Props } from '../..'
-import { config, Stories } from '../helpers'
-import { RoundInput } from '../..'
 import { mutate } from 'overmind'
+import {
+  Input as component,
+  InputProps as Props,
+  RoundInput,
+} from '../../index.js'
+import { config, Stories } from '../helpers.js'
 
 function randomWord() {
   return Array.from({ length: 8 })

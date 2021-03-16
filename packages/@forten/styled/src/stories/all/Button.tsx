@@ -1,5 +1,5 @@
-import { Button as component, ButtonProps as Props, Link } from '../..'
-import { config, Stories } from '../helpers'
+import { Button as component, ButtonProps as Props, Link } from '../../index.js'
+import { config, Stories } from '../helpers.js'
 
 export const buttonStories: Stories<Props> = {
   name: 'Button',

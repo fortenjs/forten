@@ -1,7 +1,7 @@
 import * as React from 'react'
-import { Comp, css, styled, theme, useOvermind } from '../app'
-import { droppable } from '../droppable'
-import { DroppableSettings } from '../types'
+import { Comp, css, styled, theme, useOvermind } from '../app.js'
+import { droppable } from '../droppable.js'
+import { DroppableSettings } from '../types.js'
 
 export const dropStyles = css`
   position: relative;

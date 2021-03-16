@@ -1,7 +1,6 @@
 import { describe, expect, it } from 'test'
-
-import { stripZeroWidthChar } from './stripZeroWidthChar'
-import { SelectionType } from './utils/types'
+import { stripZeroWidthChar } from './stripZeroWidthChar.js'
+import { SelectionType } from './utils/types.js'
 
 describe('stripZeroWidthChar', () => {
   it('does not alter text without zero width char', () => {

@@ -1,10 +1,10 @@
 import Bowser from 'bowser'
 import { Overmind } from 'overmind'
 import { Workbox } from 'workbox-window'
-import { AsyncAction } from './app'
-import { setupAppUpdate } from './helpers/appUpdate.setup'
-import { setupWinPosition } from './helpers/winPosition.setup'
-import { UseragentConfig, useragent_invalidBrowser } from './types'
+import { AsyncAction } from './app.js'
+import { setupAppUpdate } from './helpers/appUpdate.setup.js'
+import { setupWinPosition } from './helpers/winPosition.setup.js'
+import { UseragentConfig, useragent_invalidBrowser } from './types.js'
 
 export const onInitialize: AsyncAction<
   Overmind<UseragentConfig>,

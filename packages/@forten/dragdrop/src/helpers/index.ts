@@ -1,1 +1,1 @@
-export * from './runHook'
+export * from './runHook.js'

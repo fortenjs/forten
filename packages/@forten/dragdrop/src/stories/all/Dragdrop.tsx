@@ -1,10 +1,10 @@
 import { Stories } from '@forten/story'
 import * as React from 'react'
-import { Drag, DraggingProps as Props } from '../..'
-import { useOvermind } from '../../app'
-import { dropStyles } from '../../components'
-import { fileDrop } from '../../fileDrop'
-import { Comp, config, Doc, Group, Group2, styled } from '../helpers'
+import { useOvermind } from '../../app.js'
+import { dropStyles } from '../../components/index.js'
+import { fileDrop } from '../../fileDrop.js'
+import { Drag, DraggingProps as Props } from '../../index.js'
+import { Comp, config, Doc, Group, Group2, styled } from '../helpers.js'
 
 const component = styled(Drag)`
   background: rgba(255, 255, 255, 0.8);

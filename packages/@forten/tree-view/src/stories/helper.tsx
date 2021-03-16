@@ -4,10 +4,10 @@ import { TStories } from '@forten/story'
 import { tree, TreeSettings, TreeType } from '@forten/tree'
 import { createHook } from 'overmind-react'
 import * as React from 'react'
-import { treeView } from '..'
-import { Comp, styled } from '../app'
-import { TreeSVG } from '../components/TreeSVG'
-import { uimap } from '../helpers'
+import { Comp, styled } from '../app.js'
+import { TreeSVG } from '../components/TreeSVG.js'
+import { uimap } from '../helpers/index.js'
+import { treeView } from '../index.js'
 
 export { styled }
 

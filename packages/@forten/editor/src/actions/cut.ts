@@ -1,6 +1,6 @@
-import { Action } from '../app'
-import { CompositionHolder } from '../lib'
-import { SelectionType } from '../lib/utils/types'
+import { Action } from '../app.js'
+import { CompositionHolder } from '../lib/index.js'
+import { SelectionType } from '../lib/utils/types.js'
 
 export interface CutArg {
   holder: CompositionHolder

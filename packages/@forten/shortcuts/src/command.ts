@@ -1,5 +1,5 @@
 import { isCommand } from '@forten/useragent'
-import { reverseKeycodes } from './keycodes'
+import { reverseKeycodes } from './keycodes.js'
 
 export interface CommandEvent {
   ctrlKey?: boolean

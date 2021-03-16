@@ -1,4 +1,4 @@
-import { getAtPath } from './getAtPath'
+import { getAtPath } from './getAtPath.js'
 import {
   CompositionType,
   ElementRefType,
@@ -6,7 +6,7 @@ import {
   GroupElementType,
   isGroupElement,
   PathType,
-} from './types'
+} from './types.js'
 
 export function SortAscending(children: ElementsType): string[] {
   return Object.keys(children).sort((a, b) => children[a].p - children[b].p)

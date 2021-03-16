@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { VariableSizeList as List } from 'react-window'
-import { Comp, styled } from '../../app'
-import { VRow } from './VRow'
+import { Comp, styled } from '../../app.js'
+import { VRow } from './VRow.js'
 // https://codesandbox.io/s/dynamic-size-of-react-window-list-items-64o9p
 export interface VTableProps<T> {
   className?: string

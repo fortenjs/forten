@@ -12,6 +12,8 @@ The name is an hommage to [Harriet Forten Purvis](https://en.wikipedia.org/wiki/
 [commitizen-image]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat
 [commitizen-url]: http://commitizen.github.io/cz-cli/
 
+Community: [Join us on discord !][discord-url]
+
 ## Packages
 
 - [![NPM version][build-image]][build-npm] [@forten/build][build-url]
@@ -90,4 +92,4 @@ The name is an hommage to [Harriet Forten Purvis](https://en.wikipedia.org/wiki/
 [useragent-url]: https://github.com/fortenjs/forten/tree/next/packages/@forten/useragent
 [useragent-image]: https://img.shields.io/npm/v/@forten/useragent.svg?style=flat
 [useragent-npm]: https://npmjs.org/package/@forten/useragent
-
+[discord-url]: https://discord.gg/F7JHpk8qeW

@@ -1,4 +1,4 @@
-import { CompositionHolder } from '../lib'
+import { CompositionHolder } from '../lib/index.js'
 
 export function clearToolbox(holder: CompositionHolder) {
   if (holder.composition!.toolbox) {

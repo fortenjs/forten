@@ -1,11 +1,11 @@
-import { makeRef } from '../helpers'
+import { makeRef } from '../helpers/index.js'
 import {
   Element,
   GroupElement,
   isStringElement,
   Mutation,
   StringElement,
-} from '../types'
+} from '../types/index.js'
 
 export function addDepth(m: Mutation, elem: Element) {
   if (!isStringElement(elem)) {

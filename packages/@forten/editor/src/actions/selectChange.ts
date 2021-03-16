@@ -1,9 +1,8 @@
-import { CompositionHolder, SelectionType } from '../lib'
-
-import { Action } from '../app'
-import { doSelect } from '../lib/doSelect'
-import { getAtPath } from '../lib/utils/getAtPath'
-import { paragraphSelection } from '../lib/utils/rangeSelection'
+import { Action } from '../app.js'
+import { doSelect } from '../lib/doSelect.js'
+import { CompositionHolder, SelectionType } from '../lib/index.js'
+import { getAtPath } from '../lib/utils/getAtPath.js'
+import { paragraphSelection } from '../lib/utils/rangeSelection.js'
 
 export interface SelectChangeArgs {
   holder: CompositionHolder

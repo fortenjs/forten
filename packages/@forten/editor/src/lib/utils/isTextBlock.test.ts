@@ -1,6 +1,5 @@
 import { describe, expect, it } from 'test'
-
-import { isTextBlock } from './isTextBlock'
+import { isTextBlock } from './isTextBlock.js'
 
 describe('isTextBlock', () => {
   it('returns true for raw paragraphs', () => {

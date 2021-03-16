@@ -1,4 +1,4 @@
-import { styled, theme } from '../app'
+import { styled, theme } from '../app.js'
 
 export const Badge = styled.span`
   display: inline-block;

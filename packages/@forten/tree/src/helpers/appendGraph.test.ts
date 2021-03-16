@@ -1,6 +1,6 @@
 import { TreeType } from '@forten/tree-type'
 import { describe, expect, it } from 'test'
-import { appendGraph } from './appendGraph'
+import { appendGraph } from './appendGraph.js'
 
 type MockBlock = [string, string[]]
 

@@ -1,6 +1,6 @@
 import { Stories } from '@forten/story'
-import { Editor as component, EditorProps as Props } from '../..'
-import { config, makeComposition } from '../helpers'
+import { Editor as component, EditorProps as Props } from '../../index.js'
+import { config, makeComposition } from '../helpers.js'
 
 export const customStories: Stories<Props> = {
   name: 'Custom paragraph',

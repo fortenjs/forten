@@ -1,4 +1,4 @@
-import { ParagraphOption } from '../lib'
+import { ParagraphOption } from '../lib/index.js'
 
 export const ol: ParagraphOption = {
   o: { l: 'ol' },

@@ -4,6 +4,7 @@
   "description": "visual tree composer",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "type": "module",
   "sideEffects": true,
   "repository": {
     "type": "git",

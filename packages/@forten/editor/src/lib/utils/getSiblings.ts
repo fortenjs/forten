@@ -1,5 +1,5 @@
-import { getNeighbours } from './getNeighbours'
-import { CompositionType, ElementRefType, PathType } from './types'
+import { getNeighbours } from './getNeighbours.js'
+import { CompositionType, ElementRefType, PathType } from './types.js'
 
 export function getSiblings(
   composition: CompositionType,

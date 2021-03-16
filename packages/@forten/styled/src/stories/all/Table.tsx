@@ -1,9 +1,8 @@
 import * as React from 'react'
-
-import { Table as component, TableRow } from '../..'
-import { config, Stories } from '../helpers'
-import { styled, Comp } from '../../app'
-import { BottomTable } from '../../components'
+import { styled } from '../../app.js'
+import { BottomTable } from '../../components/index.js'
+import { Table as component, TableRow } from '../../index.js'
+import { config, Stories } from '../helpers.js'
 
 const wrapper = styled.div`
   height: 200px;

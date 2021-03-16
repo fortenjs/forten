@@ -3,8 +3,8 @@ import { draggable } from '@forten/dragdrop'
 import { TreeType } from '@forten/tree-type'
 import classnames from 'classnames'
 import * as React from 'react'
-import { Comp, useOvermind } from '../app'
-import { TreeDrag, UINodeType, UISlotType } from '../types'
+import { Comp, useOvermind } from '../app.js'
+import { TreeDrag, UINodeType, UISlotType } from '../types/index.js'
 
 const DUMMY_GRAPH: TreeType = {
   id: 'dummy',

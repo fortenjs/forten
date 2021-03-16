@@ -2,8 +2,8 @@ import { IAction } from 'overmind'
 import { createHook } from 'overmind-react'
 import * as React from 'react'
 import styled from 'styled-components'
-import { Stories } from '../..'
-import { Comp } from '../../app'
+import { Comp } from '../../app.js'
+import { Stories } from '../../index.js'
 
 interface Config {
   state: {

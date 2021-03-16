@@ -1,7 +1,7 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome/index.js'
 import * as React from 'react'
-import { Comp } from '../app'
-import { IconComponentProps } from '../types'
+import { Comp } from '../app.js'
+import { IconComponentProps } from '../types.js'
 
 export const FaIconComponent: Comp<IconComponentProps> = React.forwardRef<
   HTMLSpanElement,

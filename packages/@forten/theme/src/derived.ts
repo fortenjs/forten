@@ -1,5 +1,5 @@
-import { derive } from './app'
-import { Theme } from './types'
+import { derive } from './app.js'
+import { Theme } from './types.js'
 
 export const selectedTheme: Theme = derive(parent => {
   const selectedTheme = parent.themes[parent.selected]

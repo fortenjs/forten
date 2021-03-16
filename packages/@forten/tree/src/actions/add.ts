@@ -1,7 +1,7 @@
 import { TreeType } from '@forten/tree-type'
-import { Action } from '../app'
-import { newTree } from '../helpers'
-import { appendGraph } from '../helpers/appendGraph'
+import { Action } from '../app.js'
+import { appendGraph } from '../helpers/appendGraph.js'
+import { newTree } from '../helpers/index.js'
 
 export interface FullAddArg {
   slotIdx: number

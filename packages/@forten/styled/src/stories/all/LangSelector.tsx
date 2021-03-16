@@ -1,5 +1,5 @@
-import { LangSelector as component, LangSelectorProps } from '../..'
-import { config, Stories } from '../helpers'
+import { LangSelector as component, LangSelectorProps } from '../../index.js'
+import { config, Stories } from '../helpers.js'
 
 export const langSelector: Stories<LangSelectorProps> = {
   name: 'LangSelector',

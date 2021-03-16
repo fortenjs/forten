@@ -1,7 +1,7 @@
+import { selectionChanged } from '..js'
 import { describe, makeTest } from 'test'
-import { caretSelection } from '../helpers'
-import { Selection } from '../types'
-import { selectionChanged } from '.'
+import { caretSelection } from '../helpers/index.js'
+import { Selection } from '../types/index.js'
 
 const it = makeTest<{ s: Selection }>((m, { s }) => selectionChanged(m, s))
 

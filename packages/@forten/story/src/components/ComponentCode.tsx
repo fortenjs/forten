@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { Comp, styled, useOvermind } from '../app'
-import { stringifyComponent } from '../helpers/stringifyComponent'
+import { Comp, styled, useOvermind } from '../app.js'
+import { stringifyComponent } from '../helpers/stringifyComponent.js'
 
 function limit(text: string, length: number) {
   const lines = text.split('\n')

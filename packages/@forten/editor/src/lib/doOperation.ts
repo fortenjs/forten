@@ -1,16 +1,16 @@
-import { doBackspaceKey } from './doBackspaceKey'
-import { doDeleteKey } from './doDeleteKey'
-import { doInput } from './doInput'
-import { applyOp } from './utils/applyOp'
-import { caretSelection } from './utils/caretSelection'
-import { changeParagraph } from './utils/changeParagraph'
-import { extractSelection } from './utils/extractSelection'
-import { getAtPath } from './utils/getAtPath'
-import { getFirstChild, getNeighbours } from './utils/getNeighbours'
-import { getSiblings } from './utils/getSiblings'
-import { mergeElements } from './utils/mergeElements'
-import { rangeSelection } from './utils/rangeSelection'
-import { simplify } from './utils/simplify'
+import { doBackspaceKey } from './doBackspaceKey.js'
+import { doDeleteKey } from './doDeleteKey.js'
+import { doInput } from './doInput.js'
+import { applyOp } from './utils/applyOp.js'
+import { caretSelection } from './utils/caretSelection.js'
+import { changeParagraph } from './utils/changeParagraph.js'
+import { extractSelection } from './utils/extractSelection.js'
+import { getAtPath } from './utils/getAtPath.js'
+import { getFirstChild, getNeighbours } from './utils/getNeighbours.js'
+import { getSiblings } from './utils/getSiblings.js'
+import { mergeElements } from './utils/mergeElements.js'
+import { rangeSelection } from './utils/rangeSelection.js'
+import { simplify } from './utils/simplify.js'
 import {
   ChangesType,
   ChangeType,
@@ -22,7 +22,7 @@ import {
   OperationType,
   ParagraphPayload,
   SelectionType,
-} from './utils/types'
+} from './utils/types.js'
 
 const OP_ORDER: { [op: string]: number } = { delete: 0, create: 1, update: 1 }
 

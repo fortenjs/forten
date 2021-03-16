@@ -1,10 +1,10 @@
 import * as React from 'react'
 import { useState } from 'react'
 import styled from 'styled-components'
-import { Comp } from '../app'
-import { Stories } from '../types'
-import { StoryDisplay } from './StoryDisplay'
-import { RenderOptions } from '..'
+import { Comp } from '../app.js'
+import { RenderOptions } from '../index.js'
+import { Stories } from '../types.js'
+import { StoryDisplay } from './StoryDisplay.js'
 
 const GroupTitle = styled.div`
   padding: 10px;

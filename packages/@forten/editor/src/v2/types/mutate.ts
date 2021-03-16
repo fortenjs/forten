@@ -1,5 +1,5 @@
-import { Composition } from './composition'
-import { Element } from './element'
+import { Composition } from './composition.js'
+import { Element } from './element.js'
 
 export interface Mutation {
   comp: Composition

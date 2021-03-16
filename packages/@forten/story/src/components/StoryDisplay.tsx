@@ -2,12 +2,12 @@ import { DirectThemeProvider, themeProxy } from '@forten/theme'
 import { IAction, IConfiguration, mutate, Overmind } from 'overmind'
 import { Provider } from 'overmind-react'
 import * as React from 'react'
-import { RenderOptions } from '..'
-import { Comp, styled, useOvermind } from '../app'
-import { storyTheme } from '../theme'
-import { Stories, Story } from '../types'
-import { ComponentCode } from './ComponentCode'
-import { Title } from './Title'
+import { Comp, styled, useOvermind } from '../app.js'
+import { RenderOptions } from '../index.js'
+import { storyTheme } from '../theme.js'
+import { Stories, Story } from '../types.js'
+import { ComponentCode } from './ComponentCode.js'
+import { Title } from './Title.js'
 
 const theme = themeProxy(storyTheme)
 

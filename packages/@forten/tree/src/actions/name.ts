@@ -1,5 +1,5 @@
 import { TreeType } from '@forten/tree-type'
-import { Action } from '../app'
+import { Action } from '../app.js'
 
 export interface SetNameArg {
   name: string

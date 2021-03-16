@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Comp, styled, theme } from '../app'
+import { Comp, styled, theme } from '../app.js'
 
 const Wrapper = styled.div`
   @media not print {

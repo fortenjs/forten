@@ -1,5 +1,6 @@
+import classnames from 'classnames'
 import * as React from 'react'
-
+import { Comp, Context, styled, useOvermind } from '../../app.js'
 import {
   CaretSelectionType,
   CompositionHolder,
@@ -7,13 +8,10 @@ import {
   ElementSize,
   ElementType,
   ParagraphProps,
-} from '../../lib/utils/types'
-import { Comp, Context, styled, useOvermind } from '../../app'
-
-import { DragBar } from './DragBar'
-import { ParagraphPopup } from '../ParagraphPopup'
-import classnames from 'classnames'
-import { setSelection } from '../helpers/setSelection'
+} from '../../lib/utils/types.js'
+import { setSelection } from '../helpers/setSelection.js'
+import { ParagraphPopup } from '../ParagraphPopup.js'
+import { DragBar } from './DragBar.js'
 
 export type ElementTagType = Comp<ParagraphProps>
 

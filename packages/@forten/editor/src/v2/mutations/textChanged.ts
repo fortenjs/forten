@@ -1,6 +1,6 @@
-import { getSelection } from '../helpers'
-import { changeText, removeRange, setSelection } from '../operations'
-import { isRangeSelection, Mutation, Selection } from '../types'
+import { getSelection } from '../helpers/index.js'
+import { changeText, removeRange, setSelection } from '../operations/index.js'
+import { isRangeSelection, Mutation, Selection } from '../types/index.js'
 
 export function textChanged(
   m: Mutation,

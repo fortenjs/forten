@@ -1,10 +1,10 @@
 import classnames from 'classnames'
 import * as React from 'react'
-import { Comp, styled, theme, useOvermind } from '../app'
-import { Icon } from './Icon'
-import { wrapTip } from './Tip'
-import { ResetIcon, BaseInput } from './CommonStyles'
-import { Select } from './Select'
+import { Comp, styled, theme, useOvermind } from '../app.js'
+import { BaseInput, ResetIcon } from './CommonStyles.js'
+import { Icon } from './Icon.js'
+import { Select } from './Select.js'
+import { wrapTip } from './Tip.js'
 
 type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
 

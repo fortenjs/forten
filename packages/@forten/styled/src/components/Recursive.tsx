@@ -1,9 +1,7 @@
-import * as React from 'react'
-
-import { Comp, styled, useOvermind } from '../app'
-
-import { Icon } from './Icon'
 import classnames from 'classnames'
+import * as React from 'react'
+import { Comp, styled, useOvermind } from '../app.js'
+import { Icon } from './Icon.js'
 
 export interface RecursiveOptions<C = any, T = any> {}
 

@@ -1,5 +1,5 @@
-import { CompositionHolder } from '../lib'
-import { getAtPath } from '../lib/utils/getAtPath'
+import { CompositionHolder } from '../lib/index.js'
+import { getAtPath } from '../lib/utils/getAtPath.js'
 
 export function clearSelection(holder: CompositionHolder) {
   const { composition } = holder

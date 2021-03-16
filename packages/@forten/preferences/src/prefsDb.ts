@@ -1,11 +1,14 @@
-if (!window.indexedDB) {
-  require('fake-indexeddb/auto')
-}
 import { unproxy } from '@forten/build'
 import Dexie from 'dexie'
+import { PrefsDb } from './types.js'
 
-// FIXME: Remove after 2020-04-30
-localStorage.removeItem('forten/preferences')
+export const dummyDb: PrefsDb = {
+  close: async () => {},
+  delete: async () => {},
+  setValue: async () => {},
+  getValues: async () => [],
+  reset: async () => {},
+}
 
 export function dbname(name: string = 'default') {
   return `prefs-${name.slice(0, 10)}${
@@ -26,59 +29,61 @@ export class DexieDb extends Dexie {
   }
 }
 
-let db: DexieDb = new DexieDb(dbname())
-
-export async function selectPrefsDb(
+export async function prefsDb(
   userId: string | undefined,
   defaults: { [path: string]: any }
-) {
+): Promise<PrefsDb> {
   const name = dbname(userId)
   const isNew = !(await Dexie.exists(name))
-  db.close()
-  db = new DexieDb(name)
+  const db = new DexieDb(name)
+  const api: PrefsDb = {
+    close: makeClose(db),
+    delete: makeDelete(db),
+    setValue: makeSetValue(db),
+    getValues: makeGetValues(db),
+    reset: makeReset(db),
+  }
   if (isNew) {
     // Insert defaults
     for (const path in defaults) {
       const value = defaults[path]
-      await setValue(path, value)
+      await api.setValue(path, value)
     }
   }
-  return db
+  return api
 }
 
 // For testing
-export async function resetDb() {
-  await selectPrefsDb(undefined, {})
-  await db.values.clear()
+function makeReset(db: DexieDb): PrefsDb['reset'] {
+  return async () => db.values.clear()
 }
 
-export async function deletePrefsDb(userId?: string) {
-  const name = dbname(userId)
-  if (await Dexie.exists(name)) {
-    if (db.name === name) {
-      db.close()
-      await db.delete()
-    } else {
-      const db = new DexieDb(name)
-      await db.delete()
+function makeClose(db: DexieDb): PrefsDb['close'] {
+  return async () => db.close()
+}
+
+function makeDelete(db: DexieDb): PrefsDb['delete'] {
+  return async () => db.delete()
+}
+
+function makeSetValue(db: DexieDb) {
+  return async (path: string, value: any) => {
+    if (typeof value === 'function') {
+      return
     }
+    await db.values.put({
+      path,
+      value: typeof value === 'object' ? unproxy(value) : value,
+    })
   }
 }
 
-export async function setValue(path: string, value: any) {
-  if (typeof value === 'function') {
-    return
+function makeGetValues(db: DexieDb) {
+  return async () => {
+    const values: { path: string; value: any }[] = []
+    await db.values.each(rec => {
+      values.push(rec)
+    })
+    return values
   }
-  await db.values.put({
-    path,
-    value: typeof value === 'object' ? unproxy(value) : value,
-  })
-}
-
-export async function getValues() {
-  const values: { path: string; value: any }[] = []
-  await db.values.each(rec => {
-    values.push(rec)
-  })
-  return values
 }

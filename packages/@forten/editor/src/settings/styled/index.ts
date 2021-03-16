@@ -1,6 +1,6 @@
 import { StyledSettings } from '@forten/styled'
-import { editor_dragBar, editor_titleExtra } from '../../types'
-import { icons } from './icons'
+import { editor_dragBar, editor_titleExtra } from '../../types.js'
+import { icons } from './icons.js'
 
 export const styled: StyledSettings['styled'] = {
   family: {

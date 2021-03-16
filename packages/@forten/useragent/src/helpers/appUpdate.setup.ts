@@ -1,5 +1,5 @@
-import { Context } from '../app'
-import { appUpdate } from './appUpdate.types'
+import { Context } from '../app.js'
+import { appUpdate } from './appUpdate.types.js'
 
 export function setupAppUpdate(ctx: Context) {
   const api = window[appUpdate]

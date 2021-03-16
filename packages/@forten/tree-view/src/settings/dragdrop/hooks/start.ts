@@ -1,8 +1,8 @@
 import { reference, resolve, unproxy } from '@forten/build'
 import { DragdropHooks } from '@forten/dragdrop'
 import { cutBranch, newTree } from '@forten/tree'
-import { Context } from '../../../app'
-import { LibraryDrag, TreeDrag } from '../../../types'
+import { Context } from '../../../app.js'
+import { LibraryDrag, TreeDrag } from '../../../types/index.js'
 
 export const start: DragdropHooks['start'] = (ctx: Context) => {
   const { state } = ctx

@@ -1,5 +1,5 @@
-import { Message as component, MessageProps as Props } from '../..'
-import { config, Stories } from '../helpers'
+import { Message as component, MessageProps as Props } from '../../index.js'
+import { config, Stories } from '../helpers.js'
 
 export const messageStories: Stories<Props> = {
   component,

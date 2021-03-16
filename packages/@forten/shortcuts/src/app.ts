@@ -1,5 +1,5 @@
 import { IAction } from 'overmind'
-import { ShortcutsConfig } from './types'
+import { ShortcutsConfig } from './types.js'
 
 export type Config = ShortcutsConfig
 

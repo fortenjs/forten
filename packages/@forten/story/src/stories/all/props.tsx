@@ -1,8 +1,8 @@
 import { build } from '@forten/build'
 import { createHook } from 'overmind-react'
 import * as React from 'react'
-import { TStories } from '../..'
-import { Comp } from '../../app'
+import { Comp } from '../../app.js'
+import { TStories } from '../../index.js'
 
 const config = build({
   name: 'app',

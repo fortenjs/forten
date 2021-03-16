@@ -1,4 +1,4 @@
-import { ElementType, isStringElement, StringElementType } from './types'
+import { ElementType, isStringElement, StringElementType } from './types.js'
 
 interface TextBlocks {
   [key: string]: boolean

@@ -1,11 +1,11 @@
 import { IConfiguration, mutate, Overmind } from 'overmind'
 import { Options } from 'overmind/lib/internalTypes'
-import { addDependencies } from './addDependencies'
-import { Block, Initializer, Setup, UnknownObject, Using } from './types'
+import { addDependencies } from './addDependencies.js'
+import { Block, Initializer, Setup, UnknownObject, Using } from './types.js'
 
-export * from './reference'
-export { Block, Setup } from './types'
-export * from './unproxy'
+export * from './reference.js'
+export { Block, Setup } from './types.js'
+export * from './unproxy.js'
 
 function mergeFunctions<T>(
   target: { [key: string]: any },

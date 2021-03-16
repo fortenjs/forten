@@ -1,5 +1,5 @@
-import { AsyncAction } from '../app'
-import { useragent_online, useragent_network } from '../types'
+import { AsyncAction } from '../app.js'
+import { useragent_network, useragent_online } from '../types.js'
 
 export interface NetworkChangedArg {
   // set to true if remote server is online

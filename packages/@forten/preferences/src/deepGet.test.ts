@@ -1,6 +1,6 @@
 import simple from 'simple-mock'
 import { describe, expect, it, restore } from 'test'
-import { deepGet } from './helper'
+import { deepGet } from './helper.js'
 
 describe('deepGet', () => {
   afterEach(restore)

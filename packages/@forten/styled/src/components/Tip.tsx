@@ -1,6 +1,6 @@
 import Tippy, { TippyProps } from '@tippyjs/react'
 import * as React from 'react'
-import { useOvermind } from '../app'
+import { useOvermind } from '../app.js'
 
 type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
 
@@ -34,7 +34,8 @@ let TipImpl = function Tip({ disabled, content, tip, ...props }: TipProps) {
 }
 
 if (process.env.NODE_ENV !== 'test') {
-  require('tippy.js/dist/tippy.css')
+  // @ts-ignore
+  import('tippy.js/dist/tippy.css')
   TipImpl = function Tip({ disabled, content, tip, ...props }: TipProps) {
     const ctx = useOvermind()
     if (disabled || !ctx.state.styled.showTips) {

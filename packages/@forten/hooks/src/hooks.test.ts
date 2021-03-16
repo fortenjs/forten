@@ -1,9 +1,9 @@
+import { hooks } from '..js'
 import { Block, build, settings } from '@forten/build'
 import { IAction } from 'overmind'
 import { describe, it, restore } from 'test'
-import { hooks } from '.'
-import { makeHook, makeSyncHook } from './helpers'
-import { SyncHook, Hook, HooksConfig, HooksSettings } from './types'
+import { makeHook, makeSyncHook } from './helpers.js'
+import { Hook, HooksConfig, HooksSettings, SyncHook } from './types.js'
 
 // ================ BAR Block definition
 

@@ -1,5 +1,5 @@
-import { Mutation, Selection } from '../types'
-import { atPath } from './atPath'
+import { Mutation, Selection } from '../types/index.js'
+import { atPath } from './atPath.js'
 
 export function getSelection(m: Mutation): Selection | undefined {
   const { spath } = m.comp

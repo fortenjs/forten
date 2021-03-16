@@ -1,12 +1,12 @@
 import { TreeType } from '@forten/tree-type'
 import classnames from 'classnames'
 import * as React from 'react'
-import { Comp, styled, useOvermind } from '../app'
-import { KEY_ACTIONS } from '../helpers'
-import { TreeDrag, UITreeType } from '../types'
-import { DropTarget } from './DropTarget'
-import { Node } from './Node'
-import { TreeSVG } from './TreeSVG'
+import { Comp, styled, useOvermind } from '../app.js'
+import { KEY_ACTIONS } from '../helpers/index.js'
+import { TreeDrag, UITreeType } from '../types/index.js'
+import { DropTarget } from './DropTarget.js'
+import { Node } from './Node.js'
+import { TreeSVG } from './TreeSVG.js'
 
 export interface NodesProps {
   className?: string

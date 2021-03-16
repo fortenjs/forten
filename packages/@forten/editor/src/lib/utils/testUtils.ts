@@ -1,16 +1,15 @@
 import * as simple from 'simple-mock'
-
-import * as makeref from './makeRef'
+import { newComposition, NewCompositionOptions } from '../newComposition.js'
+import * as makeref from './makeRef.js'
 import {
   ChangesType,
-  CompositionType,
-  OperationType,
-  isRangeSelection,
-  ElementType,
-  SelectionType,
   ChangeType,
-} from './types'
-import { newComposition, NewCompositionOptions } from '../newComposition'
+  CompositionType,
+  ElementType,
+  isRangeSelection,
+  OperationType,
+  SelectionType,
+} from './types.js'
 
 const composition1: CompositionType = {
   g:

@@ -7,10 +7,10 @@ import {
   UIPosType,
   UISlotType,
   UITreeType,
-} from '../types'
-import { PALETTE_COUNT } from './colors'
-import { minSize } from './minSize'
-import { defaultUILayout } from './uilayout'
+} from '../types/index.js'
+import { PALETTE_COUNT } from './colors.js'
+import { minSize } from './minSize.js'
+import { defaultUILayout } from './uilayout.js'
 type StringMap<T> = { [k: string]: T }
 
 /** Compute svg path of a box with up and down slots.

@@ -1,11 +1,11 @@
-import { anchorElement } from '../helpers'
+import { anchorElement } from '../helpers/index.js'
 import {
   collapseUp,
   deleteParagraph,
   removePreviousChar,
   removeRange,
-} from '../mutations'
-import { isRangeSelection, isStringElement, Mutation } from '../types'
+} from '../mutations/index.js'
+import { isRangeSelection, isStringElement, Mutation } from '../types/index.js'
 
 export function backspace(m: Mutation) {
   const ref = anchorElement(m)

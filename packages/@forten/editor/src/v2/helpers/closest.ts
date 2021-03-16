@@ -1,7 +1,7 @@
-import { ElementRef, Mutation } from '../types'
-import { atPath } from './atPath'
-import { firstDescendant, lastDescendant } from './children'
-import { siblings } from './siblings'
+import { ElementRef, Mutation } from '../types/index.js'
+import { atPath } from './atPath.js'
+import { firstDescendant, lastDescendant } from './children.js'
+import { siblings } from './siblings.js'
 
 // Return closest neighbour: the element right after or before that
 // is displayed in the document. A neighbour can be a sibling

@@ -1,7 +1,6 @@
 import { describe, expect, it } from 'test'
-
-import { getAtPath } from './getAtPath'
-import { mockComposition } from './testUtils'
+import { getAtPath } from './getAtPath.js'
+import { mockComposition } from './testUtils.js'
 
 const composition = mockComposition()
 

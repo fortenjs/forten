@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'test'
-import { extractComposition } from './extractComposition'
-import { mockComposition } from './utils/testUtils'
-import { rangeSelection } from './utils/rangeSelection'
-import { StringElementType, GroupElementType } from './utils/types'
+import { extractComposition } from './extractComposition.js'
+import { rangeSelection } from './utils/rangeSelection.js'
+import { mockComposition } from './utils/testUtils.js'
+import { GroupElementType, StringElementType } from './utils/types.js'
 
 const composition = mockComposition()
 const position = { top: 0, left: 0 }

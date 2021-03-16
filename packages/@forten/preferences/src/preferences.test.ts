@@ -2,16 +2,16 @@ import { Block, build, settings, unproxy } from '@forten/build'
 import { HooksSettings } from '@forten/hooks'
 import { IAction } from 'overmind'
 import simple from 'simple-mock'
-import { describe, expect, it, restore, sleep } from 'test'
-import { deletePrefsDb, preferences, selectPrefsDb } from '.'
-import { dbname, DexieDb, getValues, resetDb } from './prefsDb'
+import { preferences } from './index.js'
+import { dbname, DexieDb, prefsDb } from './prefsDb.js'
+import { describe, expect, it, restore, sleep } from './test.js'
 import {
   PreferencesHooks,
   PreferencesSettings,
   preferences_clear,
   preferences_restore,
   preferences_save,
-} from './types'
+} from './types.js'
 
 const set: IAction<typeof foo, { holder: any; key: string; value: any }> = (
   ctx,
@@ -113,6 +113,11 @@ const test: Block<TestConfig> = {
 
 const built = build(foo).using(preferences).using(test)
 
+async function resetDb() {
+  const db = await prefsDb(undefined, {})
+  return db.reset()
+}
+
 describe('preferences', () => {
   beforeEach(resetDb)
   afterEach(restore)
@@ -169,7 +174,7 @@ describe('preferences', () => {
     })
     await sleep(200)
     expect(app.state.test.saveCount).toBe(1)
-    expect(await getValues()).toEqual([])
+    expect(await app.state.preferences.db.getValues()).toEqual([])
   })
 
   it('should unproxy objects', async () => {
@@ -185,7 +190,7 @@ describe('preferences', () => {
     })
     await sleep(200)
     expect(app.state.test.saveCount).toBe(1)
-    expect(await getValues()).toEqual([
+    expect(await app.state.preferences.db.getValues()).toEqual([
       {
         path: 'foo.bar',
         value: { ma: 'mo' },
@@ -194,19 +199,18 @@ describe('preferences', () => {
   })
 
   it('should close current db if deleting', async () => {
-    const db = await selectPrefsDb('damn', {})
-    await db.values.put({ path: 'sugar', value: 'babe' })
-    await deletePrefsDb('damn')
+    const db = await prefsDb('damn', {})
+    await db.setValue('sugar', 'babe')
+    await db.delete()
     let error: string = ''
-    await db.values
-      .put({ path: 'sugar', value: 'star' })
-      .catch(err => (error = err.message))
+    await db.setValue('sugar', 'star').catch(err => (error = err.message))
     expect(error).toBe(`DatabaseClosedError Database has been closed`)
   })
 
   it('should not delete inexistant db', async () => {
-    await deletePrefsDb('bloom')
+    const db = await prefsDb('boom', {})
     // Should do nothing
+    await db.delete()
   })
 
   it('should warn on invalid mutation', async () => {
@@ -298,8 +302,8 @@ describe('preferences', () => {
     await app.initialized
     await app.actions.preferences.clear({ userId: name })
     expect(await DexieDb.exists(dbname(name))).toBe(true)
-    await selectPrefsDb(name, {})
-    expect(await getValues()).toEqual([
+    const db2 = await prefsDb(name, {})
+    expect(await db2.getValues()).toEqual([
       { path: 'foo.bar', value: 'banana' },
       { path: 'foo.boom', value: 'kiwi' },
     ])

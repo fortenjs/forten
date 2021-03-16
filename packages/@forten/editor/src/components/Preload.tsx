@@ -1,6 +1,5 @@
 import * as React from 'react'
-
-import { Comp, useOvermind } from '../app'
+import { Comp, useOvermind } from '../app.js'
 
 export interface PreloadProps {}
 

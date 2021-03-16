@@ -1,11 +1,11 @@
-import { Action, Operator } from '../app'
+import { debounce, mutate, pipe, run } from 'overmind'
+import { Action, Operator } from '../app.js'
 import {
   CompositionHolder,
   CompositionWrapper,
   ElementSize,
   ElementSizes,
-} from '../lib/utils/types'
-import { debounce, mutate, pipe, run } from 'overmind'
+} from '../lib/utils/types.js'
 
 export interface SizeChangeArgs {
   holder: CompositionHolder

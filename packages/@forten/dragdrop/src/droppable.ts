@@ -1,6 +1,10 @@
 import classnames from 'classnames'
-import { Context } from './app'
-import { DroppableHooks, DroppableSettings, DragdropDefinitions } from './types'
+import { Context } from './app.js'
+import {
+  DragdropDefinitions,
+  DroppableHooks,
+  DroppableSettings,
+} from './types.js'
 
 function matchTypes(
   type: string,

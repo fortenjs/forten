@@ -1,13 +1,13 @@
 import { describe, expect, it } from 'test'
-import { insertComposition } from './insertComposition'
-import { caretSelection } from './utils/caretSelection'
-import { mockComposition, mockRef } from './utils/testUtils'
+import { insertComposition } from './insertComposition.js'
+import { caretSelection } from './utils/caretSelection.js'
+import { mockComposition, mockRef } from './utils/testUtils.js'
 import {
   CompositionType,
   GroupElementType,
   SelectionType,
   StringElementType,
-} from './utils/types'
+} from './utils/types.js'
 
 const composition = mockComposition()
 
@@ -59,8 +59,8 @@ function testInsertion(selection: SelectionType, source: CompositionType) {
           ? a.elem.p - b.elem.p
           : a.path.length - b.path.length
         : a.path[0] > b.path[0]
-          ? 1
-          : -1
+        ? 1
+        : -1
     })
 }
 

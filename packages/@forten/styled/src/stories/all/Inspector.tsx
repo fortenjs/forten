@@ -1,6 +1,6 @@
-import { Inspector as component, InspectorProps as Props } from '../..'
-import { config, Stories } from '../helpers'
 import { mutate } from 'overmind'
+import { Inspector as component, InspectorProps as Props } from '../../index.js'
+import { config, Stories } from '../helpers.js'
 
 export const inspector: Stories<Props> = {
   name: 'Inspector',

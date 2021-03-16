@@ -1,7 +1,7 @@
 import { describe, expectOps, it } from 'test'
-import { deleteSelectionOps } from './deleteSelection'
-import { rangeSelection } from './rangeSelection'
-import { mockComposition } from './testUtils'
+import { deleteSelectionOps } from './deleteSelection.js'
+import { rangeSelection } from './rangeSelection.js'
+import { mockComposition } from './testUtils.js'
 
 const composition = mockComposition()
 

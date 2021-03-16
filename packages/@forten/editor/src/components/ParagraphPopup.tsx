@@ -1,10 +1,8 @@
 import * as React from 'react'
-
-import { Comp, styled, theme, useOvermind } from '../app'
-
-import { InternalParagraphOption } from '../lib/utils/types'
-import { ParagraphProps } from '../lib'
-import { blockEvents } from './ElementTag/CustomTag'
+import { Comp, styled, theme, useOvermind } from '../app.js'
+import { ParagraphProps } from '../lib/index.js'
+import { InternalParagraphOption } from '../lib/utils/types.js'
+import { blockEvents } from './ElementTag/CustomTag.js'
 
 export type ParagraphPopupProps = ParagraphProps
 

@@ -1,7 +1,7 @@
-import { ResizableProps as Props, Resizable } from '../..'
-import { styled } from '../../app'
-import { ResizeArg } from '../../components'
-import { config, Stories } from '../helpers'
+import { styled } from '../../app.js'
+import { ResizeArg } from '../../components/index.js'
+import { Resizable, ResizableProps as Props } from '../../index.js'
+import { config, Stories } from '../helpers.js'
 
 const component = styled(Resizable)`
   background: #ffbcf6;

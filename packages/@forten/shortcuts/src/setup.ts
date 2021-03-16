@@ -1,5 +1,9 @@
 import { Setup } from '@forten/build'
-import { ShortcutDefinition, ShortcutsConfig, ShortcutsSettings } from './types'
+import {
+  ShortcutDefinition,
+  ShortcutsConfig,
+  ShortcutsSettings,
+} from './types.js'
 
 export const setup: Setup<ShortcutsConfig, ShortcutsSettings> = (
   config,

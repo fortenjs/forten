@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { Comp, styled } from '../../app'
-import { VListContext } from './VTable'
+import { Comp, styled } from '../../app.js'
+import { VListContext } from './VTable.js'
 
 export interface VRowProps<T = any> {
   className?: string

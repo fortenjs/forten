@@ -1,5 +1,5 @@
 import { IAction, IContext } from 'overmind'
-import { HooksConfig } from './types'
+import { HooksConfig } from './types.js'
 
 export type Context = IContext<HooksConfig>
 export type AsyncAction<Input = void, Output = void> = IAction<

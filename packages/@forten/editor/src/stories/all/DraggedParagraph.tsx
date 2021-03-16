@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import {
   DraggedParagraph as component,
   DraggedParagraphProps as Props,
-} from '../..'
-import { config, Stories } from '../helpers'
+} from '../../index.js'
+import { config, Stories } from '../helpers.js'
 
 const wrapper = styled.div`
   padding: 8px;

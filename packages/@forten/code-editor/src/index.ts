@@ -2,14 +2,14 @@ import { Block, settings } from '@forten/build'
 import { locale } from '@forten/locale'
 import { styled, StyledSettings } from '@forten/styled'
 import { theme, ThemeSettings } from '@forten/theme'
-import * as actions from './actions'
-import { icons } from './icons'
-import { codeEditorTheme } from './theme'
-import { CodeEditorConfig } from './types'
+import * as actions from './actions/index.js'
+import { icons } from './icons.js'
+import { codeEditorTheme } from './theme.js'
+import { CodeEditorConfig } from './types.js'
 
-export * from './components'
-export * from './theme'
-export * from './types'
+export * from './components/index.js'
+export * from './theme.js'
+export * from './types.js'
 
 export const codeEditor: Block<CodeEditorConfig> = {
   name: 'treeView',

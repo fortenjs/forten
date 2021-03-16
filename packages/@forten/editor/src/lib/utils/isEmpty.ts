@@ -1,4 +1,4 @@
-import { CompositionHolder } from './types'
+import { CompositionHolder } from './types.js'
 
 export function isEmptyComposition(holder: CompositionHolder): boolean {
   const { composition } = holder

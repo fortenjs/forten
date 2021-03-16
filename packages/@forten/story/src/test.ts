@@ -3,7 +3,7 @@ import { Provider } from 'overmind-react'
 import { createElement } from 'react'
 import renderer from 'react-test-renderer'
 import simple from 'simple-mock'
-import { Config } from './app'
+import { Config } from './app.js'
 
 export type Describe = (what: string, callback: () => void) => void
 

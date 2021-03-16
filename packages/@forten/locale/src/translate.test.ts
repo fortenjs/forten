@@ -1,7 +1,7 @@
 import { Overmind } from 'overmind'
 import simple from 'simple-mock'
 import { describe, expect, it } from 'test'
-import { translate } from './translate'
+import { translate } from './translate.js'
 const locales = {
   fr: {
     foo: 'le fou',

@@ -1,8 +1,8 @@
 import { build, settings } from '@forten/build'
 import { TStories } from '@forten/story'
 import { createHook } from 'overmind-react'
-import { codeEditor } from '..'
-import { styled } from '../app'
+import { styled } from '../app.js'
+import { codeEditor } from '../index.js'
 
 export { styled }
 

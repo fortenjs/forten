@@ -1,10 +1,10 @@
 import { resolve } from '@forten/build'
 import * as React from 'react'
-import { Comp, styled, theme, useOvermind } from '../app'
-import { CompositionHolder, newComposition } from '../lib'
-import { EditorParaDrag, isParaRefDrag } from '../types'
-import { EditorStyles } from './EditorStyles'
-import { ElementTag } from './ElementTag'
+import { Comp, styled, theme, useOvermind } from '../app.js'
+import { CompositionHolder, newComposition } from '../lib/index.js'
+import { EditorParaDrag, isParaRefDrag } from '../types.js'
+import { EditorStyles } from './EditorStyles.js'
+import { ElementTag } from './ElementTag/index.js'
 
 export type DraggedParagraphProps = EditorParaDrag
 

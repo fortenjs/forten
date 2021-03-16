@@ -1,4 +1,4 @@
-import { ParagraphOption } from '../lib'
+import { ParagraphOption } from '../lib/index.js'
 
 // FIXME: NOT USED FOR NOW
 export const U: ParagraphOption = {

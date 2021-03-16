@@ -2,9 +2,9 @@ import { draggable } from '@forten/dragdrop'
 import { Icon, Resizable } from '@forten/styled'
 import classnames from 'classnames'
 import * as React from 'react'
-import { Comp, css, styled, useOvermind } from '../app'
-import { colorName, indices, pfill } from '../helpers'
-import { LibraryDrag } from '../types'
+import { Comp, css, styled, useOvermind } from '../app.js'
+import { colorName, indices, pfill } from '../helpers/index.js'
+import { LibraryDrag } from '../types/index.js'
 
 export interface LibraryProps {
   className?: string
@@ -58,6 +58,7 @@ const Scroller = styled.div`
 const Element = styled.div`
   cursor: pointer;
   font-size: 0.8rem;
+  color: #333;
   opacity: 0.85;
   &.unselected {
     opacity: 0.6;

@@ -1,7 +1,6 @@
 import * as React from 'react'
-
-import { Badge, Icon as component, IconProps as Props } from '../..'
-import { config, Stories } from '../helpers'
+import { Badge, Icon as component, IconProps as Props } from '../../index.js'
+import { config, Stories } from '../helpers.js'
 
 export const badgeStories: Stories<Props> = {
   name: 'Badge with icon',

@@ -1,16 +1,16 @@
 import * as React from 'react'
-import { Comp, theme, styled, useOvermind } from '../app'
-import { BaseInput } from './CommonStyles'
-import { wrapTip } from './Tip'
-import { Spacer } from './Spacer'
+import { Comp, styled, theme, useOvermind } from '../app.js'
+import { BaseInput } from './CommonStyles.js'
+import { Spacer } from './Spacer.js'
+import { wrapTip } from './Tip.js'
 
 type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
 
 export interface PlusMinusInputProps
   extends Omit<
-      React.HTMLProps<HTMLInputElement>,
-      'form' | 'placeholder' | 'onChange' | 'ref' | 'as'
-    > {
+    React.HTMLProps<HTMLInputElement>,
+    'form' | 'placeholder' | 'onChange' | 'ref' | 'as'
+  > {
   // Styling
   className?: string
   // Do not allow edit.

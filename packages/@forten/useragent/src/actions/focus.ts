@@ -1,5 +1,5 @@
-import { AsyncAction } from '../app'
-import { useragent_blur, useragent_focus } from '../types'
+import { AsyncAction } from '../app.js'
+import { useragent_blur, useragent_focus } from '../types.js'
 
 export interface FocusChangedArg {
   // set to true if current tab has focus

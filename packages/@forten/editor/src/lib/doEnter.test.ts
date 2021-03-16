@@ -1,7 +1,7 @@
 import { describe, expectOps, it } from 'test'
-import { doEnter } from './doEnter'
-import { caretSelection } from './utils/caretSelection'
-import { mockComposition, mockRef } from './utils/testUtils'
+import { doEnter } from './doEnter.js'
+import { caretSelection } from './utils/caretSelection.js'
+import { mockComposition, mockRef } from './utils/testUtils.js'
 
 const composition = mockComposition()
 

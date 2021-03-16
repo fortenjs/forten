@@ -1,5 +1,5 @@
 import { Setup } from '@forten/build'
-import { TreeConfig, TreeHooks, TreeSettings } from './types'
+import { TreeConfig, TreeHooks, TreeSettings } from './types.js'
 
 export const setup: Setup<TreeConfig, TreeSettings> = (config, settings) => {
   const definitions: TreeHooks = {}

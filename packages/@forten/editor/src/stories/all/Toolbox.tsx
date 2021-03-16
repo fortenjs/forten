@@ -1,8 +1,8 @@
 import { Stories } from '@forten/story'
 import { Overmind } from 'overmind'
 import * as React from 'react'
-import { Toolbox as component, ToolboxProps as Props } from '../..'
-import { Config, config } from '../helpers'
+import { Toolbox as component, ToolboxProps as Props } from '../../index.js'
+import { Config, config } from '../helpers.js'
 
 const wrapper = ({ children }: any) => (
   <div

@@ -1,6 +1,6 @@
-// import { setGlobalKey } from '../../App/helper/WindowEvents'
-import { CodeMirror } from './CodeMirror'
-import { ScrubCode, TranspileCallback } from './types'
+// import { setGlobalKey } from '../../App/helper/WindowEvents.js'
+import { CodeMirror } from './CodeMirror.js'
+import { ScrubCode, TranspileCallback } from './types.js'
 
 const worker = {
   //new Worker() //'build/codeWorker.js')
@@ -63,7 +63,7 @@ const ready: any = () => {
 WORKER_OPS['ready'] = { id: 'ready', callback: ready, source: '' }
 
 // Without worker
-// import { compile } from './codeWorker'
+// import { compile } from './codeWorker.js'
 
 interface CMOptions {
   lucidity: EditorLucidityOptions

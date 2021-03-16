@@ -1,7 +1,11 @@
 import { CommandEvent } from '@forten/shortcuts'
-import { sortedIds } from '..'
-import { Action } from '../app'
-import { CompositionHolder, ElementOptionsType, SelectionType } from '../lib'
+import { Action } from '../app.js'
+import { sortedIds } from '../index.js'
+import {
+  CompositionHolder,
+  ElementOptionsType,
+  SelectionType,
+} from '../lib/index.js'
 
 const CYCLE_a: ElementOptionsType['a'][] = ['l', 'c', 'r', 'j']
 

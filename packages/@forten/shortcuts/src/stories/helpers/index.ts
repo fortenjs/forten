@@ -5,8 +5,8 @@ import { IAction } from 'overmind'
 import { createHook } from 'overmind-react'
 import { FunctionComponent as Comp } from 'react'
 import styledComp from 'styled-components'
-import { shortcuts, ShortcutsSettings } from '../..'
-import * as actions from './actions'
+import { shortcuts, ShortcutsSettings } from '../../index.js'
+import * as actions from './actions/index.js'
 
 export { Comp, styledComp as styled }
 

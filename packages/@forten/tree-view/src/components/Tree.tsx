@@ -1,9 +1,10 @@
+import { unproxy } from '@forten/build'
 import { TreeType } from '@forten/tree-type'
 import * as React from 'react'
-import { Comp, styled, useOvermind } from '../app'
-import { TreeDrag } from '../types'
-import { NodeHeader } from './NodeHeader'
-import { Nodes } from './Nodes'
+import { Comp, styled, useOvermind } from '../app.js'
+import { TreeDrag } from '../types/index.js'
+import { NodeHeader } from './NodeHeader.js'
+import { Nodes } from './Nodes.js'
 
 export interface TreeProps<T = any> {
   className?: string
@@ -35,6 +36,7 @@ export const Tree: Comp<TreeProps> = ({
 
   const definition = ctx.state.tree.definitions()[tree.type]
   if (!definition) {
+    console.error(unproxy(tree))
     throw new Error(`Missing definition for tree type '${tree.type}'.`)
   }
   const NodeEdit: Comp<{ tree: TreeType; blockId: string; extraProps: any }> =

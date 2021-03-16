@@ -1,6 +1,9 @@
-import * as actions from './actions'
-import { ResizeArg } from './components'
-import { InspectorGroupProps, InspectorIconProps } from './components/Inspector'
+import * as actions from './actions/index.js'
+import { ResizeArg } from './components/index.js'
+import {
+  InspectorGroupProps,
+  InspectorIconProps,
+} from './components/Inspector/index.js'
 
 export interface IconSettings {
   [iconName: string]: any

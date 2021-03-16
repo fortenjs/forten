@@ -1,6 +1,6 @@
 import { TreeType } from '@forten/tree-type'
 import * as React from 'react'
-import { Comp, styled, useOvermind } from '../app'
+import { Comp, styled, useOvermind } from '../app.js'
 
 export interface NodeNameProps {
   className?: string

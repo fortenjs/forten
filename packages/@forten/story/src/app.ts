@@ -2,7 +2,7 @@ import { IAction } from 'overmind'
 import { createHook } from 'overmind-react'
 import { FunctionComponent as Comp } from 'react'
 import styled from 'styled-components'
-import { StoryConfig } from './'
+import { StoryConfig } from './index.js'
 
 export { Comp, styled }
 

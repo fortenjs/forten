@@ -1,5 +1,8 @@
-import { CodeEditor as component, CodeEditorProps as Props } from '../..'
-import { config, Stories } from '../helper'
+import {
+  CodeEditor as component,
+  CodeEditorProps as Props,
+} from '../../index.js'
+import { config, Stories } from '../helper.js'
 
 export const codeEditor: Stories<Props> = {
   name: 'CodeEditor',

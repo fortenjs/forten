@@ -1,9 +1,9 @@
 import { LocaleSettings } from '@forten/locale'
 import { ThemeSettings } from '@forten/theme'
-import { icons } from '../icons'
-import { styledTheme } from '../theme'
-import { StyledSettings } from '../types'
-import { locale } from './locale'
+import { icons } from '../icons.js'
+import { styledTheme } from '../theme.js'
+import { StyledSettings } from '../types.js'
+import { locale } from './locale/index.js'
 
 type Settings = LocaleSettings & StyledSettings & ThemeSettings
 

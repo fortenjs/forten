@@ -1,7 +1,7 @@
-import { rangeSelection } from '../helpers'
-import { closest } from '../helpers/closest'
-import { removeRange } from '../operations'
-import { isStringElement, Mutation } from '../types'
+import { closest } from '../helpers/closest.js'
+import { rangeSelection } from '../helpers/index.js'
+import { removeRange } from '../operations/index.js'
+import { isStringElement, Mutation } from '../types/index.js'
 
 export function collapseUp(m: Mutation, path: string[]) {
   const prev = closest(m, path, 'up', true)

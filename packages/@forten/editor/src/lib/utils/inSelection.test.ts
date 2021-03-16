@@ -1,8 +1,7 @@
 import { describe, expect, it } from 'test'
-
-import { inSelection } from './inSelection'
-import { rangeSelection } from './rangeSelection'
-import { mockComposition } from './testUtils'
+import { inSelection } from './inSelection.js'
+import { rangeSelection } from './rangeSelection.js'
+import { mockComposition } from './testUtils.js'
 
 const composition = mockComposition()
 

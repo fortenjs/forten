@@ -1,7 +1,7 @@
 import { derived } from 'overmind'
 import { createHook } from 'overmind-react'
-import { ThemeConfig } from './types'
 import { FunctionComponent as Comp } from 'react'
+import { ThemeConfig } from './types.js'
 export { Comp }
 
 export type Config = ThemeConfig

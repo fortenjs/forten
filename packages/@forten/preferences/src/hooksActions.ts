@@ -4,7 +4,7 @@ import {
   preferences_restore,
   preferences_restored,
   preferences_save,
-} from './types'
+} from './types.js'
 
 export const hooksActions = {
   [preferences_clear]: makeHook(preferences_clear),

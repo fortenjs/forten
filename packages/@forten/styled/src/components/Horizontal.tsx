@@ -1,4 +1,4 @@
-import { styled } from '../app'
+import { styled } from '../app.js'
 
 export const Horizontal = styled.div`
   display: flex;

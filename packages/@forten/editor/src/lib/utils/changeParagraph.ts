@@ -1,6 +1,6 @@
-import { caretSelection } from './caretSelection'
-import { getAtPath } from './getAtPath'
-import { getSiblings } from './getSiblings'
+import { caretSelection } from './caretSelection.js'
+import { getAtPath } from './getAtPath.js'
+import { getSiblings } from './getSiblings.js'
 import {
   ChangesType,
   ChangeType,
@@ -9,7 +9,7 @@ import {
   ElementType,
   ParagraphPayload,
   SelectionType,
-} from './types'
+} from './types.js'
 
 export function changeParagraph(
   composition: CompositionType,

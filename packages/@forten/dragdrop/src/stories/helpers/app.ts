@@ -1,7 +1,7 @@
 import { IAction } from 'overmind'
 import { createHook } from 'overmind-react'
-import { DragdropConfig } from '../../types'
-export { Comp, styled } from '../../app'
+import { DragdropConfig } from '../../types.js'
+export { Comp, styled } from '../../app.js'
 
 export interface TestConfig {
   state: {

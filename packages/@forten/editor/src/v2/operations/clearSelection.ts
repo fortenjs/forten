@@ -1,6 +1,6 @@
-import { anchorElement } from '../helpers'
-import { runHooks } from '../hooks'
-import { Mutation } from '../types'
+import { anchorElement } from '../helpers/index.js'
+import { runHooks } from '../hooks/index.js'
+import { Mutation } from '../types/index.js'
 
 export function clearSelection(m: Mutation) {
   const { comp } = m

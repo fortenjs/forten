@@ -1,10 +1,10 @@
 import { Setup } from '@forten/build'
-import { makeSave } from './actions/makeSave'
+import { makeSave } from './actions/makeSave.js'
 import {
   PreferencesConfig,
   PreferencesPaths,
   PreferencesSettings,
-} from './types'
+} from './types.js'
 
 export const setup: Setup<PreferencesConfig, PreferencesSettings> = (
   config,

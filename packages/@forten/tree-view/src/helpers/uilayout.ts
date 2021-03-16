@@ -1,5 +1,5 @@
-import { UIBaseLayoutType, UILayoutType } from '../types'
-import { getTextSizeCanvas } from './getTextSizeCanvas'
+import { UIBaseLayoutType, UILayoutType } from '../types/index.js'
+import { getTextSizeCanvas } from './getTextSizeCanvas.js'
 
 /** Some constants for graph layout.
  * These could live in a settings object when
@@ -75,8 +75,9 @@ export function UILayout(o?: Object): UILayoutType {
   )
   res.SUBPADX = 2 * res.GRIDH
   res.SCLICKH = Math.min(res.SCLICKW, res.HEIGHT)
-  const click = `M0 0 h${6 * res.ARROW} v${res.HEIGHT} h${-6 *
-    res.ARROW} v${-res.HEIGHT}`
+  const click = `M0 0 h${6 * res.ARROW} v${res.HEIGHT} h${
+    -6 * res.ARROW
+  } v${-res.HEIGHT}`
   res.ARROW_OPEN.path = arrow(res, true)
   res.ARROW_OPEN.click = click
   res.ARROW_CLOSED.path = arrow(res, false)

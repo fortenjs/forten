@@ -1,8 +1,8 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { Comp, useOvermind } from '../app'
-import { Icon } from './Icon'
-import { Tip } from './Tip'
+import { Comp, useOvermind } from '../app.js'
+import { Icon } from './Icon.js'
+import { Tip } from './Tip.js'
 
 export interface TooltipsProps {
   className?: string

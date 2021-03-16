@@ -1,16 +1,15 @@
-import { CompositionType, isGroupElement } from '../lib'
+import { CompositionType, isGroupElement } from '../lib/index.js'
+import { getAtPath } from '../lib/utils/getAtPath.js'
+import { getNeighbours } from '../lib/utils/getNeighbours.js'
 import {
   CompositionWrapper,
   GroupElementType,
-  ProcessOpsArgs,
-  SelectOperationType,
   isCustomElement,
   isRangeSelection,
   isStringElement,
-} from '../lib/utils/types'
-
-import { getAtPath } from '../lib/utils/getAtPath'
-import { getNeighbours } from '../lib/utils/getNeighbours'
+  ProcessOpsArgs,
+  SelectOperationType,
+} from '../lib/utils/types.js'
 
 function getParent(
   composition: CompositionType,

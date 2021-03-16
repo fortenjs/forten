@@ -1,5 +1,5 @@
-import { styled, theme } from '../../app'
-import { Resizable } from '../Resizable'
+import { styled, theme } from '../../app.js'
+import { Resizable } from '../Resizable.js'
 
 export const InspectorWidget = styled.div`
   display: flex;

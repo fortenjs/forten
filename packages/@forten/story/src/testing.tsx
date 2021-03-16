@@ -1,14 +1,13 @@
 import * as React from 'react'
 // @ts-ignore
 import * as renderer from 'react-test-renderer'
+import { StoryDisplay } from './components/StoryDisplay.js'
+import { RenderOptions, StoriesDict } from './index.js'
+import { Stories, Story } from './types.js'
 
 if (process.env.NODE_ENV === 'test') {
   require('jest-styled-components')
 }
-
-import { RenderOptions, StoriesDict } from './'
-import { StoryDisplay } from './components/StoryDisplay'
-import { Stories, Story } from './types'
 
 declare var describe: any
 declare var it: any

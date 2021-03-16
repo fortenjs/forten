@@ -1,8 +1,8 @@
+import { config, Stories } from '../helpers.js'
 import {
   ShowMessage as component,
   ShowMessageProps as Props,
-} from '../helpers/ShowMessage'
-import { config, Stories } from '../helpers'
+} from '../helpers/ShowMessage.js'
 
 export const simpleStories: Stories<Props> = {
   name: 'Show shorcuts',

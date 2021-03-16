@@ -1,6 +1,6 @@
 import { Hook } from '@forten/hooks'
-import * as actions from './actions'
-import { hooksActions } from './hooksActions'
+import * as actions from './actions/index.js'
+import { hooksActions } from './hooksActions.js'
 
 export const locale_set = 'locale_set'
 

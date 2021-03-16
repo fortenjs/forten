@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { RenderOptions } from '..'
-import { Comp, styled } from '../app'
-import { Stories } from '../types'
-import { StoryGroup } from './StoryGroup'
+import { Comp, styled } from '../app.js'
+import { RenderOptions } from '../index.js'
+import { Stories } from '../types.js'
+import { StoryGroup } from './StoryGroup.js'
 
 interface StoryRouterProps {
   className?: string

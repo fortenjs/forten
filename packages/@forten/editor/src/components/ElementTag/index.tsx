@@ -1,22 +1,20 @@
+import { IReactComponent } from 'overmind-react'
 import * as React from 'react'
-
-import { Comp, useOvermind } from '../../app'
+import { Comp, useOvermind } from '../../app.js'
+import { getAtPath } from '../../lib/utils/getAtPath.js'
 import {
   CompositionHolder,
   isCustomElement,
   isDocumentTitle,
   isGroupElement,
   isStringElement,
-} from '../../lib/utils/types'
+} from '../../lib/utils/types.js'
+import { EditorProps } from '../Editor.js'
+import { CustomTag } from './CustomTag.js'
+import { GroupTag } from './GroupTag.js'
+import { StringTag } from './StringTag.js'
 
-import { CustomTag } from './CustomTag'
-import { EditorProps } from '../Editor'
-import { GroupTag } from './GroupTag'
-import { IReactComponent } from 'overmind-react'
-import { StringTag } from './StringTag'
-import { getAtPath } from '../../lib/utils/getAtPath'
-
-export { BarIcon } from './DragBar'
+export { BarIcon } from './DragBar.js'
 
 export interface ElementTagProps {
   // Composition id (when displaying a full composition).

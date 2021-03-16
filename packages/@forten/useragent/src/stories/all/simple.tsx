@@ -1,6 +1,6 @@
 import { Icon } from '@forten/styled'
 import * as React from 'react'
-import { Comp, config, Stories, styled, useOvermind } from '../helper'
+import { Comp, config, Stories, styled, useOvermind } from '../helper.js'
 
 const Wrapper = styled.div`
   padding: 5px;

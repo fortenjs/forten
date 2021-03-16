@@ -1,7 +1,7 @@
 import { IAction } from 'overmind'
-import { describe, expect, it } from 'test'
-import { Block, build, Reference, reference, resolve } from './'
 import Simple from 'simple-mock'
+import { describe, expect, it } from 'test'
+import { Block, build, Reference, reference, resolve } from './index.js'
 
 interface Foo {
   foo: string

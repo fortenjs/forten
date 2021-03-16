@@ -1,5 +1,5 @@
-import { GetTextSizeType } from './GetTextSizeType'
-import { UIArrowType } from './UINodeType'
+import { GetTextSizeType } from './GetTextSizeType.js'
+import { UIArrowType } from './UINodeType.js'
 
 export interface UIBaseLayoutType {
   GRIDH: number

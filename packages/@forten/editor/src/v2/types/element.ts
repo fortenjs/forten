@@ -1,5 +1,5 @@
-import { ParagraphOptions } from './options'
-import { Selection } from './selection'
+import { ParagraphOptions } from './options.js'
+import { Selection } from './selection.js'
 
 export type TypeName = 'P' | 'A' | 'E' | 'T' | 'B' | 'I' | 'B+I'
 export const TYPES: TypeName[] = ['P', 'A', 'E', 'T', 'B', 'I', 'B+I']

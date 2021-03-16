@@ -1,12 +1,12 @@
 import { Block, build, settings } from '@forten/build'
-import { dragdrop, DragdropSettings } from '../..'
-import { DragTransform } from '../../types'
-import { Action, TestConfig } from './app'
-import { Doc, DocDrag, Name, NameDrag } from './Doc'
+import { dragdrop, DragdropSettings } from '../../index.js'
+import { DragTransform } from '../../types.js'
+import { Action, TestConfig } from './app.js'
+import { Doc, DocDrag, Name, NameDrag } from './Doc.js'
 
-export * from './app'
-export * from './Doc'
-export * from './Group'
+export * from './app.js'
+export * from './Doc.js'
+export * from './Group.js'
 
 const showPayload: Action<any> = (_, value) => {
   alert(`showPayload: ${JSON.stringify(value)}`)

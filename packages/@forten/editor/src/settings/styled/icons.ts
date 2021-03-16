@@ -1,14 +1,17 @@
-import { IconDefinition, library } from '@fortawesome/fontawesome-svg-core'
-import { faParagraph } from '@fortawesome/free-solid-svg-icons/faParagraph'
-import { faVideo } from '@fortawesome/free-solid-svg-icons/faVideo'
-import { faPenAlt } from '@fortawesome/free-solid-svg-icons/faPenAlt'
-import { faUndo } from '@fortawesome/free-solid-svg-icons/faUndo'
-import { faRedo } from '@fortawesome/free-solid-svg-icons/faRedo'
-import { faAlignJustify } from '@fortawesome/free-solid-svg-icons/faAlignJustify'
-import { faAlignLeft } from '@fortawesome/free-solid-svg-icons/faAlignLeft'
-import { faAlignCenter } from '@fortawesome/free-solid-svg-icons/faAlignCenter'
-import { faAlignRight } from '@fortawesome/free-solid-svg-icons/faAlignRight'
-import { faColumns } from '@fortawesome/free-solid-svg-icons/faColumns'
+import {
+  IconDefinition,
+  library,
+} from '@fortawesome/fontawesome-svg-core/index.js'
+import { faAlignCenter } from '@fortawesome/free-solid-svg-icons/faAlignCenter.js'
+import { faAlignJustify } from '@fortawesome/free-solid-svg-icons/faAlignJustify.js'
+import { faAlignLeft } from '@fortawesome/free-solid-svg-icons/faAlignLeft.js'
+import { faAlignRight } from '@fortawesome/free-solid-svg-icons/faAlignRight.js'
+import { faColumns } from '@fortawesome/free-solid-svg-icons/faColumns.js'
+import { faParagraph } from '@fortawesome/free-solid-svg-icons/faParagraph.js'
+import { faPenAlt } from '@fortawesome/free-solid-svg-icons/faPenAlt.js'
+import { faRedo } from '@fortawesome/free-solid-svg-icons/faRedo.js'
+import { faUndo } from '@fortawesome/free-solid-svg-icons/faUndo.js'
+import { faVideo } from '@fortawesome/free-solid-svg-icons/faVideo.js'
 
 export const icons: { [key: string]: IconDefinition } = {
   P: faParagraph,

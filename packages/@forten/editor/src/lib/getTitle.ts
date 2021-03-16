@@ -1,4 +1,4 @@
-import { CompositionType, StringElementType } from './utils/types'
+import { CompositionType, StringElementType } from './utils/types.js'
 
 export function getTitleElem(
   composition: CompositionType

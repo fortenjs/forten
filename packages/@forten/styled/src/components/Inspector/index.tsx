@@ -1,10 +1,10 @@
 import * as React from 'react'
-import { Comp, styled, theme } from '../../app'
-import { Children } from '../Children'
-import { ScrollDiv } from '../ScrollDiv'
-export * from './InspectorGroup'
-export * from './InspectorIcon'
-export * from './InspectorWidget'
+import { Comp, styled, theme } from '../../app.js'
+import { Children } from '../Children.js'
+import { ScrollDiv } from '../ScrollDiv.js'
+export * from './InspectorGroup.js'
+export * from './InspectorIcon.js'
+export * from './InspectorWidget.js'
 
 const Wrap = styled(ScrollDiv)`
   min-width: ${theme.inspectorWidth};
