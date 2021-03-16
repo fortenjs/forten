@@ -19,7 +19,7 @@ export const tree: Stories<Props> = {
       component,
       props: ctx => ({
         tree: ctx.state.test.graph,
-        nodeId: 'bazId',
+        blockId: 'bazId',
       }),
     },
     /*

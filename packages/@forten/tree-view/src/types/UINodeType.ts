@@ -110,6 +110,6 @@ export interface UINodeType {
 }
 
 export interface UIDropType {
-  nodeId: string
+  blockId: string
   slotId: number
 }

@@ -1,12 +1,12 @@
 import { TreeType } from '@forten/tree-type'
 import * as React from 'react'
 import { Comp, styled, useOvermind } from '../app'
-import { NodeName } from './NodeName'
+import { BlockName } from './BlockName'
 
 export interface NodeHeaderProps {
   className?: string
   tree: TreeType
-  nodeId: string
+  blockId: string
 }
 
 const Wrapper = styled.div`
@@ -20,12 +20,12 @@ const Wrapper = styled.div`
 export const NodeHeader: Comp<NodeHeaderProps> = ({
   className,
   tree,
-  nodeId,
+  blockId,
 }) => {
   useOvermind()
   return (
     <Wrapper className={className}>
-      <NodeName tree={tree} nodeId={nodeId} />
+      <BlockName tree={tree} blockId={blockId} />
     </Wrapper>
   )
 }

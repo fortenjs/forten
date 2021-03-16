@@ -1,12 +1,17 @@
 import { Reference } from '@forten/build'
-import { TreeType } from '@forten/tree-type'
+import { BlockDefinition, TreeType } from '@forten/tree-type'
+
+export interface LibraryDrag {
+  treeType: string
+  block: BlockDefinition
+}
 
 export interface TreeDrag {
   // A reference to the original graph where the drag operation started.
   origin: Reference<TreeType>
   // The dragged branch (sub-graph)
   tree: TreeType
-  nodeId: string
+  blockId: string
 }
 
 export interface TreeDrop {
@@ -15,7 +20,7 @@ export interface TreeDrop {
 }
 
 export interface DropTargetInfo {
-  nodeId: string
+  blockId: string
   slotIdx: number
 }
 

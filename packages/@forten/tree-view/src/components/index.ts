@@ -1,6 +1,6 @@
+export * from './BlockName'
 export * from './DropTarget'
 export * from './Library'
 export * from './Node'
-export * from './NodeName'
 export * from './Nodes'
 export * from './Tree'

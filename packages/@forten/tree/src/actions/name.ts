@@ -3,16 +3,16 @@ import { Action } from '../app'
 
 export interface SetNameArg {
   name: string
-  nodeId: string
+  blockId: string
   tree: TreeType
   done?: boolean
 }
 
 export const setName: Action<SetNameArg> = (ctx, arg) => {
-  const { done, name, nodeId, tree } = arg
+  const { done, name, blockId, tree } = arg
   if (done) {
-    tree.selected = { id: nodeId, editName: false }
+    tree.selected = { id: blockId, editName: false }
   }
-  tree.blocks[nodeId].name = name
+  tree.blocks[blockId].name = name
   ctx.actions.tree.changed({ tree })
 }

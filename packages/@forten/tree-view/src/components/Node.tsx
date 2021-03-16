@@ -28,7 +28,7 @@ export interface NodeProps {
   noDrop?: boolean
 }
 
-const makeSlot = (nodeId: string, slot: UISlotType, sclick: any) => {
+const makeSlot = (blockId: string, slot: UISlotType, sclick: any) => {
   const flags = slot.flags
   const { x, y } = slot.pos
   const klass = ['slot', ...Object.keys(flags)].join(' ')
@@ -43,7 +43,7 @@ const makeSlot = (nodeId: string, slot: UISlotType, sclick: any) => {
   return (
     <g key={slot.idx} transform={transform}>
       {spath}
-      <g className="sclick" data-nodeid={nodeId} data-slotidx={slot.idx}>
+      <g className="sclick" data-blockid={blockId} data-slotidx={slot.idx}>
         <path
           d={slot.click}
           onClick={e => sclick(e, slot.idx)}
@@ -79,7 +79,7 @@ export const Node: Comp<NodeProps> = React.memo(({ tree, uinode, noDrop }) => {
     e.stopPropagation()
 
     ctx.actions.tree.setClosed({
-      nodeId: uinode.id,
+      blockId: uinode.id,
       tree,
       closed: !uinode.closed,
     })
@@ -97,7 +97,7 @@ export const Node: Comp<NodeProps> = React.memo(({ tree, uinode, noDrop }) => {
   const uiArrow = uinode.arrow
 
   const onClick = () =>
-    ctx.actions.tree.selectNode({ tree, id: uinode.id, editName: false })
+    ctx.actions.tree.selectBlock({ tree, id: uinode.id, editName: false })
   const dragProps = noDrop
     ? {}
     : tree.entry === uinode.id
@@ -110,7 +110,7 @@ export const Node: Comp<NodeProps> = React.memo(({ tree, uinode, noDrop }) => {
           origin: reference(tree),
           // Dummy value replaced in 'start' hook.
           tree: DUMMY_GRAPH,
-          nodeId: uinode.id,
+          blockId: uinode.id,
         },
         enable: uinode.className !== 'main',
         onClick,

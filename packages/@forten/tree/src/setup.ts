@@ -23,7 +23,7 @@ export const setup: Setup<TreeConfig, TreeSettings> = (config, settings) => {
         contentComponent,
         newBlock,
         treeChanged,
-        selectNode,
+        selectBlock,
       } = setting
 
       if (contentComponent) {
@@ -32,8 +32,8 @@ export const setup: Setup<TreeConfig, TreeSettings> = (config, settings) => {
       if (newBlock) {
         definition.newBlock = newBlock
       }
-      if (selectNode) {
-        definition.selectNode.push(selectNode)
+      if (selectBlock) {
+        definition.selectNode.push(selectBlock)
       }
       if (treeChanged) {
         definition.treeChanged.push(treeChanged)

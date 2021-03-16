@@ -14,7 +14,7 @@ export const KEY_ACTIONS: {
   ArrowUp(ctx, tree, _, parentId) {
     if (parentId) {
       // select parent
-      ctx.actions.tree.selectNode({
+      ctx.actions.tree.selectBlock({
         id: parentId,
         tree,
         editName: false,
@@ -32,7 +32,7 @@ export const KEY_ACTIONS: {
       const child = block.children.find(id => id !== null)
       if (child) {
         // select child
-        ctx.actions.tree.selectNode({
+        ctx.actions.tree.selectBlock({
           id: child,
           tree,
           editName: false,
@@ -61,7 +61,7 @@ export const KEY_ACTIONS: {
         const child = children.find((id, i) => id !== null && i < idx)
         if (child) {
           // select sibling
-          ctx.actions.tree.selectNode({
+          ctx.actions.tree.selectBlock({
             id: child,
             tree,
             editName: false,
@@ -91,7 +91,7 @@ export const KEY_ACTIONS: {
         const child = block.children.find((id, i) => id !== null && i > idx)
         if (child) {
           // select sibling
-          ctx.actions.tree.selectNode({
+          ctx.actions.tree.selectBlock({
             id: child,
             tree,
             editName: false,
@@ -101,20 +101,20 @@ export const KEY_ACTIONS: {
     }
   },
   Enter(ctx, tree, selected) {
-    ctx.actions.tree.selectNode({
-      id: selected.id,
+    ctx.actions.tree.selectBlock({
       tree,
+      id: selected.id,
       editName: !selected.editName,
     })
   },
   Backspace(ctx, tree, selected, parentId) {
     if (parentId) {
-      ctx.actions.tree.remove({ tree, nodeId: selected.id })
+      ctx.actions.tree.remove({ tree, blockId: selected.id })
     }
   },
   Delete(ctx, tree, selected, parentId) {
     if (parentId) {
-      ctx.actions.tree.remove({ tree, nodeId: selected.id })
+      ctx.actions.tree.remove({ tree, blockId: selected.id })
     }
   },
   /*
@@ -132,7 +132,7 @@ export const KEY_ACTIONS: {
   [' ']: (ctx, tree, selected) => {
     ctx.actions.tree.setClosed({
       tree,
-      nodeId: selected.id,
+      blockId: selected.id,
       closed: !tree.blocks[selected.id].closed,
     })
   },

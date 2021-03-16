@@ -14,13 +14,13 @@ function remap(blocks: TreeType['blocks'], map: IdMap, id: string): string {
 /* FIXM: test duplicate id in branch and tree. */
 export function appendGraph(
   tree: TreeType,
-  nodeId: string,
+  blockId: string,
   slotIdx: number,
   branch: TreeType
 ): string {
-  const node = tree.blocks[nodeId]
+  const node = tree.blocks[blockId]
   if (!node) {
-    throw new Error(`Cannot append (nodeId '${nodeId}' not in tree).`)
+    throw new Error(`Cannot append (blockId '${blockId}' not in tree).`)
   }
   const map: IdMap = {}
   const { children } = node

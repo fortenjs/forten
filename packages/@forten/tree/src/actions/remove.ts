@@ -4,15 +4,17 @@ import { cutBranch } from '../helpers'
 
 export interface RemoveArg {
   tree: TreeType
-  nodeId: string
+  blockId: string
 }
 
 export const remove: Action<RemoveArg> = (ctx, arg) => {
-  const { tree, nodeId } = arg
+  const { tree, blockId } = arg
   // Create a sub-tree
-  const { trunc, cut, parentId } = cutBranch(tree, nodeId)
+  const { trunc, cut, parentId } = cutBranch(tree, blockId)
   if (!cut) {
-    throw new Error(`Invalid operation, cannot cut tree at nodeId '${nodeId}'.`)
+    throw new Error(
+      `Invalid operation, cannot cut tree at blockId '${blockId}'.`
+    )
   }
   Object.assign(tree, trunc)
   delete tree.selected

@@ -58,9 +58,9 @@ function grabBlocks(
 
 export function cutBranch(
   branch: BranchDefinition,
-  nodeId: string
+  blockId: string
 ): GrabResult {
-  if (nodeId === branch.entry) {
+  if (blockId === branch.entry) {
     // Just make a copy
     const id = makeId(branch.blocks)
     const cut: BranchDefinition = Object.assign(
@@ -80,5 +80,5 @@ export function cutBranch(
       cut,
     }
   }
-  return grabBlocks(branch, branch.entry, nodeId, {})
+  return grabBlocks(branch, branch.entry, blockId, {})
 }

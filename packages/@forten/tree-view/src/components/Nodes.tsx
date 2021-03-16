@@ -14,7 +14,7 @@ export interface NodesProps {
   // Prevent dragged element as behaving like a drop zone.
   noDrop?: boolean
   // Only draw part of the Tree
-  nodeId?: string
+  blockId?: string
 }
 
 const Wrapper = styled.div`
@@ -78,13 +78,13 @@ export const Nodes: Comp<NodesProps> = React.memo(
     const transform = `scale(1.0)` // ${$scale})`
 
     const uidropnode = dropTarget
-      ? uitree.uiNodeById[dropTarget.nodeId]
+      ? uitree.uiNodeById[dropTarget.blockId]
       : undefined
     if (dropTarget && !uidropnode) {
       console.log(
-        `Invalid droptarget nodeId ?? ${
+        `Invalid droptarget blockId ?? ${
           // @ts-ignore
-          dropTarget.nodeId
+          dropTarget.blockId
         }: not present in tree nodes [${Object.keys(uitree.uiNodeById).join(
           ' ,'
         )}].`
@@ -106,7 +106,11 @@ export const Nodes: Comp<NodesProps> = React.memo(
           action(ctx, tree, selected, uinode.parent, e)
         } else {
           // select root
-          ctx.actions.tree.selectNode({ id: tree.entry, tree, editName: false })
+          ctx.actions.tree.selectBlock({
+            id: tree.entry,
+            tree,
+            editName: false,
+          })
         }
       } else {
         // console.log(e.key)

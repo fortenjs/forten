@@ -5,13 +5,13 @@ import { Comp, styled, useOvermind } from '../app'
 export interface NodeNameProps {
   className?: string
   tree: TreeType
-  nodeId: string
+  blockId: string
 }
 
 interface NodeRenameProps {
   className?: string
   tree: TreeType
-  nodeId: string
+  blockId: string
 }
 
 const Wrapper = styled.div`
@@ -41,9 +41,9 @@ const MyInput = styled.input`
   }
 `
 
-const NodeRename: Comp<NodeRenameProps> = ({ className, nodeId, tree }) => {
+const BlockRename: Comp<NodeRenameProps> = ({ className, blockId, tree }) => {
   const ctx = useOvermind()
-  const block = tree.blocks[nodeId]
+  const block = tree.blocks[blockId]
   const [oldValue] = React.useState<string>(block.name)
 
   function onKeyDown(e: React.KeyboardEvent) {
@@ -52,7 +52,7 @@ const NodeRename: Comp<NodeRenameProps> = ({ className, nodeId, tree }) => {
       case 'Escape':
         ctx.actions.tree.setName({
           tree,
-          nodeId,
+          blockId,
           name: oldValue,
           done: true,
         })
@@ -60,7 +60,7 @@ const NodeRename: Comp<NodeRenameProps> = ({ className, nodeId, tree }) => {
       case 'Enter':
         ctx.actions.tree.setName({
           tree,
-          nodeId,
+          blockId,
           name: target.value,
           done: true,
         })
@@ -69,7 +69,7 @@ const NodeRename: Comp<NodeRenameProps> = ({ className, nodeId, tree }) => {
       case 'Tab':
         ctx.actions.tree.setName({
           tree,
-          nodeId,
+          blockId,
           name: target.value,
           done: true,
         })
@@ -88,7 +88,7 @@ const NodeRename: Comp<NodeRenameProps> = ({ className, nodeId, tree }) => {
         const target = e.target as HTMLInputElement
         ctx.actions.tree.setName({
           tree,
-          nodeId,
+          blockId,
           name: target.value,
         })
       }}
@@ -96,25 +96,25 @@ const NodeRename: Comp<NodeRenameProps> = ({ className, nodeId, tree }) => {
   )
 }
 
-export const NodeName: Comp<NodeNameProps> = ({ nodeId, tree }) => {
+export const BlockName: Comp<NodeNameProps> = ({ blockId, tree }) => {
   const ctx = useOvermind()
   const rename = tree.selected && tree.selected.editName
-  const block = tree.blocks[nodeId]
+  const block = tree.blocks[blockId]
   const onClick = rename
     ? undefined
     : (e: React.MouseEvent<HTMLDivElement>) => {
         e.stopPropagation()
         e.preventDefault()
-        ctx.actions.tree.selectNode({
+        ctx.actions.tree.selectBlock({
           tree,
-          id: nodeId,
+          id: blockId,
           editName: true,
         })
       }
   return (
     <Wrapper onClick={onClick}>
       {rename ? (
-        <NodeRename tree={tree} nodeId={nodeId} />
+        <BlockRename tree={tree} blockId={blockId} />
       ) : (
         <Name>{block.name}</Name>
       )}

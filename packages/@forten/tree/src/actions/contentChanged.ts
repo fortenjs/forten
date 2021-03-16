@@ -3,7 +3,7 @@ import { Action } from '../app'
 
 export interface ContentChangedArg {
   tree: TreeType
-  nodeId: string
+  blockId: string
   previousContent: any
 }
 

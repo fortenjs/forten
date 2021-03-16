@@ -2,15 +2,15 @@ import { TreeType } from '@forten/tree-type'
 import { Action } from '../app'
 
 export interface SetContentArg {
-  nodeId: string
+  blockId: string
   tree: TreeType
   // FIXME: how to make this generic ?
   content: any
 }
 
 export const setContent: Action<SetContentArg> = (ctx, arg) => {
-  const { content, nodeId, tree } = arg
-  const previousContent = tree.blocks[nodeId].content
-  tree.blocks[nodeId].content = content
-  ctx.actions.tree.contentChanged({ tree, nodeId, previousContent })
+  const { content, blockId, tree } = arg
+  const previousContent = tree.blocks[blockId].content
+  tree.blocks[blockId].content = content
+  ctx.actions.tree.contentChanged({ tree, blockId, previousContent })
 }

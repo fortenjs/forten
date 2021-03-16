@@ -1,8 +1,8 @@
-import { reference, resolve } from '@forten/build'
+import { reference, resolve, unproxy } from '@forten/build'
 import { DragdropHooks } from '@forten/dragdrop'
 import { cutBranch, newTree } from '@forten/tree'
 import { Context } from '../../../app'
-import { LibraryElement, TreeDrag } from '../../../types'
+import { LibraryDrag, TreeDrag } from '../../../types'
 
 export const start: DragdropHooks['start'] = (ctx: Context) => {
   const { state } = ctx
@@ -10,14 +10,14 @@ export const start: DragdropHooks['start'] = (ctx: Context) => {
   if (!drag) {
     return
   }
-  if (drag.payload.library) {
-    const lib: LibraryElement = drag.payload.library
-    const tree = newTree(lib.type, { name: lib.name, content: lib.content })
-    ctx.state.treeView.libraryTree = tree
+  if (drag.payload.block) {
+    const lib: LibraryDrag = drag.payload
+    const tree = newTree(lib.treeType, unproxy(lib.block))
+    ctx.state.treeView.dragTree = tree
     const newPayload: TreeDrag = {
-      origin: reference(ctx.state.treeView.libraryTree),
+      origin: reference(ctx.state.treeView.dragTree),
       tree,
-      nodeId: tree.entry,
+      blockId: tree.entry,
     }
     drag.payload = newPayload
   }
@@ -28,10 +28,10 @@ export const start: DragdropHooks['start'] = (ctx: Context) => {
     return
   }
   // Create a sub-tree
-  const { trunc, cut, slotIdx, parentId } = cutBranch(origin, payload.nodeId)
+  const { trunc, cut, slotIdx, parentId } = cutBranch(origin, payload.blockId)
   if (!cut) {
     throw new Error(
-      `Invalid operation, cannot cut tree at nodeId '${payload.nodeId}'.`
+      `Invalid operation, cannot cut tree at blockId '${payload.blockId}'.`
     )
   }
   // Change original graph in place.
@@ -41,7 +41,7 @@ export const start: DragdropHooks['start'] = (ctx: Context) => {
 
   Object.assign(origin, trunc)
   if (parentId && slotIdx !== undefined) {
-    const uinode = uigraph.uiNodeById[payload.nodeId]
+    const uinode = uigraph.uiNodeById[payload.blockId]
     if (uinode) {
       origin.lock = { parentId, slotIdx, width: uinode.size.w }
     }

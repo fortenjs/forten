@@ -113,7 +113,7 @@ function boxPosition(
     uigraph.slots.push({
       x: slot.pos.x + ctx.x,
       y: slot.pos.y + ctx.y,
-      nodeId: blockId,
+      blockId: blockId,
       slotIdx: slot.idx,
     })
   })

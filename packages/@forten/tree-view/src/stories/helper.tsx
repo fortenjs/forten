@@ -24,16 +24,16 @@ const MyArea = styled.textarea`
 
 const contentComponent: Comp<{
   tree: TreeType<{ source: string }>
-  nodeId: string
-}> = ({ tree, nodeId }) => {
+  blockId: string
+}> = ({ tree, blockId }) => {
   const ctx = useOvermind()
-  const content = tree.blocks[nodeId].content
+  const content = tree.blocks[blockId].content
   return (
     <MyArea
       value={content.source}
       onChange={e => {
         const source = e.target.value
-        ctx.actions.tree.setContent({ tree, nodeId, content: { source } })
+        ctx.actions.tree.setContent({ tree, blockId, content: { source } })
       }}
     />
   )

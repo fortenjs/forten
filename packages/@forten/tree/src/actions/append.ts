@@ -12,7 +12,7 @@ export interface AppendArg {
 
   // Target
   target: Reference<TreeType>
-  nodeId: string
+  blockId: string
   slotIdx: number
 }
 
@@ -32,7 +32,7 @@ export const append: Action<AppendArg> = (ctx, arg) => {
     ctx.actions.tree.changed({ tree: origin })
   }
 
-  const { tree, nodeId, slotIdx } = arg
-  appendGraph(target, nodeId, slotIdx, tree)
+  const { tree, blockId, slotIdx } = arg
+  appendGraph(target, blockId, slotIdx, tree)
   ctx.actions.tree.changed({ tree: target })
 }

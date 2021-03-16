@@ -1,9 +1,10 @@
 import { draggable } from '@forten/dragdrop'
 import { Icon, Resizable } from '@forten/styled'
-import { darken } from 'polished'
+import classnames from 'classnames'
 import * as React from 'react'
 import { Comp, css, styled, useOvermind } from '../app'
 import { colorName, indices, pfill } from '../helpers'
+import { LibraryDrag } from '../types'
 
 export interface LibraryProps {
   className?: string
@@ -57,11 +58,18 @@ const Scroller = styled.div`
 const Element = styled.div`
   cursor: pointer;
   font-size: 0.8rem;
+  opacity: 0.85;
+  &.unselected {
+    opacity: 0.6;
+  }
+  &.selected {
+    opacity: 1;
+  }
   ${indices
     .map(
       paletteIdx => css`
         &.box${paletteIdx} {
-          background: ${darken(0.2, pfill(paletteIdx))};
+          background: ${pfill(paletteIdx)};
         }
       `
     )
@@ -99,7 +107,11 @@ export const Library: Comp<LibraryProps> = ({ className }) => {
     el.addEventListener('mousewheel', scrollStop)
     el.addEventListener('DOMMouseScroll', scrollStop)
   }
-  const elements = ctx.state.treeView.library
+  const tree = ctx.state.treeView.library
+  const blocks = Object.values(tree.blocks)
+    // root should not be shown as list of blocks
+    .filter(block => block.id !== tree.entry)
+    .sort((a, b) => (a.name < b.name ? -1 : 1))
   return (
     <Wrapper className={className} name="library" type="width">
       <Search>
@@ -107,17 +119,26 @@ export const Library: Comp<LibraryProps> = ({ className }) => {
       </Search>
       <Scroller ref={setupScroll as any}>
         <List>
-          {elements.map(el => (
+          {blocks.map(block => (
             <Element
-              key={el.name}
-              className={colorName(el.name)}
-              {...draggable(ctx, {
-                className: colorName(el.name),
+              key={block.name}
+              {...draggable<LibraryDrag>(ctx, {
+                className: classnames(colorName(block.name), {
+                  selected: block.id === tree.selected?.id,
+                  unselected: tree.selected && block.id !== tree.selected.id,
+                }),
                 drag: 'tree',
-                payload: { library: el },
+                payload: { block, treeType: tree.type },
+                onClick: () => {
+                  ctx.actions.tree.selectBlock({
+                    id: block.id,
+                    tree,
+                    editName: false,
+                  })
+                },
               })}
             >
-              {el.name}
+              {block.name}
             </Element>
           ))}
         </List>

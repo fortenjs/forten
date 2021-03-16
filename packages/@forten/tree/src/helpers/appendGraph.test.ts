@@ -55,7 +55,7 @@ describe('appendGraph', () => {
       ['bing', []],
     ])
     expect(() => appendGraph(graph, 'doom', 1, branch)).toThrow(
-      `Cannot append (nodeId 'doom' not in tree).`
+      `Cannot append (blockId 'doom' not in tree).`
     )
   })
 })

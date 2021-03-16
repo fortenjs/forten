@@ -1,12 +1,12 @@
 import { TreeType } from '@forten/tree-type'
 import * as actions from './actions'
-import { AddArg, SelectNodeArg } from './actions'
+import { AddArg, selectBlockArg } from './actions'
 
 export const tree_selectNode = 'tree_selectNode'
 export const tree_treeChanged = 'tree_treeChanged'
 
 export interface TreeConnectArg {
-  nodeId: string
+  blockId: string
   slotIdx: number
   tree: TreeType
 }
@@ -16,15 +16,15 @@ export interface TreeChangedHook {
 }
 
 export interface TreeContentChangedHook<T> {
-  (ctx: any, arg: { tree: TreeType; nodeId: string; previousContent: T }): void
+  (ctx: any, arg: { tree: TreeType; blockId: string; previousContent: T }): void
 }
 
 export interface NewBlockHook<T> {
   (ctx: any, arg: AddArg): { name: string; content: T }
 }
 
-export interface SelectNodeHook {
-  (ctx: any, arg: SelectNodeArg): void
+export interface SelectBlockHook {
+  (ctx: any, arg: selectBlockArg): void
 }
 
 export interface TreeHooks<T = any> {
@@ -33,7 +33,7 @@ export interface TreeHooks<T = any> {
     newBlock: NewBlockHook<T>
     // Executed in block loading order.
     treeChanged: TreeChangedHook[]
-    selectNode: SelectNodeHook[]
+    selectNode: SelectBlockHook[]
     contentChanged: TreeContentChangedHook<T>[]
     contentComponent: any
   }
@@ -43,7 +43,7 @@ export interface TreeDefinitions<T = any> {
   [type: string]: {
     newBlock?: NewBlockHook<T>
     treeChanged?: TreeChangedHook
-    selectNode?: SelectNodeHook
+    selectBlock?: SelectBlockHook
     contentChanged?: TreeContentChangedHook<T>
     contentComponent?: any
   }

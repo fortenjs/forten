@@ -108,7 +108,7 @@ export const move: DragdropHooks['move'] = (ctx: Context, value) => {
       if (oldId === tree.id) {
         const oldSlot = dropTarget[oldId]
         if (
-          oldSlot.nodeId === slot.nodeId &&
+          oldSlot.blockId === slot.blockId &&
           oldSlot.slotIdx === slot.slotIdx
         ) {
           // did not change
@@ -132,7 +132,7 @@ export const move: DragdropHooks['move'] = (ctx: Context, value) => {
         ctx.actions.tree.changed({
           tree: target,
           connecting: {
-            nodeId: slot.nodeId,
+            blockId: slot.blockId,
             slotIdx: slot.slotIdx,
             tree: branch,
           },
