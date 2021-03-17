@@ -28,7 +28,5 @@
     "@forten/hooks": "next",
     "dexie": "^3.0.2"
   },
-  "devDependencies": {
-    "fake-indexeddb": "^3.1.2"
-  }
+  "devDependencies": {}
 }
