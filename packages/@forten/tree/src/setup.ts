@@ -14,12 +14,14 @@ export const setup: Setup<TreeConfig, TreeSettings> = (config, settings) => {
           treeChanged: [],
           selectNode: [],
           contentChanged: [],
+          nameChanged: [],
           contentComponent: () => null,
         }
         definitions[treeType] = definition
       }
       const {
         contentChanged,
+        nameChanged,
         contentComponent,
         newBlock,
         treeChanged,
@@ -40,6 +42,9 @@ export const setup: Setup<TreeConfig, TreeSettings> = (config, settings) => {
       }
       if (contentChanged) {
         definition.contentChanged.push(contentChanged)
+      }
+      if (nameChanged) {
+        definition.nameChanged.push(nameChanged)
       }
     })
   })

@@ -23,7 +23,6 @@ const Wrapper = styled.div`
   }
   position: relative;
   padding: 0;
-  flex-grow: 1;
   overflow: auto;
   font-size: 12pt;
   font-family: 'Avenir Next';
@@ -65,11 +64,9 @@ export const Nodes: Comp<NodesProps> = React.memo(
     const treeId = tree.id
     const dropTarget = ctx.state.treeView.dropTarget[treeId]
     const uitree = ctx.state.treeView.uimap[treeId]
-    if (!uitree) {
+    if (!uitree || uitree.version !== tree.version) {
+      // remap
       ctx.actions.treeView.uimap({ tree })
-      return null
-    } else if (uitree.version !== tree.version) {
-      ctx.actions.treeView.uimap({ tree: tree })
       return null
     }
 
@@ -120,7 +117,7 @@ export const Nodes: Comp<NodesProps> = React.memo(
     return (
       <Wrapper
         ref={ref as any}
-        className={classnames(className, 'Graph')}
+        className={classnames(className, 'Tree')}
         onKeyDown={onKeyDown}
         tabIndex={-1}
       >

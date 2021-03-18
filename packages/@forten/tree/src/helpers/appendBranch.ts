@@ -12,7 +12,7 @@ function remap(blocks: TreeType['blocks'], map: IdMap, id: string): string {
 
 /** Append a graph in place. */
 /* FIXM: test duplicate id in branch and tree. */
-export function appendGraph(
+export function appendBranch(
   tree: TreeType,
   blockId: string,
   slotIdx: number,

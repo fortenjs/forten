@@ -13,7 +13,6 @@ export const changed: Action<TreeChangedArg> = (ctx, arg) => {
   const { tree } = arg
   if (!arg.connecting) {
     // Only re-render on true drop
-    console.log('TREE', tree)
     tree.version = makeId({ [tree.version]: '' })
   }
 

@@ -1,6 +1,6 @@
 import { TreeType } from '@forten/tree-type'
 import { Action } from '../app.js'
-import { appendGraph } from '../helpers/appendGraph.js'
+import { appendBranch } from '../helpers/appendBranch.js'
 import { newTree } from '../helpers/index.js'
 
 export interface FullAddArg {
@@ -40,7 +40,7 @@ export const add: Action<AddArg> = (ctx, arg) => {
     )
   }
   const blockDefinition = def.newBlock(ctx, arg)
-  const newId = appendGraph(
+  const newId = appendBranch(
     tree,
     parentId,
     slotIdx,

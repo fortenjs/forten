@@ -100,11 +100,18 @@ export const KEY_ACTIONS: {
       }
     }
   },
+  F2(ctx, tree, selected) {
+    ctx.actions.tree.selectBlock({
+      tree,
+      id: selected.id,
+      editName: true,
+    })
+  },
   Enter(ctx, tree, selected) {
     ctx.actions.tree.selectBlock({
       tree,
       id: selected.id,
-      editName: !selected.editName,
+      editContent: true,
     })
   },
   Backspace(ctx, tree, selected, parentId) {

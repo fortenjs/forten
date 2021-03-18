@@ -4,7 +4,8 @@ import { Action } from '../app.js'
 export interface selectBlockArg {
   // block id
   id: string
-  editName: boolean
+  editName?: boolean
+  editContent?: boolean
   tree: TreeType
 }
 
@@ -14,7 +15,7 @@ export const selectBlock: Action<selectBlockArg> = (ctx, arg) => {
   if (selected && selected.id === id && selected.editName === editName) {
     delete tree.selected
   } else {
-    tree.selected = { id, editName }
+    tree.selected = { id, editName: !!editName }
   }
   const definition = ctx.state.tree.definitions()[tree.type]
   if (definition) {

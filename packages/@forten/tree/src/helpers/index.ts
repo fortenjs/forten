@@ -1,4 +1,4 @@
-export * from './appendGraph.js'
+export * from './appendBranch.js'
 export * from './cutBranch.js'
 export * from './makeId.js'
 export * from './newBlock.js'

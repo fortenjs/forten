@@ -4,13 +4,22 @@ import { Action } from '../app.js'
 export interface SetContentArg {
   blockId: string
   tree: TreeType
-  // FIXME: how to make this generic ?
   content: any
+  moreEdits?: boolean
 }
 
 export const setContent: Action<SetContentArg> = (ctx, arg) => {
   const { content, blockId, tree } = arg
   const previousContent = tree.blocks[blockId].content
   tree.blocks[blockId].content = content
-  ctx.actions.tree.contentChanged({ tree, blockId, previousContent })
+
+  const definition = ctx.state.tree.definitions()[tree.type]
+  if (definition) {
+    definition.contentChanged.forEach(fun =>
+      fun(ctx, { ...arg, previousContent })
+    )
+  }
+  if (!arg.moreEdits) {
+    ctx.actions.tree.changed({ tree })
+  }
 }

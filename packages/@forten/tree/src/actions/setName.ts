@@ -6,6 +6,7 @@ export interface SetNameArg {
   blockId: string
   tree: TreeType
   done?: boolean
+  moreEdits?: boolean
 }
 
 export const setName: Action<SetNameArg> = (ctx, arg) => {
@@ -13,6 +14,17 @@ export const setName: Action<SetNameArg> = (ctx, arg) => {
   if (done) {
     tree.selected = { id: blockId, editName: false }
   }
+  const previousName = tree.blocks[blockId].name
+  if (name === previousName) {
+    return
+  }
   tree.blocks[blockId].name = name
-  ctx.actions.tree.changed({ tree })
+
+  const definition = ctx.state.tree.definitions()[tree.type]
+  if (definition) {
+    definition.nameChanged.forEach(fun => fun(ctx, { ...arg, previousName }))
+  }
+  if (!arg.moreEdits) {
+    ctx.actions.tree.changed({ tree })
+  }
 }

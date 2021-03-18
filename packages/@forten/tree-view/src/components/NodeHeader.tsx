@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   flex-direction: row;
   flex-grow: 0;
   border-radius: 2px;
-  background: #ffffff14;
+  background: #ffffff29;
 `
 
 export const NodeHeader: Comp<NodeHeaderProps> = ({
