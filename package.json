@@ -72,7 +72,7 @@
     "prettier": "2.1.2",
     "prettier-plugin-organize-imports": "^1.1.1",
     "react-test-renderer": "16.13.1",
-    "repo-cooker": "^7.1.0",
+    "repo-cooker": "^7.3.0",
     "rimraf": "3.0.2",
     "simple-mock": "0.8.0",
     "ts-jest": "26.4.4",
