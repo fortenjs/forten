@@ -1,3 +1,4 @@
+import { unproxy } from '@forten/build'
 import { BranchDefinition } from '@forten/tree-type'
 import { makeId } from './makeId.js'
 
@@ -52,6 +53,12 @@ function grabBlocks(
       }
     }
   })
+  let len = children.length
+  // Remove trailing null values
+  while (len && children[len - 1] === null) {
+    children.pop()
+    len = children.length
+  }
   blocks[id] = { ...block, children }
   return result
 }
@@ -63,14 +70,11 @@ export function cutBranch(
   if (blockId === branch.entry) {
     // Just make a copy
     const id = makeId(branch.blocks)
-    const cut: BranchDefinition = Object.assign(
-      JSON.parse(JSON.stringify(branch)) as BranchDefinition,
-      {
-        id,
-        version: id,
-        entry: id,
-      }
-    )
+    const cut: BranchDefinition = Object.assign(unproxy(branch), {
+      id,
+      version: id,
+      entry: id,
+    })
     const entry = cut.blocks[branch.entry]
     delete cut.blocks[branch.entry]
     entry.id = id

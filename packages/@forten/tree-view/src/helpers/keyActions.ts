@@ -2,9 +2,26 @@ import { TreeType } from '@forten/tree-type'
 import * as React from 'react'
 import { Context } from '../app.js'
 
+function focusLibrary(ctx: ViewContext, tree: TreeType) {
+  const el = document.querySelector('.LibraryList') as HTMLElement
+  console.log('LibraryList', el)
+  if (el) {
+    if (tree.selected?.id) {
+      // deselect
+      ctx.actions.tree.selectBlock({
+        id: tree.selected.id,
+        tree,
+      })
+    }
+    el.focus()
+  }
+}
+
+type ViewContext = { state: Context['state']; actions: Context['actions'] }
+
 export const KEY_ACTIONS: {
   [key: string]: (
-    ctx: { state: Context['state']; actions: Context['actions'] },
+    ctx: ViewContext,
     tree: TreeType,
     selected: { id: string; editName: boolean },
     parentId: string | undefined,
@@ -64,10 +81,13 @@ export const KEY_ACTIONS: {
           ctx.actions.tree.selectBlock({
             id: child,
             tree,
-            editName: false,
           })
+        } else {
+          focusLibrary(ctx, tree)
         }
       }
+    } else {
+      focusLibrary(ctx, tree)
     }
   },
   ArrowRight(ctx, tree, selected, parentId, e) {

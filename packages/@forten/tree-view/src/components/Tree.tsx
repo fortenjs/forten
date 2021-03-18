@@ -16,10 +16,12 @@ export interface TreeProps<T = any> {
   extraProps: T
 }
 
+// min-width: 0 to prevent overflow
 const Wrapper = styled.div`
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
+  min-width: 0;
 `
 
 export const Tree: Comp<TreeProps> = ({

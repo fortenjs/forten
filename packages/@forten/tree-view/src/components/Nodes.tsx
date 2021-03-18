@@ -6,6 +6,7 @@ import { KEY_ACTIONS } from '../helpers/index.js'
 import { TreeDrag, UITreeType } from '../types/index.js'
 import { DropTarget } from './DropTarget.js'
 import { Node } from './Node.js'
+import { StyledScroll } from './StyledScroll.js'
 import { TreeSVG } from './TreeSVG.js'
 
 export interface NodesProps {
@@ -17,13 +18,13 @@ export interface NodesProps {
   blockId?: string
 }
 
-const Wrapper = styled.div`
-  &:focus {
-    outline: none;
-  }
+// min-width: 0 to prevent overflow
+const Wrapper = styled(StyledScroll)`
   position: relative;
-  padding: 0;
+  padding: 2px;
+  margin-bottom: 1rem;
   overflow: auto;
+  min-width: 0;
   font-size: 12pt;
   font-family: 'Avenir Next';
 `
@@ -51,7 +52,9 @@ export const Nodes: Comp<NodesProps> = React.memo(
       if (tree.selected) {
         if (!tree.selected.editName) {
           if (ref.current) {
-            ref.current.focus()
+            // this is bad because it prevents library focus
+            // we have tab for this
+            // ref.current.focus()
           }
         }
       }
@@ -119,7 +122,7 @@ export const Nodes: Comp<NodesProps> = React.memo(
         ref={ref as any}
         className={classnames(className, 'Tree')}
         onKeyDown={onKeyDown}
-        tabIndex={-1}
+        tabIndex={0}
       >
         <TreeSVG
           id={treeId}

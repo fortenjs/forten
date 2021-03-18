@@ -45,9 +45,12 @@ const BlockRename: Comp<NodeRenameProps> = ({ className, blockId, tree }) => {
   const ctx = useOvermind()
   const block = tree.blocks[blockId]
   const [oldValue] = React.useState<string>(block.name)
-  const [value, setValue] = React.useState<string>(block.name)
+  const [value, setValue] = React.useState<string>(
+    block.name.split('/').slice(0, -1)[0]
+  )
 
   function onKeyDown(e: React.KeyboardEvent) {
+    e.stopPropagation()
     switch (e.key) {
       case 'Escape':
         ctx.actions.tree.setName({
@@ -84,6 +87,7 @@ const BlockRename: Comp<NodeRenameProps> = ({ className, blockId, tree }) => {
       onFocus={e => e.target.select()}
       onKeyDown={onKeyDown}
       value={value}
+      tabIndex={3}
       onChange={e => {
         const target = e.target as HTMLInputElement
         setValue(target.value)
