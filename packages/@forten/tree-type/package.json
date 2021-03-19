@@ -14,8 +14,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "clean": "rimraf .cache dist coverage",
-    "prepare": "rimraf dist && cp -r ../../node_modules/@forten/tree-type/dist dist"
+    "clean": "rimraf .cache dist coverage"
   },
   "files": [
     "dist",
