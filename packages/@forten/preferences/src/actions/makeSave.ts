@@ -1,8 +1,7 @@
 import { mutate, pipe, throttle } from 'overmind'
-import { Operator } from '../app'
-import { deepGet } from '../helper'
-import { setValue } from '../prefsDb'
-import { ChangedArg, preferences_save } from '../types'
+import { Operator } from '../app.js'
+import { deepGet } from '../helper.js'
+import { ChangedArg, preferences_save } from '../types.js'
 
 const setChanged: Operator<ChangedArg> = mutate(async function setChanged(
   ctx,
@@ -21,7 +20,7 @@ const executeSave: Operator = mutate(async function executeSave(ctx) {
   for (const change of Object.keys(changed)) {
     const value = deepGet(state, change)
     if (!(await save_hook({ path: change, value }))) {
-      await setValue(change, value)
+      await state.preferences.db.setValue(change, value)
     }
   }
 })

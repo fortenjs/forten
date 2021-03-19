@@ -1,6 +1,10 @@
-import { getSelection } from '../helpers'
-import { removeRange, setSelection, splitParagraph } from '../operations'
-import { isRangeSelection, Mutation } from '../types'
+import { getSelection } from '../helpers/index.js'
+import {
+  removeRange,
+  setSelection,
+  splitParagraph,
+} from '../operations/index.js'
+import { isRangeSelection, Mutation } from '../types/index.js'
 
 export function newParagraph(m: Mutation) {
   const selection = getSelection(m)

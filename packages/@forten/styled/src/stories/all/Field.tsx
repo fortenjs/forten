@@ -1,5 +1,5 @@
-import { Field as component, FieldProps as Props } from '../..'
-import { config, Stories } from '../helpers'
+import { Field as component, FieldProps as Props } from '../../index.js'
+import { config, Stories } from '../helpers.js'
 
 export const fieldStories: Stories<Props> = {
   name: 'Field',

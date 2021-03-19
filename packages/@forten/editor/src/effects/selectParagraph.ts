@@ -1,7 +1,6 @@
-import { CompositionType, SelectOperationType } from '../lib/utils/types'
-
-import { caretSelection } from '../lib'
-import { processSelect } from './processOps'
+import { caretSelection } from '../lib/index.js'
+import { CompositionType, SelectOperationType } from '../lib/utils/types.js'
+import { processSelect } from './processOps.js'
 
 // FIXME: IS THIS STILL USED ??? REMOVE.
 export function selectParagraph(args: {

@@ -1,1 +1,1 @@
-export * from './Dragdrop'
+export * from './Dragdrop.js'

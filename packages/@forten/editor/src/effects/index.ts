@@ -1,6 +1,6 @@
 // These are the public helpers exported by editor
-export * from './clearSelection'
-export * from './clearToolbox'
-export * from './ensureComposition'
-export * from './processOps'
-export * from './selectParagraph'
+export * from './clearSelection.js'
+export * from './clearToolbox.js'
+export * from './ensureComposition.js'
+export * from './processOps.js'
+export * from './selectParagraph.js'

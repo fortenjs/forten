@@ -1,17 +1,16 @@
+import simple from 'simple-mock'
+import { caretSelection, ElementType, OperationType } from './lib/index.js'
+import { rangeSelection, sortAscending } from './v2/helpers/index.js'
+import { mockable } from './v2/helpers/makeRef.js'
 import {
   Composition,
   Element,
+  isCaretSelection,
   Mutation,
   RangeSelection,
-  TYPES,
   TypeName,
-  isCaretSelection,
-} from './v2/types'
-import { ElementType, OperationType, caretSelection } from './lib'
-import { rangeSelection, sortAscending } from './v2/helpers'
-
-import { mockable } from './v2/helpers/makeRef'
-import simple from 'simple-mock'
+  TYPES,
+} from './v2/types/index.js'
 
 export type Describe = {
   (what: string, callback: () => void): void

@@ -1,5 +1,5 @@
 import { IAction, IContext } from 'overmind'
-import { TreeConfig } from './types'
+import { TreeConfig } from './types.js'
 
 export function css(strings: TemplateStringsArray, ...values: any[]): string {
   return strings.map((s, idx) => s + (values[idx] || '')).join('')

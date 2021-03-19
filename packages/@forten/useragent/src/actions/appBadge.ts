@@ -1,5 +1,5 @@
-import { Action } from '../app'
-import { appBadge } from '../helpers/appBadge.types'
+import { Action } from '../app.js'
+import { appBadge } from '../helpers/appBadge.types.js'
 
 export const setBadge: Action<{ text: string }> = (ctx, arg) => {
   const api = window[appBadge]

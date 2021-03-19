@@ -1,5 +1,5 @@
 import { unproxy } from '@forten/build'
-import { inSelection } from './utils/inSelection'
+import { inSelection } from './utils/inSelection.js'
 import {
   ChangeType,
   CompositionType,
@@ -7,7 +7,7 @@ import {
   isCustomElement,
   isStringElement,
   RangeSelectionType,
-} from './utils/types'
+} from './utils/types.js'
 
 function getElem(
   ref: ChangeType,

@@ -1,4 +1,4 @@
-import { Action } from '../app'
+import { Action } from '../app.js'
 
 export const toggleTooltips: Action = ctx => {
   const { state } = ctx

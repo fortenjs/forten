@@ -15,6 +15,7 @@
     "outDir": "./dist",
     "rootDir": "./src",
     "strict": true,
+    "resolveJsonModule": true,
     "moduleResolution": "node",
     "noImplicitAny": true,
     "skipLibCheck": false,
@@ -37,6 +38,8 @@
     "src/**/*"
   ],
   "exclude": [
+    "src/stories",
+    "**/*.test.ts",
     "node_modules",
     "dist"
   ]

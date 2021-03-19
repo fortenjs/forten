@@ -1,9 +1,9 @@
 import { Block } from '@forten/build'
-import { setup } from './setup'
-import { HooksConfig } from './types'
+import { setup } from './setup.js'
+import { HooksConfig } from './types.js'
 
-export * from './helpers'
-export * from './types'
+export * from './helpers.js'
+export * from './types.js'
 
 export const hooks: Block<HooksConfig> = {
   name: 'hooks',

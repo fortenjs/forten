@@ -1,7 +1,13 @@
-import { CompositionType, ElementType, GroupElementType, isGroupElement, PathType } from './types'
+import {
+  CompositionType,
+  ElementType,
+  GroupElementType,
+  isGroupElement,
+  PathType,
+} from './types.js'
 
 /* Return an array with position at each level in path.
-*/
+ */
 export function getPosition(
   composition: CompositionType,
   path: PathType

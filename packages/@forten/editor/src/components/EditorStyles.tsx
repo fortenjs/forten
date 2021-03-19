@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { theme } from '../app'
+import { theme } from '../app.js'
 
 export const EditorStyles = styled.div`
   /** Do not use padding or margin inside .Composition or selection calculations

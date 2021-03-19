@@ -6,10 +6,10 @@ import {
   isStringElement,
   Mutation,
   Selection,
-} from '../types'
-import { getSelection } from './getSelection'
-import { position } from './position'
-import { sortAscending } from './sorting'
+} from '../types/index.js'
+import { getSelection } from './getSelection.js'
+import { position } from './position.js'
+import { sortAscending } from './sorting.js'
 
 export const SMALLEST_PATH = [-1, -1, -1]
 export const BIGGEST_PATH = [Infinity, Infinity, Infinity]

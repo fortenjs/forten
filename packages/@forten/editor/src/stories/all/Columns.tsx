@@ -1,7 +1,7 @@
 // import * as React from 'react'
 // import styled from 'styled-components'
-import { Editor as component, EditorProps as Props } from '../..'
-import { config, Stories, wrapper } from '../helpers'
+import { Editor as component, EditorProps as Props } from '../../index.js'
+import { config, Stories, wrapper } from '../helpers.js'
 
 /*
 const SomeChild = styled.div`

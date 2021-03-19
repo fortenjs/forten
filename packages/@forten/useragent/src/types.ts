@@ -1,9 +1,9 @@
 import { Hook } from '@forten/hooks'
 import { Parser } from 'bowser'
-import * as actions from './actions'
-import { AppUpdateInfo } from './helpers/appUpdate.types'
-import { WinPosition } from './helpers/winPosition.types'
-import { hooksActions } from './hooksActions'
+import * as actions from './actions/index.js'
+import { AppUpdateInfo } from './helpers/appUpdate.types.js'
+import { WinPosition } from './helpers/winPosition.types.js'
+import { hooksActions } from './hooksActions.js'
 
 export const useragent_network = 'useragent_network'
 export const useragent_online = 'useragent_online'

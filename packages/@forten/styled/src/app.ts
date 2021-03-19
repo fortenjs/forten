@@ -4,8 +4,8 @@ import { IAction, IContext } from 'overmind'
 import { createHook } from 'overmind-react'
 import { FunctionComponent as Comp } from 'react'
 import styled from 'styled-components'
-import { styledTheme } from './theme'
-import { StyledConfig } from './types'
+import { styledTheme } from './theme.js'
+import { StyledConfig } from './types.js'
 
 export { styled, Comp }
 

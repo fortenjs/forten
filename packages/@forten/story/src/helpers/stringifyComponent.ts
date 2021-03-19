@@ -1,5 +1,5 @@
 import { IS_PROXY, PATH } from 'proxy-state-tree'
-import { Comp } from '../app'
+import { Comp } from '../app.js'
 
 function serialize(value: any) {
   if (value === undefined) {

@@ -1,7 +1,7 @@
 import * as React from 'react'
-import { ApplyOpArgs } from '../../actions'
-import { Comp } from '../../app'
-import { OperationsKey } from '../doOperation'
+import { ApplyOpArgs } from '../../actions/index.js'
+import { Comp } from '../../app.js'
+import { OperationsKey } from '../doOperation.js'
 
 // ============== Composition definition
 

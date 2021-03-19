@@ -1,4 +1,4 @@
-import { ElementType } from '../../lib'
+import { ElementType } from '../../lib/index.js'
 
 export function getElementTag(
   { t, o }: ElementType,

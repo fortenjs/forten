@@ -1,5 +1,5 @@
-import { ElementRef, Elements, isGroupElement } from '../types'
-import { sortAscending, sortDescending } from './sorting'
+import { ElementRef, Elements, isGroupElement } from '../types/index.js'
+import { sortAscending, sortDescending } from './sorting.js'
 
 export function child(
   ref: ElementRef,

@@ -5,9 +5,9 @@ import { styled as styledBlock, StyledSettings } from '@forten/styled'
 import { createHook } from 'overmind-react'
 import { FunctionComponent as Comp } from 'react'
 import styled from 'styled-components'
-import { useragent } from '../'
-import { UseragentHooks, UseragentSettings } from '../types'
-import { icons } from './icons'
+import { useragent } from '../index.js'
+import { UseragentHooks, UseragentSettings } from '../types.js'
+import { icons } from './icons.js'
 
 export { Comp, styled }
 

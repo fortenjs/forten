@@ -1,35 +1,29 @@
-export * from './ComponentType'
-export * from './DragDrop'
-export * from './GetTextSizeType'
-export * from './UILayoutType'
-export * from './UINodeType'
-export * from './UITreeType'
+export * from './ComponentType.js'
+export * from './DragDrop.js'
+export * from './GetTextSizeType.js'
+export * from './UILayoutType.js'
+export * from './UINodeType.js'
+export * from './UITreeType.js'
 
 import { TreeType } from '@forten/tree-type'
-import * as actions from '../actions'
-import { DropTargetInfoById } from './DragDrop'
-import { UITreeType } from './UITreeType'
+import * as actions from '../actions/index.js'
+import { DropTargetInfoById } from './DragDrop.js'
+import { UITreeType } from './UITreeType.js'
 
 export interface SlotInfo {
   x: number
   y: number
-  nodeId: string
+  blockId: string
   slotIdx: number
-}
-
-export interface LibraryElement {
-  // tree type
-  type: string
-  name: string
-  content: any
 }
 
 export interface TreeViewConfig {
   state: {
     treeView: {
       dropTarget: DropTargetInfoById
-      libraryTree?: TreeType
-      library: LibraryElement[]
+      dragTree?: TreeType
+      // Pseudo tree (only used to store blocks and meta information)
+      library: TreeType
       // Cached uimap
       uimap: {
         [key: string]: UITreeType

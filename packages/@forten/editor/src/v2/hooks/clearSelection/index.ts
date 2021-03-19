@@ -1,1 +1,1 @@
-export * from './closeOptions'
+export * from './closeOptions.js'

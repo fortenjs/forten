@@ -1,20 +1,18 @@
+import classnames from 'classnames'
 import * as React from 'react'
-
-import { Comp, Context, useOvermind } from '../../app'
+import { Comp, Context, useOvermind } from '../../app.js'
+import { getAtPath } from '../../lib/utils/getAtPath.js'
 import {
   CompositionHolder,
   ElementSize,
   GroupElementType,
-} from '../../lib/utils/types'
-
-import { DragBar } from './DragBar'
-import { EditorProps } from '../Editor'
-import classnames from 'classnames'
-import { expandInner } from '../helpers/expandInner'
-import { getAtPath } from '../../lib/utils/getAtPath'
-import { getElementClassName } from '../helpers/getElementClassName'
-import { getElementTag } from '../helpers/getElementTag'
-import { setSelection } from '../helpers/setSelection'
+} from '../../lib/utils/types.js'
+import { EditorProps } from '../Editor.js'
+import { expandInner } from '../helpers/expandInner.js'
+import { getElementClassName } from '../helpers/getElementClassName.js'
+import { getElementTag } from '../helpers/getElementTag.js'
+import { setSelection } from '../helpers/setSelection.js'
+import { DragBar } from './DragBar.js'
 
 export interface GroupTagProps {
   dragged?: boolean

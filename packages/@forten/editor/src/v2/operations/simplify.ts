@@ -1,15 +1,14 @@
+import { caretSelection, isStringElement } from '../../lib/index.js'
+import { rangeSelection, sortAscending } from '../helpers/index.js'
 import {
   GroupElement,
+  isCaretSelection,
   Mutation,
   RangeSelection,
   Selection,
   StringElement,
-  isCaretSelection,
-} from '../types'
-import { caretSelection, isStringElement } from '../../lib'
-import { rangeSelection, sortAscending } from '../helpers'
-
-import { setSelection } from './setSelection'
+} from '../types/index.js'
+import { setSelection } from './setSelection.js'
 
 function shouldFuse(a: StringElement, b: StringElement) {
   return b.t === a.t || (b.i.length === 0 && b.t !== 'E' && !b.noFuse)

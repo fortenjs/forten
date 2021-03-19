@@ -1,14 +1,13 @@
+import { Context } from '../../../app.js'
+import { ensureComposition } from '../../../effects/index.js'
+import { PasteOperation } from '../../../index.js'
 import {
-  CompositionHolder,
   caretSelection,
+  CompositionHolder,
   isStringElement,
-} from '../../../lib'
-
-import { Context } from '../../../app'
-import { PasteOperation } from '../../..'
-import { ensureComposition } from '../../../effects'
-import { getAtPath } from '../../../lib/utils/getAtPath'
-import { isRangeSelection } from '../../../lib/utils/types'
+} from '../../../lib/index.js'
+import { getAtPath } from '../../../lib/utils/getAtPath.js'
+import { isRangeSelection } from '../../../lib/utils/types.js'
 
 export function doPasteText(
   ctx: { state: Context['state']; actions: Context['actions'] },

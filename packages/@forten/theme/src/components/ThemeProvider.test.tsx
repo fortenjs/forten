@@ -1,10 +1,10 @@
 import { build, settings } from '@forten/build'
 import * as React from 'react'
 import { expect, it, testRender } from 'test'
-import { theme } from '..'
-import { defaultTheme } from '../themes'
-import { ThemeSettings } from '../types'
-import { DirectThemeProvider, ThemeProvider } from './ThemeProvider'
+import { theme } from '../index.js'
+import { defaultTheme } from '../themes/index.js'
+import { ThemeSettings } from '../types.js'
+import { DirectThemeProvider, ThemeProvider } from './ThemeProvider.js'
 
 const main = {
   name: 'main',

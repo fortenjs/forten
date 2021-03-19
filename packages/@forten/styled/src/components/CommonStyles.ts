@@ -1,5 +1,5 @@
-import { styled, theme } from '../app'
-import { Icon } from './Icon'
+import { styled, theme } from '../app.js'
+import { Icon } from './Icon.js'
 
 // .nobg is needed to avoid ugly corners in Field with
 // borderRadius.

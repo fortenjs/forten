@@ -1,11 +1,11 @@
-import { caretSelection } from './caretSelection'
-import { extractSelection } from './extractSelection'
+import { caretSelection } from './caretSelection.js'
+import { extractSelection } from './extractSelection.js'
 import {
   ChangesType,
   CompositionType,
   filterChanges,
   RangeSelectionType,
-} from './types'
+} from './types.js'
 
 export function deleteRangeSelection(
   composition: CompositionType,

@@ -1,7 +1,7 @@
 import classnames from 'classnames'
 import * as React from 'react'
-import { Comp, styled, theme } from '../app'
-import { ScrollDiv } from './ScrollDiv'
+import { Comp, styled, theme } from '../app.js'
+import { ScrollDiv } from './ScrollDiv.js'
 // https://react-window.now.sh/
 // import x from 'react-window'
 // dynamic heights...

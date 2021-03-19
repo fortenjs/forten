@@ -1,7 +1,6 @@
-import { CaretSelectionType, CompositionHolder } from '../lib/utils/types'
-
-import { Action } from '../app'
-import { doEnter } from '../lib/doEnter'
+import { Action } from '../app.js'
+import { doEnter } from '../lib/doEnter.js'
+import { CaretSelectionType, CompositionHolder } from '../lib/utils/types.js'
 
 export interface EnterPressArgs {
   holder: CompositionHolder

@@ -1,5 +1,5 @@
-import { Action } from '../app'
-import { ResizeArg } from '../components'
+import { Action } from '../app.js'
+import { ResizeArg } from '../components/index.js'
 
 export const resize: Action<{
   name: string

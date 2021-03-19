@@ -1,7 +1,7 @@
 import { Icon } from '@forten/styled'
 import * as React from 'react'
-import { Comp, useOvermind } from '../app'
-import { CompositionHolder } from '../lib'
+import { Comp, useOvermind } from '../app.js'
+import { CompositionHolder } from '../lib/index.js'
 
 export interface UndoRedoProps {
   className?: string

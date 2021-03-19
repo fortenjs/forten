@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'test'
-import { makeCommand } from './command'
-import { keycodes } from './keycodes'
+import { makeCommand } from './command.js'
+import { keycodes } from './keycodes.js'
 
 describe('makeCommand', () => {
   it('should create command from event', () => {

@@ -1,9 +1,12 @@
-import { CompositionType, PasteArgs, PasteOperation } from '../../../lib'
-
-import { Context } from '../../../app'
-import { editor_pasteEditor } from '../../../types'
-import { insertComposition } from '../../../lib/insertComposition'
-import { makeOps } from '../../../lib/doOperation'
+import { Context } from '../../../app.js'
+import { makeOps } from '../../../lib/doOperation.js'
+import {
+  CompositionType,
+  PasteArgs,
+  PasteOperation,
+} from '../../../lib/index.js'
+import { insertComposition } from '../../../lib/insertComposition.js'
+import { editor_pasteEditor } from '../../../types.js'
 
 export async function doPasteEditor(
   ctx: Context,

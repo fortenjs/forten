@@ -1,5 +1,5 @@
 import { BlockDefinition, TreeType } from '@forten/tree-type'
-import { makeId } from './makeId'
+import { makeId } from './makeId.js'
 
 interface IdMap {
   [oldId: string]: string
@@ -12,15 +12,15 @@ function remap(blocks: TreeType['blocks'], map: IdMap, id: string): string {
 
 /** Append a graph in place. */
 /* FIXM: test duplicate id in branch and tree. */
-export function appendGraph(
+export function appendBranch(
   tree: TreeType,
-  nodeId: string,
+  blockId: string,
   slotIdx: number,
   branch: TreeType
 ): string {
-  const node = tree.blocks[nodeId]
+  const node = tree.blocks[blockId]
   if (!node) {
-    throw new Error(`Cannot append (nodeId '${nodeId}' not in tree).`)
+    throw new Error(`Cannot append (blockId '${blockId}' not in tree).`)
   }
   const map: IdMap = {}
   const { children } = node

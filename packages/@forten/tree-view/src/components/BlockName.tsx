@@ -1,17 +1,17 @@
 import { TreeType } from '@forten/tree-type'
 import * as React from 'react'
-import { Comp, styled, useOvermind } from '../app'
+import { Comp, styled, useOvermind } from '../app.js'
 
 export interface NodeNameProps {
   className?: string
   tree: TreeType
-  nodeId: string
+  blockId: string
 }
 
 interface NodeRenameProps {
   className?: string
   tree: TreeType
-  nodeId: string
+  blockId: string
 }
 
 const Wrapper = styled.div`
@@ -41,18 +41,21 @@ const MyInput = styled.input`
   }
 `
 
-const NodeRename: Comp<NodeRenameProps> = ({ className, nodeId, tree }) => {
+const BlockRename: Comp<NodeRenameProps> = ({ className, blockId, tree }) => {
   const ctx = useOvermind()
-  const block = tree.blocks[nodeId]
+  const block = tree.blocks[blockId]
   const [oldValue] = React.useState<string>(block.name)
+  const [value, setValue] = React.useState<string>(
+    block.name.split('/').slice(0, -1)[0]
+  )
 
   function onKeyDown(e: React.KeyboardEvent) {
-    const target = e.target as HTMLInputElement
+    e.stopPropagation()
     switch (e.key) {
       case 'Escape':
         ctx.actions.tree.setName({
           tree,
-          nodeId,
+          blockId,
           name: oldValue,
           done: true,
         })
@@ -60,8 +63,8 @@ const NodeRename: Comp<NodeRenameProps> = ({ className, nodeId, tree }) => {
       case 'Enter':
         ctx.actions.tree.setName({
           tree,
-          nodeId,
-          name: target.value,
+          blockId,
+          name: value,
           done: true,
         })
         break
@@ -69,7 +72,7 @@ const NodeRename: Comp<NodeRenameProps> = ({ className, nodeId, tree }) => {
       case 'Tab':
         ctx.actions.tree.setName({
           tree,
-          nodeId,
+          blockId,
           name: target.value,
           done: true,
         })
@@ -83,38 +86,35 @@ const NodeRename: Comp<NodeRenameProps> = ({ className, nodeId, tree }) => {
       autoFocus
       onFocus={e => e.target.select()}
       onKeyDown={onKeyDown}
-      value={block.name}
+      value={value}
+      tabIndex={3}
       onChange={e => {
         const target = e.target as HTMLInputElement
-        ctx.actions.tree.setName({
-          tree,
-          nodeId,
-          name: target.value,
-        })
+        setValue(target.value)
       }}
     />
   )
 }
 
-export const NodeName: Comp<NodeNameProps> = ({ nodeId, tree }) => {
+export const BlockName: Comp<NodeNameProps> = ({ blockId, tree }) => {
   const ctx = useOvermind()
   const rename = tree.selected && tree.selected.editName
-  const block = tree.blocks[nodeId]
+  const block = tree.blocks[blockId]
   const onClick = rename
     ? undefined
     : (e: React.MouseEvent<HTMLDivElement>) => {
         e.stopPropagation()
         e.preventDefault()
-        ctx.actions.tree.selectNode({
+        ctx.actions.tree.selectBlock({
           tree,
-          id: nodeId,
+          id: blockId,
           editName: true,
         })
       }
   return (
     <Wrapper onClick={onClick}>
       {rename ? (
-        <NodeRename tree={tree} nodeId={nodeId} />
+        <BlockRename tree={tree} blockId={blockId} />
       ) : (
         <Name>{block.name}</Name>
       )}

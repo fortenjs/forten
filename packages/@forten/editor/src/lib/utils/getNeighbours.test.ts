@@ -1,17 +1,13 @@
 import { describe, expect, it } from 'test'
-
-import { getNeighbours } from './getNeighbours'
-import { mockComposition } from './testUtils'
-import { CompositionType } from './types'
+import { getNeighbours } from './getNeighbours.js'
+import { mockComposition } from './testUtils.js'
+import { CompositionType } from './types.js'
 
 const composition = mockComposition()
 
-function doTest(
-  comp: CompositionType,
-  path: string[]
-): (string | null)[] {
-  return getNeighbours(composition, path).map(
-    e => (e ? e.path.join('.') : null)
+function doTest(comp: CompositionType, path: string[]): (string | null)[] {
+  return getNeighbours(composition, path).map(e =>
+    e ? e.path.join('.') : null
   )
 }
 

@@ -1,6 +1,6 @@
-import { Elements } from './element'
-import { Sizes } from './size'
-import { Toolbox } from './toolbox'
+import { Elements } from './element.js'
+import { Sizes } from './size.js'
+import { Toolbox } from './toolbox.js'
 
 export interface Composition {
   sz?: Sizes

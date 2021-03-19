@@ -1,5 +1,5 @@
-import { Context } from '../app'
-import { winPosition } from './winPosition.types'
+import { Context } from '../app.js'
+import { winPosition } from './winPosition.types.js'
 
 export function setupWinPosition(ctx: Context) {
   const api = window[winPosition]

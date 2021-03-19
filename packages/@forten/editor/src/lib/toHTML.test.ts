@@ -1,14 +1,14 @@
 import { describe, expect, it } from 'test'
-import { toHTML } from './toHTML'
-import { mockComposition } from './utils/testUtils'
-import { rangeSelection } from './utils/rangeSelection'
+import { extractComposition } from './extractComposition.js'
+import { toHTML } from './toHTML.js'
+import { rangeSelection } from './utils/rangeSelection.js'
+import { mockComposition } from './utils/testUtils.js'
 import {
-  StringElementType,
-  GroupElementType,
   CompositionType,
+  GroupElementType,
   RangeSelectionType,
-} from './utils/types'
-import { extractComposition } from './extractComposition'
+  StringElementType,
+} from './utils/types.js'
 
 const composition = mockComposition()
 const position = { top: 0, left: 0 }

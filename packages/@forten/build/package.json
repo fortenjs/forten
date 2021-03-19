@@ -4,6 +4,7 @@
   "description": "Help create modular apps with blocks.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fortenjs/forten.git"
@@ -12,13 +13,15 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "tsc -p setup/tsconfig.${NODE_ENV:=development}.json",
-    "postbuild": "cp package.json ../../node_modules/@forten/build",
-    "prepare": "rimraf dist && cp -r ../../node_modules/@forten/build/dist dist",
-    "clean": "rimraf .cache dist coverage ../../node_modules/@forten/build",
+    "build": "tsc",
+    "clean": "rimraf .cache dist coverage",
     "test": "jest -c setup/jest.js",
     "test:watch": "jest -c setup/jest.js --watch --coverage false"
   },
+  "files": [
+    "dist",
+    "src"
+  ],
   "dependencies": {
     "overmind": "^25.0.2"
   },
@@ -28,23 +31,6 @@
     "prettier": "^2.1.2",
     "simple-mock": "^0.8.0",
     "ts-jest": "^26.4.4",
-    "typescript": "^4.1.5"
-  },
-  "importSort": {
-    ".js, .jsx, .es6, .es": {
-      "parser": "babylon",
-      "style": "import-sort-style-module",
-      "options": {}
-    },
-    ".ts, .tsx": {
-      "parser": "typescript",
-      "style": "import-sort-style-module",
-      "options": {}
-    }
-  },
-  "majestic": {
-    "args": [
-      "-c setup/jest.js"
-    ]
+    "typescript": "^4.2.3"
   }
 }

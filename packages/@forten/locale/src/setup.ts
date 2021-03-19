@@ -1,5 +1,5 @@
 import { Setup } from '@forten/build'
-import { LocaleConfig, Locales, LocaleSettings } from './types'
+import { LocaleConfig, Locales, LocaleSettings } from './types.js'
 
 export const setup: Setup<LocaleConfig, LocaleSettings> = (
   config,

@@ -1,6 +1,5 @@
 import { describe, expect, it } from 'test'
-
-import { themeProxy } from './'
+import { themeProxy } from './index.js'
 
 describe('themeProxy', () => {
   it('should return css vars for values', () => {

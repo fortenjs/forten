@@ -1,10 +1,10 @@
 import { Block } from '@forten/build'
-import { onInitialize } from './onInitialize'
-import { setup } from './setup'
-import { ShortcutsConfig } from './types'
+import { onInitialize } from './onInitialize.js'
+import { setup } from './setup.js'
+import { ShortcutsConfig } from './types.js'
 
-export * from './command'
-export * from './types'
+export * from './command.js'
+export * from './types.js'
 
 export const shortcuts: Block<ShortcutsConfig> = {
   name: 'shortcuts',

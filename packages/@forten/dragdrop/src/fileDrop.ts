@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { FileDroppableHooks, FileDroppableOptions } from './types'
+import { FileDroppableHooks, FileDroppableOptions } from './types.js'
 
 function acceptFile({ kind }: { kind: string }) {
   return kind === 'file'

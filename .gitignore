@@ -1,7 +1,5 @@
-**/node_modules
-/packages/node_modules
-/packages/@forten/**/node_modules
-/off
+node_modules
+/packages/other
 **/.cache
 **/coverage
 **/dist
@@ -9,9 +7,5 @@
 **/*.log
 **/yarn.lock
 /packages/**/package-lock.json
-/packages/apps/vasudeva/**/*.db
-/packages/apps/vasudeva/**/*.pgsql
-/packages/apps/vasudeva/**/*.db-journal
 **/.vscode
 **/.DS_Store
-*.csv

@@ -1,7 +1,7 @@
 import { reference } from '@forten/build'
 import { TreeType } from '@forten/tree-type'
-import { Action } from '../app'
-import { uimap as doMap } from '../helpers'
+import { Action } from '../app.js'
+import { uimap as doMap } from '../helpers/index.js'
 
 export const uimap: Action<{ tree: TreeType }> = (ctx, arg) => {
   const { tree } = arg

@@ -1,5 +1,5 @@
 import { IAction } from 'overmind'
-import { HooksConfig, SyncHook } from './types'
+import { HooksConfig, SyncHook } from './types.js'
 
 export function makeSyncHook<Arg = void>(
   hookName: string

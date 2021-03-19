@@ -2,7 +2,7 @@ import { build } from '@forten/build'
 import { locale } from '@forten/locale'
 import { theme } from '@forten/theme'
 import { describe, expect, it } from 'test'
-import { styled } from '../'
+import { styled } from '../index.js'
 
 describe('valueChanged', () => {
   it('should change form value', () => {

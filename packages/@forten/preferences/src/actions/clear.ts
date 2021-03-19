@@ -1,6 +1,6 @@
-import { AsyncAction } from '../app'
-import { deletePrefsDb } from '../prefsDb'
-import { preferences_clear } from '../types'
+import { AsyncAction } from '../app.js'
+import { prefsDb } from '../prefsDb.js'
+import { preferences_clear } from '../types.js'
 
 export const clear: AsyncAction<{ userId: string } | void> = async (
   ctx,
@@ -8,6 +8,7 @@ export const clear: AsyncAction<{ userId: string } | void> = async (
 ) => {
   const done = await ctx.actions.hooks[preferences_clear]()
   if (!done) {
-    await deletePrefsDb(arg ? arg.userId : undefined)
+    const api = await prefsDb(arg ? arg.userId : undefined, {})
+    await api.delete()
   }
 }

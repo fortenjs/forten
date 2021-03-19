@@ -1,8 +1,7 @@
 import { describe, expect, it } from 'test'
-
-import { doSelect } from './doSelect'
-import { mockComposition } from './utils/testUtils'
-import { CaretSelectionType, RangeSelectionType } from './utils/types'
+import { doSelect } from './doSelect.js'
+import { mockComposition } from './utils/testUtils.js'
+import { CaretSelectionType, RangeSelectionType } from './utils/types.js'
 
 const composition = mockComposition()
 const position = { top: 0, left: 0 }

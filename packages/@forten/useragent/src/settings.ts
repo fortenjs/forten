@@ -1,6 +1,6 @@
 import { HooksSettings } from '@forten/hooks'
 import { PreferencesHooks, PreferencesSettings } from '@forten/preferences'
-import { Context } from './app'
+import { Context } from './app.js'
 
 export const settings: PreferencesSettings & HooksSettings<PreferencesHooks> = {
   preferences: {

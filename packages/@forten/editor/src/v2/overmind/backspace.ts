@@ -1,8 +1,8 @@
-import { CompositionHolder } from '../..'
-import { Action } from '../../app'
-import { backspace as op } from '../actions'
-import { sortAscending } from '../helpers'
-import { Composition } from '../types'
+import { Action } from '../../app.js'
+import { CompositionHolder } from '../../index.js'
+import { backspace as op } from '../actions/index.js'
+import { sortAscending } from '../helpers/index.js'
+import { Composition } from '../types/index.js'
 
 export interface BackspaceArg {
   holder: CompositionHolder

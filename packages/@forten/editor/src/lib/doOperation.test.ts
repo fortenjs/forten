@@ -1,19 +1,19 @@
 import { describe, expect, it } from 'test'
-import { doOperation, makeOps, OperationsKey } from './doOperation'
-import { caretSelection } from './utils/caretSelection'
-import { rangeSelection } from './utils/rangeSelection'
+import { doOperation, makeOps, OperationsKey } from './doOperation.js'
+import { caretSelection } from './utils/caretSelection.js'
+import { rangeSelection } from './utils/rangeSelection.js'
 import {
   makeComposition,
   mockComposition,
   mockRef,
   opResults,
-} from './utils/testUtils'
+} from './utils/testUtils.js'
 import {
   CompositionType,
   EditorProvider,
   ParagraphPayload,
   SelectionType,
-} from './utils/types'
+} from './utils/types.js'
 
 const composition = mockComposition()
 

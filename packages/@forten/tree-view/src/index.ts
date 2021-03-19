@@ -3,14 +3,14 @@ import { dragdrop } from '@forten/dragdrop'
 import { locale } from '@forten/locale'
 import { styled } from '@forten/styled'
 import { theme } from '@forten/theme'
-import { tree } from '@forten/tree'
-import * as actions from './actions'
-import { settings } from './settings'
-import { TreeViewConfig } from './types'
+import { newTree, tree } from '@forten/tree'
+import * as actions from './actions/index.js'
+import { settings } from './settings/index.js'
+import { TreeViewConfig } from './types/index.js'
 
-export * from './components'
-export * from './settings/theme'
-export * from './types'
+export * from './components/index.js'
+export * from './settings/theme.js'
+export * from './types/index.js'
 
 export const treeView: Block<TreeViewConfig> = {
   name: 'treeView',
@@ -18,7 +18,8 @@ export const treeView: Block<TreeViewConfig> = {
   settings,
   state: {
     treeView: {
-      library: [],
+      // Dummy value
+      library: newTree('', { name: '', content: {} }),
       dropTarget: {},
       uimap: {},
     },

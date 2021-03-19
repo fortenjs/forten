@@ -1,7 +1,7 @@
 import { Reference } from '@forten/build'
 import { TreeType } from '@forten/tree-type'
-import { SlotInfo } from '.'
-import { UINodeType } from './UINodeType'
+import { SlotInfo } from './index.js'
+import { UINodeType } from './UINodeType.js'
 
 export interface UINodeByIdType {
   [key: string]: UINodeType

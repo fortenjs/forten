@@ -1,10 +1,8 @@
-import * as React from 'react'
-
-import { Comp, styled, useOvermind } from '../../app'
-import { CompositionHolder, ToolboxOpType } from '../../lib'
-
-import { ToolboxMenu } from './ToolboxMenu'
 import classnames from 'classnames'
+import * as React from 'react'
+import { Comp, styled, useOvermind } from '../../app.js'
+import { CompositionHolder, ToolboxOpType } from '../../lib/index.js'
+import { ToolboxMenu } from './ToolboxMenu.js'
 
 interface ToolpaddingType {
   top: number

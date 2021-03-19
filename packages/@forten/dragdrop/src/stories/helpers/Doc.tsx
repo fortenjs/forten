@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { draggable, Drop } from '../..'
-import { Comp, useOvermind, styled } from './app'
+import { draggable, Drop } from '../../index.js'
+import { Comp, styled, useOvermind } from './app.js'
 
 export const MyDoc = styled.div`
   border: 1px solid #888;

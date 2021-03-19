@@ -1,7 +1,6 @@
 import { describe, expect, it } from 'test'
-
-import { getSiblings } from './getSiblings'
-import { mockComposition } from './testUtils'
+import { getSiblings } from './getSiblings.js'
+import { mockComposition } from './testUtils.js'
 
 const composition = mockComposition()
 

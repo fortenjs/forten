@@ -1,6 +1,6 @@
 import { Overmind } from 'overmind'
-import { Action } from './app'
-import { locale_set } from './types'
+import { Action } from './app.js'
+import { locale_set } from './types.js'
 
 export const onInitialize: Action<Overmind<{}>> = (ctx, app) => {
   app.addMutationListener(({ path, args }) => {

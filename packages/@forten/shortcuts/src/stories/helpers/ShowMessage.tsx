@@ -1,6 +1,6 @@
 import { Input, Message } from '@forten/styled'
 import * as React from 'react'
-import { Comp, styled, useOvermind } from './'
+import { Comp, styled, useOvermind } from './index.js'
 
 export interface ShowMessageProps {
   className?: string

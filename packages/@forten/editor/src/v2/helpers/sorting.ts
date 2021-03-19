@@ -1,4 +1,4 @@
-import { Elements } from '../types'
+import { Elements } from '../types/index.js'
 
 export function sortAscending(children: Elements): string[] {
   return Object.keys(children).sort((a, b) => children[a].p - children[b].p)

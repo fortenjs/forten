@@ -1,10 +1,10 @@
 import { TreeType } from '@forten/tree-type'
 import { describe, expect, it } from 'test'
-import { appendGraph } from './appendGraph'
+import { appendBranch } from './appendBranch.js'
 
 type MockBlock = [string, string[]]
 
-function mockGraph(def: MockBlock[], id: string = 'base'): TreeType {
+function mockBranch(def: MockBlock[], id: string = 'base'): TreeType {
   return {
     id,
     type: 'test',
@@ -19,20 +19,20 @@ function mockGraph(def: MockBlock[], id: string = 'base'): TreeType {
   }
 }
 
-describe('appendGraph', () => {
+describe('appendBranch', () => {
   it('should remap ids', () => {
-    const graph = mockGraph([
+    const graph = mockBranch([
       ['foo', ['bar', 'baz']],
       ['bar', ['bing']],
       ['baz', []],
       ['bing', []],
     ])
-    const branch = mockGraph([
+    const branch = mockBranch([
       ['yo', ['bar']],
       ['bar', ['bing']],
       ['bing', []],
     ])
-    appendGraph(graph, 'baz', 1, branch)
+    appendBranch(graph, 'baz', 1, branch)
     const children = graph.blocks['baz'].children
     expect(children).toEqual([null, 'yo'])
     const yo = graph.blocks['yo']
@@ -43,19 +43,19 @@ describe('appendGraph', () => {
   })
 
   it('should throw on missing node', () => {
-    const graph = mockGraph([
+    const graph = mockBranch([
       ['foo', ['bar', 'baz']],
       ['bar', ['bing']],
       ['baz', []],
       ['bing', []],
     ])
-    const branch = mockGraph([
+    const branch = mockBranch([
       ['yo', ['bar']],
       ['bar', ['bing']],
       ['bing', []],
     ])
-    expect(() => appendGraph(graph, 'doom', 1, branch)).toThrow(
-      `Cannot append (nodeId 'doom' not in tree).`
+    expect(() => appendBranch(graph, 'doom', 1, branch)).toThrow(
+      `Cannot append (blockId 'doom' not in tree).`
     )
   })
 })

@@ -1,8 +1,8 @@
 import { IAction, Overmind } from 'overmind'
-import { describe, expect, it, restore } from 'test'
-import { Block, build, settings } from './'
-import { Setup } from './types'
 import simple from 'simple-mock'
+import { describe, expect, it, restore } from 'test'
+import { Block, build, settings } from './index.js'
+import { Setup } from './types.js'
 
 const foo = {
   name: 'foo',

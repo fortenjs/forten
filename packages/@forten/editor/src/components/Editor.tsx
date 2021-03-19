@@ -5,9 +5,9 @@ import { isCommand } from '@forten/useragent'
 import classnames from 'classnames'
 import { IReactComponent } from 'overmind-react'
 import * as React from 'react'
-import { Comp, Context, styled, theme, useOvermind } from '../app'
-import * as makeref from '../lib/utils/makeRef'
-import { selectAll } from '../lib/utils/rangeSelection'
+import { Comp, Context, styled, theme, useOvermind } from '../app.js'
+import * as makeref from '../lib/utils/makeRef.js'
+import { selectAll } from '../lib/utils/rangeSelection.js'
 import {
   CaretSelectionType,
   CompositionHolder,
@@ -16,20 +16,20 @@ import {
   isRangeSelection,
   RangeSelectionType,
   SelectionType,
-} from '../lib/utils/types'
+} from '../lib/utils/types.js'
 import {
   dragParaType,
   EditorParaDrag,
   EditorParaDrop,
   isParaRefDrag,
   SPACER,
-} from '../types'
-import { EditorStyles } from './EditorStyles'
-import { ElementTag } from './ElementTag'
-import { expandPages } from './helpers/expandInner'
-import { getSelection } from './helpers/getSelection'
-import { isInputEvent } from './helpers/isInputEvent'
-import { Toolbox } from './Toolbox'
+} from '../types.js'
+import { EditorStyles } from './EditorStyles.js'
+import { ElementTag } from './ElementTag/index.js'
+import { expandPages } from './helpers/expandInner.js'
+import { getSelection } from './helpers/getSelection.js'
+import { isInputEvent } from './helpers/isInputEvent.js'
+import { Toolbox } from './Toolbox/index.js'
 
 const USE_V2 = process.env.NODE_ENV === 'development' && false
 if (USE_V2) {

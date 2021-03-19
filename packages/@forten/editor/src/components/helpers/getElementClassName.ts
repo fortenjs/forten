@@ -1,4 +1,4 @@
-import { ElementType, isDocumentTitle } from '../../lib'
+import { ElementType, isDocumentTitle } from '../../lib/index.js'
 
 const OP_TO_CLASS: { [op: string]: string } = {
   B: 'strong',

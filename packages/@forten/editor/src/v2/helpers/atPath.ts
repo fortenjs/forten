@@ -1,4 +1,4 @@
-import { Element, isGroupElement, Mutation } from '../types'
+import { Element, isGroupElement, Mutation } from '../types/index.js'
 
 /* Returns the element at the given path
  */

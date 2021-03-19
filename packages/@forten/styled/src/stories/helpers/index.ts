@@ -4,11 +4,11 @@ import { TStories } from '@forten/story'
 import { theme } from '@forten/theme'
 import { IAction, Overmind } from 'overmind'
 import { createHook } from 'overmind-react'
-import { styled, StyledSettings } from '../..'
-import * as actions from './actions'
-import { family } from './family'
-import { icons } from './icons'
-import { inspector } from './inspector'
+import { styled, StyledSettings } from '../../index.js'
+import * as actions from './actions/index.js'
+import { family } from './family.js'
+import { icons } from './icons.js'
+import { inspector } from './inspector.js'
 
 const test = {
   name: 'test',

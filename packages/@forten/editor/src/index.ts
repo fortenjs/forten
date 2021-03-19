@@ -5,17 +5,21 @@ import { locale } from '@forten/locale'
 import { shortcuts } from '@forten/shortcuts'
 import { styled } from '@forten/styled'
 import { theme } from '@forten/theme'
-import * as actions from './actions'
-import * as effects from './effects'
-import { hooksActions } from './hooksActions'
-import { settings } from './settings'
-import { setup } from './setup'
-import { EditorConfig } from './types'
-import * as v2 from './v2/overmind'
+import * as actions from './actions/index.js'
+import * as effects from './effects/index.js'
+import { hooksActions } from './hooksActions.js'
+import { settings } from './settings/index.js'
+import { setup } from './setup.js'
+import { EditorConfig } from './types.js'
+import * as v2 from './v2/overmind/index.js'
 
-export * from './components'
-export { ElementTag, ElementTagProps, getInputValue } from './components'
-export * from './helpers'
+export * from './components/index.js'
+export {
+  ElementTag,
+  ElementTagProps,
+  getInputValue,
+} from './components/index.js'
+export * from './helpers.js'
 export {
   CompositionType,
   EditorOptions,
@@ -29,21 +33,21 @@ export {
   ParagraphProps,
   PasteArgs,
   PasteOperation,
-} from './lib'
-export { caretSelection } from './lib/utils/caretSelection'
+} from './lib/index.js'
+export { caretSelection } from './lib/utils/caretSelection.js'
 export {
   CustomParagraphInfo,
   customParagraphs,
-} from './lib/utils/customParagraphs'
-export { firstId } from './lib/utils/firstId'
-export { SortAscending as sortedIds } from './lib/utils/getNeighbours'
-export { isEmptyComposition } from './lib/utils/isEmpty'
-export { lastId } from './lib/utils/lastId'
-export { rangeSelection } from './lib/utils/rangeSelection'
-export { makeComposition, MakeComposition } from './lib/utils/testUtils'
-export * from './paragraphs'
-export { editorTheme } from './theme'
-export * from './types'
+} from './lib/utils/customParagraphs.js'
+export { firstId } from './lib/utils/firstId.js'
+export { SortAscending as sortedIds } from './lib/utils/getNeighbours.js'
+export { isEmptyComposition } from './lib/utils/isEmpty.js'
+export { lastId } from './lib/utils/lastId.js'
+export { rangeSelection } from './lib/utils/rangeSelection.js'
+export { makeComposition, MakeComposition } from './lib/utils/testUtils.js'
+export * from './paragraphs/index.js'
+export { editorTheme } from './theme.js'
+export * from './types.js'
 
 export const editor: Block<EditorConfig> = {
   name: 'editor',

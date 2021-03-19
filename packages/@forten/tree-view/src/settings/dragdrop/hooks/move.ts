@@ -1,13 +1,13 @@
 import { Reference, resolve } from '@forten/build'
 import { DragdropHooks, Position } from '@forten/dragdrop'
 import { TreeType } from '@forten/tree-type'
-import { Context } from '../../../app'
-import { defaultUILayout } from '../../../helpers'
-import { SlotInfo, TreeDrag, TreeDrop } from '../../../types'
+import { Context } from '../../../app.js'
+import { defaultUILayout } from '../../../helpers/index.js'
+import { SlotInfo, TreeDrag, TreeDrop } from '../../../types/index.js'
 
 const MIN_TREE_DIST = 2 * 50 * 50 // px
 
-interface GraphPosition {
+interface BranchPosition {
   tree: Reference<TreeType>
   id: string
   x: number
@@ -71,7 +71,7 @@ export const move: DragdropHooks['move'] = (ctx: Context, value) => {
   }
 
   const { tree: branch } = drag.payload as TreeDrag
-  const trees: GraphPosition[] = Array.from(
+  const trees: BranchPosition[] = Array.from(
     document.getElementsByClassName(`tree-${branch.type}`)
   )
     .map(e => {
@@ -80,7 +80,7 @@ export const move: DragdropHooks['move'] = (ctx: Context, value) => {
         return undefined
       }
       const rect = e.getBoundingClientRect()
-      const g: GraphPosition = {
+      const g: BranchPosition = {
         tree: uigraph.tree,
         id: e.id,
         x: rect.x,
@@ -91,7 +91,7 @@ export const move: DragdropHooks['move'] = (ctx: Context, value) => {
       }
       return g
     })
-    .filter(e => e) as GraphPosition[]
+    .filter(e => e) as BranchPosition[]
 
   // clear other target
   const { dropTarget } = state.treeView
@@ -108,7 +108,7 @@ export const move: DragdropHooks['move'] = (ctx: Context, value) => {
       if (oldId === tree.id) {
         const oldSlot = dropTarget[oldId]
         if (
-          oldSlot.nodeId === slot.nodeId &&
+          oldSlot.blockId === slot.blockId &&
           oldSlot.slotIdx === slot.slotIdx
         ) {
           // did not change
@@ -132,7 +132,7 @@ export const move: DragdropHooks['move'] = (ctx: Context, value) => {
         ctx.actions.tree.changed({
           tree: target,
           connecting: {
-            nodeId: slot.nodeId,
+            blockId: slot.blockId,
             slotIdx: slot.slotIdx,
             tree: branch,
           },

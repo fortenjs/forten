@@ -1,6 +1,7 @@
 import { ComponentWrapper } from '@forten/story'
 import { mutate } from 'overmind'
 import * as React from 'react'
+import { Comp } from '../../app.js'
 import {
   Button,
   Card,
@@ -12,9 +13,8 @@ import {
   ModalProps as Props,
   Spacer,
   TitleText,
-} from '../..'
-import { Comp } from '../../app'
-import { config, Stories, useOvermind } from '../helpers'
+} from '../../index.js'
+import { config, Stories, useOvermind } from '../helpers.js'
 
 const Wrapper: Comp = ({ children }) => {
   const app = useOvermind()

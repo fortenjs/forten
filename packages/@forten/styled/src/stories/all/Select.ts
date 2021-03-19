@@ -1,5 +1,5 @@
-import { Select as component, SelectProps as Props } from '../..'
-import { config, Stories } from '../helpers'
+import { Select as component, SelectProps as Props } from '../../index.js'
+import { config, Stories } from '../helpers.js'
 
 export const selectStories: Stories<Props> = {
   name: 'Select',

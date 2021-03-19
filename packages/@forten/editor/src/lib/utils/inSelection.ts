@@ -1,4 +1,4 @@
-import { getPosition } from './getPosition'
+import { getPosition } from './getPosition.js'
 import {
   ChangeType,
   CompositionType,
@@ -6,7 +6,7 @@ import {
   isGroupElement,
   isStringElement,
   SelectionType,
-} from './types'
+} from './types.js'
 
 export const SMALLEST_PATH = [-1, -1, -1]
 export const BIGGEST_PATH = [Infinity, Infinity, Infinity]

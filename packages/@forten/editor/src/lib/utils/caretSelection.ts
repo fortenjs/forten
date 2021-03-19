@@ -1,4 +1,4 @@
-import { CaretSelectionType, SelectionPositionType } from './types'
+import { CaretSelectionType, SelectionPositionType } from './types.js'
 
 const DUMMY_POSITION = { top: 0, left: 0 }
 

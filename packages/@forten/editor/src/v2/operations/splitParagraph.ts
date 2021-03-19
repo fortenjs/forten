@@ -4,11 +4,16 @@ import {
   firstDescendant,
   lastDescendant,
   rangeSelection,
-} from '../helpers'
-import { GroupElement, isStringElement, Mutation, Selection } from '../types'
-import { addDepth } from './addDepth'
-import { applyToRange } from './applyToRange'
-import { newParagraph } from './newParagraph'
+} from '../helpers/index.js'
+import {
+  GroupElement,
+  isStringElement,
+  Mutation,
+  Selection,
+} from '../types/index.js'
+import { addDepth } from './addDepth.js'
+import { applyToRange } from './applyToRange.js'
+import { newParagraph } from './newParagraph.js'
 
 export function splitParagraph(m: Mutation, s: Selection) {
   const path = s.anchorPath.slice(0, 1)

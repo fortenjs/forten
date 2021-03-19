@@ -1,4 +1,7 @@
-import { Action, Config } from '../app'
+import { IContext } from 'overmind'
+import { Action, Config } from '../app.js'
+import { doOperation, makeOps, OperationsKey } from '../lib/doOperation.js'
+import { setParaFromText } from '../lib/utils/setParaFromText.js'
 import {
   CompositionHolder,
   InitFunction,
@@ -6,11 +9,7 @@ import {
   ParagraphPayload,
   ProcessOpsArgs,
   SelectionType,
-} from '../lib/utils/types'
-import { OperationsKey, doOperation, makeOps } from '../lib/doOperation'
-
-import { IContext } from 'overmind'
-import { setParaFromText } from '../lib/utils/setParaFromText'
+} from '../lib/utils/types.js'
 
 export interface ApplyOpArgs {
   holder: CompositionHolder

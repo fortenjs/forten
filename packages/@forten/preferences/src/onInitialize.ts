@@ -1,5 +1,5 @@
 import { Overmind } from 'overmind'
-import { AsyncAction } from './app'
+import { AsyncAction } from './app.js'
 
 interface IMutation {
   method: string

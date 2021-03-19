@@ -1,5 +1,5 @@
-import { CompositionHolder } from './lib'
-import { SortAscending } from './lib/utils/getNeighbours'
+import { CompositionHolder } from './lib/index.js'
+import { SortAscending } from './lib/utils/getNeighbours.js'
 
 export function parseCustomData<T>(
   holder: CompositionHolder,

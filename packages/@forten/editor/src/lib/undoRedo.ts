@@ -1,7 +1,7 @@
-import { CompositionHolder } from '.'
-import { Context } from '../app'
 import { PATH } from 'proxy-state-tree'
-import { UndoStore } from '../types'
+import { Context } from '../app.js'
+import { UndoStore } from '../types.js'
+import { CompositionHolder } from './index.js'
 const UNDO_SIZE = 30
 
 function checkPath(store: UndoStore, holder: CompositionHolder) {

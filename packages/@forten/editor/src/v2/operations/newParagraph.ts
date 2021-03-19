@@ -1,5 +1,10 @@
-import { atPath, makeRef, siblings } from '../helpers'
-import { ElementOptions, Mutation, Selection, StringElement } from '../types'
+import { atPath, makeRef, siblings } from '../helpers/index.js'
+import {
+  ElementOptions,
+  Mutation,
+  Selection,
+  StringElement,
+} from '../types/index.js'
 
 export function newParagraph(m: Mutation, prev: Selection) {
   const pe = atPath(m, prev.anchorPath)

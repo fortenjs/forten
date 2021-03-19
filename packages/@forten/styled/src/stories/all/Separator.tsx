@@ -1,7 +1,7 @@
 import { ComponentWrapper } from '@forten/story'
-import { Separator as component } from '../..'
-import { styled } from '../../app'
-import { config, Stories } from '../helpers'
+import { styled } from '../../app.js'
+import { Separator as component } from '../../index.js'
+import { config, Stories } from '../helpers.js'
 
 const Wrapper = styled(ComponentWrapper)`
   display: flex;

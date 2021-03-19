@@ -1,10 +1,9 @@
 // @ts-ignore
-import wordFilter from 'tinymce-word-paste-filter'
-import { PasteOperation } from '../../..'
-// import { fromHTML } from '../../../lib/fromHTML'
-// import { PASTE_TEXT } from '../../../lib/utils/types'
-// import { doPasteText } from './pasteText'
-// import { doPasteEditor } from './pasteEditor'
+import { PasteOperation } from '../../../index.js'
+// import { fromHTML } from '../../../lib/fromHTML.js'
+// import { PASTE_TEXT } from '../../../lib/utils/types.js'
+// import { doPasteText } from './pasteText.js'
+// import { doPasteEditor } from './pasteEditor.js'
 
 export const pasteHtml: PasteOperation = async function (ctx, type, args) {
   // const { holder, event } = args

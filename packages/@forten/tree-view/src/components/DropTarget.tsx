@@ -1,6 +1,6 @@
-import { Comp, styled, useOvermind } from '../app'
-import { UINodeType } from '../types'
 import * as React from 'react'
+import { Comp, styled, useOvermind } from '../app.js'
+import { UINodeType } from '../types/index.js'
 const DURATION = 1.6
 
 export interface DropTargetProps {

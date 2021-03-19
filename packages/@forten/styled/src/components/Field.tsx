@@ -1,8 +1,8 @@
 import classnames from 'classnames'
 import * as React from 'react'
-import { Comp, styled, theme, useOvermind } from '../app'
-import { Icon } from './Icon'
-import { Input, InputProps } from './Input'
+import { Comp, styled, theme, useOvermind } from '../app.js'
+import { Icon } from './Icon.js'
+import { Input, InputProps } from './Input.js'
 
 const FieldIcon = styled.div`
   display: flex;

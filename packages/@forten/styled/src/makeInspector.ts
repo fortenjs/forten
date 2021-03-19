@@ -1,10 +1,10 @@
-import { Context } from './app'
-import { InspectorGroup, InspectorIcon } from './components'
-import { Families, Inspectors, unSugarFamilySetting } from './types'
+import { Context } from './app.js'
+import { InspectorGroup, InspectorIcon } from './components/index.js'
+import { Families, Inspectors, unSugarFamilySetting } from './types.js'
 
-export * from './components'
-export * from './theme'
-export * from './types'
+export * from './components/index.js'
+export * from './theme.js'
+export * from './types.js'
 
 export function makeInspector(
   families: Families,

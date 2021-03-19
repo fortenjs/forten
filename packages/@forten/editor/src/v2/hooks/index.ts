@@ -1,9 +1,9 @@
 // HOOKS CAN MUTATE COMPOSITION
 // but they are only called from mutations themselves
 //
-import { HookArg, Mutation, MutateHook } from '../types'
-import * as deleteParagraph from './deleteParagraph'
-import * as clearSelection from './clearSelection'
+import { HookArg, MutateHook, Mutation } from '../types/index.js'
+import * as clearSelection from './clearSelection/index.js'
+import * as deleteParagraph from './deleteParagraph/index.js'
 
 function runAll<T>(
   obj: { [key: string]: MutateHook<T> },

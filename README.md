@@ -12,6 +12,8 @@ The name is an hommage to [Harriet Forten Purvis](https://en.wikipedia.org/wiki/
 [commitizen-image]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat
 [commitizen-url]: http://commitizen.github.io/cz-cli/
 
+Community: [Join us on discord !][discord-url]
+
 ## Packages
 
 - [![NPM version][build-image]][build-npm] [@forten/build][build-url]
@@ -66,7 +68,6 @@ The name is an hommage to [Harriet Forten Purvis](https://en.wikipedia.org/wiki/
 [preferences-url]: https://github.com/fortenjs/forten/tree/next/packages/@forten/preferences
 [preferences-image]: https://img.shields.io/npm/v/@forten/preferences.svg?style=flat
 [preferences-npm]: https://npmjs.org/package/@forten/preferences
-[sample-url]: https://github.com/fortenjs/sample-project
 [shortcuts-url]: https://github.com/fortenjs/forten/tree/next/packages/@forten/shortcuts
 [shortcuts-image]: https://img.shields.io/npm/v/@forten/shortcuts.svg?style=flat
 [shortcuts-npm]: https://npmjs.org/package/@forten/shortcuts
@@ -82,49 +83,13 @@ The name is an hommage to [Harriet Forten Purvis](https://en.wikipedia.org/wiki/
 [tree-url]: https://github.com/fortenjs/forten/tree/next/packages/@forten/tree
 [tree-image]: https://img.shields.io/npm/v/@forten/tree.svg?style=flat
 [tree-npm]: https://npmjs.org/package/@forten/tree
-[tree-type-url]: https://github.com/fortenjs/forten/tree-type/next/packages/@forten/tree-type
+[tree-type-url]: https://github.com/fortenjs/forten/tree/next/packages/@forten/tree-type
 [tree-type-image]: https://img.shields.io/npm/v/@forten/tree-type.svg?style=flat
 [tree-type-npm]: https://npmjs.org/package/@forten/tree-type
-[tree-view-url]: https://github.com/fortenjs/forten/tree-view/next/packages/@forten/tree-view
+[tree-view-url]: https://github.com/fortenjs/forten/tree/next/packages/@forten/tree-view
 [tree-view-image]: https://img.shields.io/npm/v/@forten/tree-view.svg?style=flat
 [tree-view-npm]: https://npmjs.org/package/@forten/tree-view
 [useragent-url]: https://github.com/fortenjs/forten/tree/next/packages/@forten/useragent
 [useragent-image]: https://img.shields.io/npm/v/@forten/useragent.svg?style=flat
 [useragent-npm]: https://npmjs.org/package/@forten/useragent
-
-### Release process
-
-Review and merge PRs into `next` branch. To release a production ready version, you need
-to add the commits from `next` to `master` with the following (github web interface does not
-work as it makes branches diverge):
-
-```sh
-$ git checkout next
-$ git pull
-$ npm install # make sure any new dependencies are installed
-$ npm install --no-save nodegit # needed to test release
-$ npm run release -- --dry-run # and check release notes
-$ git checkout master
-$ git pull
-$ git merge --ff-only next
-$ git push
-```
-
-### Dependencies
-
-Here is the order in which we review and update modules (later modules
-depend on all or some of the previous ones). Modules with a \* have 100%
-coverage.
-
-1. build\*
-2. hooks\*
-3. locale\*
-4. theme\*
-5. story [TODO] 100% coverage
-6. styled [TODO] fix stories and tests
-7. dragdrop [TODO] improve coverage
-8. useragent [TODO] write more tests
-9. shortcuts [TODO] write more tests
-10. editor [TODO] fix stories, fix tests
-11. tree [TODO] 100% coverage
-12. tree-view [TODO] 100% coverage (through stories)
+[discord-url]: https://discord.gg/F7JHpk8qeW

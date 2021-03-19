@@ -1,5 +1,5 @@
-import { Action } from '../app'
-import { CompositionHolder } from '../lib'
+import { Action } from '../app.js'
+import { CompositionHolder } from '../lib/index.js'
 
 export interface RemoveParagraphArg {
   holder: CompositionHolder

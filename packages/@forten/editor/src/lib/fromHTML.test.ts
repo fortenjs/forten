@@ -1,6 +1,6 @@
-import { describe, expect, it, elemValue } from 'test'
-import { fromHTML } from './fromHTML'
-import { toHTML } from './toHTML'
+import { describe, elemValue, expect, it } from 'test'
+import { fromHTML } from './fromHTML.js'
+import { toHTML } from './toHTML.js'
 
 function testFromHTML(html: string): string[] {
   return Object.values(fromHTML(html).g)

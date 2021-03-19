@@ -1,4 +1,4 @@
-import { SelectionType } from './utils/types'
+import { SelectionType } from './utils/types.js'
 
 export function stripZeroWidthChar(
   avalue: string,

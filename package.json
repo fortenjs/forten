@@ -4,8 +4,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build:watch": "env NODE_ENV=production repo-cooker build:watch",
-    "build": "env NODE_ENV=production repo-cooker --build",
+    "build": "repo-cooker --build",
     "checkdeps": "repo-cooker --check-dependencies",
     "clean": "repo-cooker clean",
     "commit": "git-cz",
@@ -16,7 +15,6 @@
     "install": "npm run link",
     "link": "repo-cooker --link",
     "release": "repo-cooker --release",
-    "serve": "cd packages/examples && npm run serve",
     "test": "repo-cooker test"
   },
   "repository": {
@@ -65,7 +63,6 @@
     "css-loader": "4.3.0",
     "cz-customizable": "^5.2.0",
     "cz-customizable-ghooks": "^1.5.0",
-    "fake-indexeddb": "3.1.2",
     "file-loader": "6.1.0",
     "html-webpack-plugin": "5.2.0",
     "jest": "26.6.3",
@@ -75,12 +72,12 @@
     "prettier": "2.1.2",
     "prettier-plugin-organize-imports": "^1.1.1",
     "react-test-renderer": "16.13.1",
-    "repo-cooker": "^6.3.1",
+    "repo-cooker": "^7.3.0",
     "rimraf": "3.0.2",
     "simple-mock": "0.8.0",
     "ts-jest": "26.4.4",
     "ts-loader": "8.0.17",
-    "typescript": "4.1.5",
+    "typescript": "4.2.3",
     "webpack": "5.24.3",
     "webpack-cli": "4.5.0",
     "webpack-dev-server": "3.11.0"

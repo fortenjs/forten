@@ -1,17 +1,17 @@
 import { resolve } from '@forten/build'
-import { Action, Context } from '../app'
-import { ensureComposition } from '../effects'
-import { caretSelection, ChangesType } from '../lib'
-import { makeOps } from '../lib/doOperation'
-import { getAtPath } from '../lib/utils/getAtPath'
-import { getSiblings } from '../lib/utils/getSiblings'
-import { lastId } from '../lib/utils/lastId'
+import { Action, Context } from '../app.js'
+import { ensureComposition } from '../effects/index.js'
+import { makeOps } from '../lib/doOperation.js'
+import { caretSelection, ChangesType } from '../lib/index.js'
+import { getAtPath } from '../lib/utils/getAtPath.js'
+import { getSiblings } from '../lib/utils/getSiblings.js'
+import { lastId } from '../lib/utils/lastId.js'
 import {
   ChangeType,
   ElementOptionsType,
   SelectionType,
-} from '../lib/utils/types'
-import { EditorParaDrag, EditorParaDrop, isParaRefDrag } from '../types'
+} from '../lib/utils/types.js'
+import { EditorParaDrag, EditorParaDrop, isParaRefDrag } from '../types.js'
 
 export type DropParagraphArg = EditorParaDrag &
   EditorParaDrop & { exported?: boolean }

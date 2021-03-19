@@ -1,2 +1,2 @@
-export * from './removeColumns'
-export * from './removeData'
+export * from './removeColumns.js'
+export * from './removeData.js'

@@ -1,34 +1,33 @@
+export { getTitle } from './getTitle.js'
+export { newComposition, NewCompositionOptions } from './newComposition.js'
+export * from './undoRedo.js'
+export { caretSelection } from './utils/caretSelection.js'
+export { makeRef } from './utils/makeRef.js'
 export {
+  ChangesType,
+  CompositionHolder,
+  CompositionType,
+  EditorOptions,
+  EditorProvider,
+  ElementOptionsType,
+  ElementSizes,
+  ElementsType,
+  ElementType,
+  InitFunction,
   isCustomElement,
+  isDocumentTitle,
   isGroupElement,
   isStringElement,
-  isDocumentTitle,
   isTitle,
-  ChangesType,
-  CompositionType,
-  CompositionHolder,
-  ParagraphProps,
-  ElementSizes,
-  ElementType,
-  ElementsType,
-  ElementOptionsType,
-  EditorOptions,
-  InitFunction,
-  EditorProvider,
-  OperationType,
   OperationsType,
+  OperationType,
+  ParagraphOption,
+  ParagraphProps,
+  Paragraphs,
   PasteArgs,
   PasteOperation,
-  Paragraphs,
-  ParagraphOption,
   SelectionType,
   TextMarkup,
-  ToolboxOpType,
   ToolboxOperationValueType,
-} from './utils/types'
-
-export { newComposition, NewCompositionOptions } from './newComposition'
-export { getTitle } from './getTitle'
-export { caretSelection } from './utils/caretSelection'
-export { makeRef } from './utils/makeRef'
-export * from './undoRedo'
+  ToolboxOpType,
+} from './utils/types.js'

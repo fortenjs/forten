@@ -1,5 +1,5 @@
-import { Tree as component, TreeProps as Props } from '../..'
-import { config, Stories, Wrapper } from '../helper'
+import { Tree as component, TreeProps as Props } from '../../index.js'
+import { config, Stories, Wrapper } from '../helper.js'
 
 export const tree: Stories<Props> = {
   name: 'Tree',
@@ -19,7 +19,7 @@ export const tree: Stories<Props> = {
       component,
       props: ctx => ({
         tree: ctx.state.test.graph,
-        nodeId: 'bazId',
+        blockId: 'bazId',
       }),
     },
     /*

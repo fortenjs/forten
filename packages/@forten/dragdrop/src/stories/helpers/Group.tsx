@@ -1,7 +1,7 @@
 import * as React from 'react'
-import { Drop, droppable, dropStyles } from '../..'
-import { Comp, styled, useOvermind } from './app'
-import { Doc } from './Doc'
+import { Drop, droppable, dropStyles } from '../../index.js'
+import { Comp, styled, useOvermind } from './app.js'
+import { Doc } from './Doc.js'
 
 const MyDrop = styled(Drop)`
   padding: 20px;

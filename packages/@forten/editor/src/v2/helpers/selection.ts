@@ -5,9 +5,9 @@ import {
   Position,
   RangeSelection,
   Selection,
-} from '../types'
-import { atPath } from './atPath'
-import { lastDescendant } from './children'
+} from '../types/index.js'
+import { atPath } from './atPath.js'
+import { lastDescendant } from './children.js'
 
 const DUMMY_POSITION = { top: 0, left: 0 }
 

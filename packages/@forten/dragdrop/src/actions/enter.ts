@@ -1,6 +1,6 @@
-import { Action } from '../app'
-import { runHook } from '../helpers'
-import { DropData } from '../types'
+import { Action } from '../app.js'
+import { runHook } from '../helpers/index.js'
+import { DropData } from '../types.js'
 
 export interface EnterArg {
   htmlElement: HTMLElement

@@ -1,5 +1,5 @@
-import { runHooks } from '../hooks'
-import { Mutation } from '../types'
+import { runHooks } from '../hooks/index.js'
+import { Mutation } from '../types/index.js'
 
 export function deleteParagraph(m: Mutation, id: string) {
   const { g } = m.comp

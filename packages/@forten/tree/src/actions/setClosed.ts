@@ -1,14 +1,14 @@
 import { TreeType } from '@forten/tree-type'
-import { Action } from '../app'
+import { Action } from '../app.js'
 
 export interface SetClosedArg {
-  nodeId: string
+  blockId: string
   tree: TreeType
   closed: boolean
 }
 
 export const setClosed: Action<SetClosedArg> = (ctx, arg) => {
-  const { closed, nodeId, tree } = arg
-  tree.blocks[nodeId].closed = closed
+  const { closed, blockId, tree } = arg
+  tree.blocks[blockId].closed = closed
   ctx.actions.tree.changed({ tree })
 }

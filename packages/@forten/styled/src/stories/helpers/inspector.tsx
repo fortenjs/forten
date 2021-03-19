@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { styled } from '../../app'
-import { InspectorIcon, InspectorWidget } from '../../components'
-import { Inspectors } from '../../types'
-import { TestApp } from './'
+import { styled } from '../../app.js'
+import { InspectorIcon, InspectorWidget } from '../../components/index.js'
+import { Inspectors } from '../../types.js'
+import { TestApp } from './index.js'
 
 const Wrap = styled.div`
   padding: 8px;

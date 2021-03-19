@@ -1,7 +1,7 @@
-import { caretSelection } from './utils/caretSelection'
-import { extractSelection } from './utils/extractSelection'
-import { getNeighbours } from './utils/getNeighbours'
-import { mergeElements } from './utils/mergeElements'
+import { caretSelection } from './utils/caretSelection.js'
+import { extractSelection } from './utils/extractSelection.js'
+import { getNeighbours } from './utils/getNeighbours.js'
+import { mergeElements } from './utils/mergeElements.js'
 import {
   ChangesType,
   ChangeType,
@@ -9,7 +9,7 @@ import {
   isCustomElement,
   isStringElement,
   SelectionType,
-} from './utils/types'
+} from './utils/types.js'
 
 export function doBackspaceKey(
   composition: CompositionType,

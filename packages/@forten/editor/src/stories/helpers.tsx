@@ -8,17 +8,22 @@ import { theme, ThemeSettings } from '@forten/theme'
 import { mutate } from 'overmind'
 import { createHook } from 'overmind-react'
 import * as React from 'react'
-import { editor, EditorSettings, newComposition, ParagraphProps } from '..'
-import { Comp, styled } from '../app'
-import { rangeSelection } from '../lib/utils/rangeSelection'
+import { Comp, styled } from '../app.js'
+import {
+  editor,
+  EditorSettings,
+  newComposition,
+  ParagraphProps,
+} from '../index.js'
+import { rangeSelection } from '../lib/utils/rangeSelection.js'
 import {
   makeComposition,
   mockComposition,
   mockRef,
-} from '../lib/utils/testUtils'
-import { editor_titleExtra } from '../types'
+} from '../lib/utils/testUtils.js'
+import { editor_titleExtra } from '../types.js'
 
-export { makeComposition } from '../lib/utils/testUtils'
+export { makeComposition } from '../lib/utils/testUtils.js'
 
 // We need to put this here as the base composition created for testing uses
 // makeRef and we do not want paragraph ids to change in snapshot on every

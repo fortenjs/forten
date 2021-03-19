@@ -1,7 +1,7 @@
 import { isCommand } from '@forten/useragent'
 import * as React from 'react'
-import { Comp, styled, useOvermind } from '../app'
-import { caretSelection, CompositionHolder } from '../lib'
+import { Comp, styled, useOvermind } from '../app.js'
+import { caretSelection, CompositionHolder } from '../lib/index.js'
 
 export interface SpacerProps {
   prevRef: string

@@ -1,5 +1,5 @@
 import { Setup } from '@forten/build'
-import { Hook, HooksConfig, HooksSettings } from './types'
+import { Hook, HooksConfig, HooksSettings } from './types.js'
 
 export const setup: Setup<HooksConfig, HooksSettings<any>> = (
   config,

@@ -1,5 +1,5 @@
-import { SelectionType } from '../../lib'
-import { getPath } from './getPath'
+import { SelectionType } from '../../lib/index.js'
+import { getPath } from './getPath.js'
 
 export function getSelection(compId: string): SelectionType | undefined {
   const selection = window.getSelection()

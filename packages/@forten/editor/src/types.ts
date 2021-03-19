@@ -1,17 +1,17 @@
 import { Reference } from '@forten/build'
 import { Hook } from '@forten/hooks'
-import * as actions from './actions'
-import * as effects from './effects'
-import { hooksActions } from './hooksActions'
+import * as actions from './actions/index.js'
+import * as effects from './effects/index.js'
+import { hooksActions } from './hooksActions.js'
 import {
   CompositionHolder,
   CompositionType,
   EditorOptions,
   EditorProvider,
-} from './lib/utils/types'
-import * as v2 from './v2/overmind'
+} from './lib/utils/types.js'
+import * as v2 from './v2/overmind/index.js'
 
-export { CompositionHolder } from './lib/utils/types'
+export { CompositionHolder } from './lib/utils/types.js'
 export const editor_pasteEditor = 'editor_pasteEditor'
 export const SPACER = '\u200B'
 

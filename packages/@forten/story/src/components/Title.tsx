@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Comp, styled } from '../app'
+import { Comp, styled } from '../app.js'
 
 interface TitleProps {
   className?: string

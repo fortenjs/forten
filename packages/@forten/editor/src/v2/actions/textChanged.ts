@@ -1,1 +1,1 @@
-export { textChanged } from '../mutations'
+export { textChanged } from '../mutations/index.js'

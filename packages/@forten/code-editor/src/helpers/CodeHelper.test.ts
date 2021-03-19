@@ -1,5 +1,5 @@
-import { describe, it, expect } from 'test'
-import { compileCode } from './CodeHelper'
+import { describe, expect, it } from 'test'
+import { compileCode } from './CodeHelper.js'
 
 describe('CodeHelper compileCode', () => {
   it('should return errors on invalid code', () => {
@@ -67,38 +67,16 @@ describe('CodeHelper compileCode scrub', (it, setupDone) => {
   })
 
   it('should get values with unary minus', assert => {
-    assert.equal(scrub.literals.map(l => l.value), [
-      0,
-      10,
-      -20,
-      30,
-      -40,
-      -50,
-      60,
-      -70,
-      -80,
-      90,
-      100,
-      110,
-      120,
-    ])
+    assert.equal(
+      scrub.literals.map(l => l.value),
+      [0, 10, -20, 30, -40, -50, 60, -70, -80, 90, 100, 110, 120]
+    )
   })
 
   it('should get literal position', assert => {
-    assert.equal(scrub.literals.map(l => l.line), [
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      9,
-      10,
-      10,
-      10,
-      10,
-      10,
-      15,
-    ])
+    assert.equal(
+      scrub.literals.map(l => l.line),
+      [4, 5, 6, 7, 8, 9, 9, 10, 10, 10, 10, 10, 15]
+    )
   })
 })

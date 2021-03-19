@@ -1,6 +1,6 @@
-import { caretSelection } from './utils/caretSelection'
-import * as makeref from './utils/makeRef'
-import { addDepth } from './utils/mergeElements'
+import { caretSelection } from './utils/caretSelection.js'
+import * as makeref from './utils/makeRef.js'
+import { addDepth } from './utils/mergeElements.js'
 import {
   CompositionType,
   ElementType,
@@ -8,7 +8,7 @@ import {
   isStringElement,
   StringElementType,
   Type,
-} from './utils/types'
+} from './utils/types.js'
 
 export interface NewCompositionOptions {
   id?: string

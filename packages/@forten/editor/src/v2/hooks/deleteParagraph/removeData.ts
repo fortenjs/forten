@@ -1,4 +1,4 @@
-import { DeleteParagraph, MutateHook } from '../../types'
+import { DeleteParagraph, MutateHook } from '../../types/index.js'
 
 export const removeData: MutateHook<DeleteParagraph> = (mut, arg) => {
   const { elem, path } = arg

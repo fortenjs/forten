@@ -1,7 +1,6 @@
 import { describe, expect, it } from 'test'
-
-import { isParagraphStart } from './isParagraphStart'
-import { mockComposition } from './testUtils'
+import { isParagraphStart } from './isParagraphStart.js'
+import { mockComposition } from './testUtils.js'
 
 const composition = mockComposition()
 

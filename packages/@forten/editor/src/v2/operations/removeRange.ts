@@ -4,8 +4,7 @@ import {
   inSelection,
   lastChild,
   sortAscending,
-} from '../helpers'
-import { addDepth, simplify } from '.'
+} from '../helpers/index.js'
 import {
   Element,
   ElementRef,
@@ -13,8 +12,9 @@ import {
   isStringElement,
   Mutation,
   RangeSelection,
-} from '../types'
-import { deleteParagraph } from './deleteParagraph'
+} from '../types/index.js'
+import { deleteParagraph } from './deleteParagraph.js'
+import { addDepth, simplify } from './index.js'
 
 function fuse(
   m: Mutation,

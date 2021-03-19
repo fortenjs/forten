@@ -1,7 +1,7 @@
 import { TreeType } from '@forten/tree-type'
-import { Action } from '../app'
-import { makeId } from '../helpers'
-import { TreeConnectArg } from '../types'
+import { Action } from '../app.js'
+import { makeId } from '../helpers/index.js'
+import { TreeConnectArg } from '../types.js'
 
 export interface TreeChangedArg {
   tree: TreeType

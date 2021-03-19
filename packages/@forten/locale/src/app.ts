@@ -1,6 +1,6 @@
 import { HooksConfig } from '@forten/hooks'
 import { derived, IAction } from 'overmind'
-import { LocaleConfig } from './types'
+import { LocaleConfig } from './types.js'
 
 type Config = LocaleConfig & HooksConfig
 

@@ -1,12 +1,13 @@
 import { TreeType } from '@forten/tree-type'
 import classnames from 'classnames'
 import * as React from 'react'
-import { Comp, styled, useOvermind } from '../app'
-import { KEY_ACTIONS } from '../helpers'
-import { TreeDrag, UITreeType } from '../types'
-import { DropTarget } from './DropTarget'
-import { Node } from './Node'
-import { TreeSVG } from './TreeSVG'
+import { Comp, styled, useOvermind } from '../app.js'
+import { KEY_ACTIONS } from '../helpers/index.js'
+import { TreeDrag, UITreeType } from '../types/index.js'
+import { DropTarget } from './DropTarget.js'
+import { Node } from './Node.js'
+import { StyledScroll } from './StyledScroll.js'
+import { TreeSVG } from './TreeSVG.js'
 
 export interface NodesProps {
   className?: string
@@ -14,17 +15,16 @@ export interface NodesProps {
   // Prevent dragged element as behaving like a drop zone.
   noDrop?: boolean
   // Only draw part of the Tree
-  nodeId?: string
+  blockId?: string
 }
 
-const Wrapper = styled.div`
-  &:focus {
-    outline: none;
-  }
+// min-width: 0 to prevent overflow
+const Wrapper = styled(StyledScroll)`
   position: relative;
-  padding: 0;
-  flex-grow: 1;
+  padding: 2px;
+  margin-bottom: 1rem;
   overflow: auto;
+  min-width: 0;
   font-size: 12pt;
   font-family: 'Avenir Next';
 `
@@ -52,7 +52,9 @@ export const Nodes: Comp<NodesProps> = React.memo(
       if (tree.selected) {
         if (!tree.selected.editName) {
           if (ref.current) {
-            ref.current.focus()
+            // this is bad because it prevents library focus
+            // we have tab for this
+            // ref.current.focus()
           }
         }
       }
@@ -65,11 +67,9 @@ export const Nodes: Comp<NodesProps> = React.memo(
     const treeId = tree.id
     const dropTarget = ctx.state.treeView.dropTarget[treeId]
     const uitree = ctx.state.treeView.uimap[treeId]
-    if (!uitree) {
+    if (!uitree || uitree.version !== tree.version) {
+      // remap
       ctx.actions.treeView.uimap({ tree })
-      return null
-    } else if (uitree.version !== tree.version) {
-      ctx.actions.treeView.uimap({ tree: tree })
       return null
     }
 
@@ -78,13 +78,13 @@ export const Nodes: Comp<NodesProps> = React.memo(
     const transform = `scale(1.0)` // ${$scale})`
 
     const uidropnode = dropTarget
-      ? uitree.uiNodeById[dropTarget.nodeId]
+      ? uitree.uiNodeById[dropTarget.blockId]
       : undefined
     if (dropTarget && !uidropnode) {
       console.log(
-        `Invalid droptarget nodeId ?? ${
+        `Invalid droptarget blockId ?? ${
           // @ts-ignore
-          dropTarget.nodeId
+          dropTarget.blockId
         }: not present in tree nodes [${Object.keys(uitree.uiNodeById).join(
           ' ,'
         )}].`
@@ -106,7 +106,11 @@ export const Nodes: Comp<NodesProps> = React.memo(
           action(ctx, tree, selected, uinode.parent, e)
         } else {
           // select root
-          ctx.actions.tree.selectNode({ id: tree.entry, tree, editName: false })
+          ctx.actions.tree.selectBlock({
+            id: tree.entry,
+            tree,
+            editName: false,
+          })
         }
       } else {
         // console.log(e.key)
@@ -116,9 +120,9 @@ export const Nodes: Comp<NodesProps> = React.memo(
     return (
       <Wrapper
         ref={ref as any}
-        className={classnames(className, 'Graph')}
+        className={classnames(className, 'Tree')}
         onKeyDown={onKeyDown}
-        tabIndex={-1}
+        tabIndex={0}
       >
         <TreeSVG
           id={treeId}

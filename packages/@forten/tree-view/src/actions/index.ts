@@ -1,2 +1,3 @@
-export * from './drop'
-export * from './uimap'
+export * from './drop.js'
+export * from './navigateLibrary.js'
+export * from './uimap.js'

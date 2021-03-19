@@ -7,7 +7,7 @@ import {
   useragent_network,
   useragent_online,
   useragent_restart,
-} from './types'
+} from './types.js'
 
 export const hooksActions = {
   [useragent_network]: makeHook<{ network: boolean }>(useragent_network),

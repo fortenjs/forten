@@ -1,6 +1,6 @@
-import { endCaretSelection, siblings } from '../helpers'
-import { deleteParagraph as del, setSelection } from '../operations'
-import { Mutation } from '../types'
+import { endCaretSelection, siblings } from '../helpers/index.js'
+import { deleteParagraph as del, setSelection } from '../operations/index.js'
+import { Mutation } from '../types/index.js'
 
 export function deleteParagraph(m: Mutation, id: string) {
   if (del(m, id)) {

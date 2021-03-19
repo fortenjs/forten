@@ -1,6 +1,6 @@
-import { Action } from '../app'
-import { CompositionHolder } from '../lib/utils/types'
-import { getTitleElem } from '../lib/getTitle'
+import { Action } from '../app.js'
+import { getTitleElem } from '../lib/getTitle.js'
+import { CompositionHolder } from '../lib/utils/types.js'
 
 export interface TitleChangeArgs {
   holder: CompositionHolder

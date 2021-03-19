@@ -1,5 +1,5 @@
-import { Action } from '../app'
-import { runHook } from '../helpers'
+import { Action } from '../app.js'
+import { runHook } from '../helpers/index.js'
 
 export const leave: Action = ctx => {
   const { state } = ctx

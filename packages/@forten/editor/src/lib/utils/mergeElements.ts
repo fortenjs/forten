@@ -1,5 +1,14 @@
-import { makeRef } from './makeRef';
-import { ChangesType, CompositionType, ElementRefType, ElementsType, ElementType, GroupElementType, isStringElement, StringElementType } from './types';
+import { makeRef } from './makeRef.js'
+import {
+  ChangesType,
+  CompositionType,
+  ElementRefType,
+  ElementsType,
+  ElementType,
+  GroupElementType,
+  isStringElement,
+  StringElementType,
+} from './types.js'
 
 /*********************************************************************
  * FIXME: ALL THIS NEEDS TO WORK ON ChangesType, not operations !

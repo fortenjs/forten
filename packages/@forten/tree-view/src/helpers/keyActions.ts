@@ -1,10 +1,27 @@
 import { TreeType } from '@forten/tree-type'
 import * as React from 'react'
-import { Context } from '../app'
+import { Context } from '../app.js'
+
+function focusLibrary(ctx: ViewContext, tree: TreeType) {
+  const el = document.querySelector('.LibraryList') as HTMLElement
+  console.log('LibraryList', el)
+  if (el) {
+    if (tree.selected?.id) {
+      // deselect
+      ctx.actions.tree.selectBlock({
+        id: tree.selected.id,
+        tree,
+      })
+    }
+    el.focus()
+  }
+}
+
+type ViewContext = { state: Context['state']; actions: Context['actions'] }
 
 export const KEY_ACTIONS: {
   [key: string]: (
-    ctx: { state: Context['state']; actions: Context['actions'] },
+    ctx: ViewContext,
     tree: TreeType,
     selected: { id: string; editName: boolean },
     parentId: string | undefined,
@@ -14,7 +31,7 @@ export const KEY_ACTIONS: {
   ArrowUp(ctx, tree, _, parentId) {
     if (parentId) {
       // select parent
-      ctx.actions.tree.selectNode({
+      ctx.actions.tree.selectBlock({
         id: parentId,
         tree,
         editName: false,
@@ -32,7 +49,7 @@ export const KEY_ACTIONS: {
       const child = block.children.find(id => id !== null)
       if (child) {
         // select child
-        ctx.actions.tree.selectNode({
+        ctx.actions.tree.selectBlock({
           id: child,
           tree,
           editName: false,
@@ -61,13 +78,16 @@ export const KEY_ACTIONS: {
         const child = children.find((id, i) => id !== null && i < idx)
         if (child) {
           // select sibling
-          ctx.actions.tree.selectNode({
+          ctx.actions.tree.selectBlock({
             id: child,
             tree,
-            editName: false,
           })
+        } else {
+          focusLibrary(ctx, tree)
         }
       }
+    } else {
+      focusLibrary(ctx, tree)
     }
   },
   ArrowRight(ctx, tree, selected, parentId, e) {
@@ -91,7 +111,7 @@ export const KEY_ACTIONS: {
         const child = block.children.find((id, i) => id !== null && i > idx)
         if (child) {
           // select sibling
-          ctx.actions.tree.selectNode({
+          ctx.actions.tree.selectBlock({
             id: child,
             tree,
             editName: false,
@@ -100,21 +120,28 @@ export const KEY_ACTIONS: {
       }
     }
   },
-  Enter(ctx, tree, selected) {
-    ctx.actions.tree.selectNode({
-      id: selected.id,
+  F2(ctx, tree, selected) {
+    ctx.actions.tree.selectBlock({
       tree,
-      editName: !selected.editName,
+      id: selected.id,
+      editName: true,
+    })
+  },
+  Enter(ctx, tree, selected) {
+    ctx.actions.tree.selectBlock({
+      tree,
+      id: selected.id,
+      editContent: true,
     })
   },
   Backspace(ctx, tree, selected, parentId) {
     if (parentId) {
-      ctx.actions.tree.remove({ tree, nodeId: selected.id })
+      ctx.actions.tree.remove({ tree, blockId: selected.id })
     }
   },
   Delete(ctx, tree, selected, parentId) {
     if (parentId) {
-      ctx.actions.tree.remove({ tree, nodeId: selected.id })
+      ctx.actions.tree.remove({ tree, blockId: selected.id })
     }
   },
   /*
@@ -132,7 +159,7 @@ export const KEY_ACTIONS: {
   [' ']: (ctx, tree, selected) => {
     ctx.actions.tree.setClosed({
       tree,
-      nodeId: selected.id,
+      blockId: selected.id,
       closed: !tree.blocks[selected.id].closed,
     })
   },

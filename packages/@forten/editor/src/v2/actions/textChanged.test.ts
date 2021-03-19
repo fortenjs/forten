@@ -1,8 +1,7 @@
+import { textChanged } from '..js'
 import { describe, makeTest } from 'test'
-
-import { Selection } from '../types'
-import { caretSelection } from '../../lib'
-import { textChanged } from '.'
+import { caretSelection } from '../../lib/index.js'
+import { Selection } from '../types/index.js'
 
 const it = makeTest<{ txt: string; s: Selection }>((m, { txt, s }) =>
   textChanged(m, { i: txt, s })

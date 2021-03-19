@@ -1,5 +1,5 @@
-import { Library as component, LibraryProps as Props } from '../..'
-import { styled, config, Stories, svgWrapper } from '../helper'
+import { Library as component, LibraryProps as Props } from '../../index.js'
+import { config, Stories, styled } from '../helper.js'
 
 const Wrapper = styled.div`
   display: flex;

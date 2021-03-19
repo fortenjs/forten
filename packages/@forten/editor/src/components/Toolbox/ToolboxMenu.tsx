@@ -1,12 +1,12 @@
 import { Icon, Tip } from '@forten/styled'
 import classnames from 'classnames'
 import * as React from 'react'
-import { Comp, styled, useOvermind } from '../../app'
-import { CompositionHolder } from '../../lib'
-import { OperationsKey } from '../../lib/doOperation'
-import { getAtPath } from '../../lib/utils/getAtPath'
-import { ParagraphPayload } from '../../lib/utils/types'
-import { getSelection } from '../helpers/getSelection'
+import { Comp, styled, useOvermind } from '../../app.js'
+import { OperationsKey } from '../../lib/doOperation.js'
+import { CompositionHolder } from '../../lib/index.js'
+import { getAtPath } from '../../lib/utils/getAtPath.js'
+import { ParagraphPayload } from '../../lib/utils/types.js'
+import { getSelection } from '../helpers/getSelection.js'
 
 interface ParagraphProps {
   className?: string

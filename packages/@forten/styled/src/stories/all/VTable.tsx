@@ -1,8 +1,8 @@
 import randomParagraph from 'random-paragraph'
 import * as React from 'react'
-import { VTable } from '../..'
-import { Comp, styled } from '../../app'
-import { config, Stories } from '../helpers'
+import { Comp, styled } from '../../app.js'
+import { VTable } from '../../index.js'
+import { config, Stories } from '../helpers.js'
 
 const Wrapper = styled.div`
   height: 800px;

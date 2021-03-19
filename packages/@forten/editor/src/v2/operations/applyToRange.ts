@@ -1,22 +1,21 @@
-import {
-  ElementRef,
-  Mutation,
-  RangeSelection,
-  Selection,
-  isGroupElement,
-  isRangeSelection,
-} from '../types'
-import { addDepth, newElement, simplify } from '.'
+import { isCustomElement } from '../../lib/index.js'
 import {
   atPath,
   caretSelection,
   inSelection,
   rangeSelection,
   sortAscending,
-} from '../helpers'
-
-import { isCustomElement } from '../../lib'
-import { setSelection } from '../mutations'
+} from '../helpers/index.js'
+import { setSelection } from '../mutations/index.js'
+import {
+  ElementRef,
+  isGroupElement,
+  isRangeSelection,
+  Mutation,
+  RangeSelection,
+  Selection,
+} from '../types/index.js'
+import { addDepth, newElement, simplify } from './index.js'
 
 function flatten(refList: ElementRef[]): ElementRef[] {
   const result: ElementRef[] = []

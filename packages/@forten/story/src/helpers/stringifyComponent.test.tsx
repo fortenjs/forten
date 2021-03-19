@@ -2,7 +2,7 @@ import { build } from '@forten/build'
 import { IS_PROXY, ProxyStateTree } from 'proxy-state-tree'
 import * as React from 'react'
 import { expect, it } from 'test'
-import { stringifyComponent } from './stringifyComponent'
+import { stringifyComponent } from './stringifyComponent.js'
 
 const app = build({
   name: 'app',

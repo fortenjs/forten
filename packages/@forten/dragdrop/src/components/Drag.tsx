@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Comp, styled, useOvermind } from '../app'
+import { Comp, styled, useOvermind } from '../app.js'
 
 export interface DraggingProps {
   className?: string
@@ -37,9 +37,7 @@ export const Drag: Comp<DraggingProps> = ({ className }) => {
   const definition = app.state.dragdrop.definitions().types[drag.type]
   if (!definition) {
     throw new Error(
-      `Missing component for dragged type '${
-        drag.type
-      }': no settings found for this type.`
+      `Missing component for dragged type '${drag.type}': no settings found for this type.`
     )
   }
   const anchor = definition.anchor || drag.anchor

@@ -1,11 +1,11 @@
 import { unproxy } from '@forten/build'
-import { getTitleElem } from '../getTitle'
-import { caretSelection } from './caretSelection'
-import { getAtPath } from './getAtPath'
-import { isTextBlock } from './isTextBlock'
-import { joinText } from './joinText'
-import { makeRef } from './makeRef'
-import { rangeSelection } from './rangeSelection'
+import { getTitleElem } from '../getTitle.js'
+import { caretSelection } from './caretSelection.js'
+import { getAtPath } from './getAtPath.js'
+import { isTextBlock } from './isTextBlock.js'
+import { joinText } from './joinText.js'
+import { makeRef } from './makeRef.js'
+import { rangeSelection } from './rangeSelection.js'
 import {
   ChangesType,
   ChangeType,
@@ -20,7 +20,7 @@ import {
   isStringElement,
   RangeSelectionType,
   StringElementType,
-} from './types'
+} from './types.js'
 
 export function simplifyParent(
   changes: ChangesType,

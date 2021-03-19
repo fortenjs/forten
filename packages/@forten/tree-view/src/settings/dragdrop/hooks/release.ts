@@ -1,8 +1,8 @@
 import { resolve } from '@forten/build'
 import { DragdropHooks } from '@forten/dragdrop'
 import { makeId } from '@forten/tree'
-import { Context } from '../../../app'
-import { TreeDrag } from '../../../types'
+import { Context } from '../../../app.js'
+import { TreeDrag } from '../../../types/index.js'
 
 export const release: DragdropHooks['release'] = (ctx: Context) => {
   const { actions, state } = ctx

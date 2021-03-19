@@ -1,17 +1,17 @@
 import { Page, PageContent, PageHeader, Resizable } from '@forten/styled'
 import * as React from 'react'
 import styled from 'styled-components'
-import { ElementTagType } from '..'
-import { Comp, useOvermind } from '../../app'
-import { ElementsType } from '../../lib'
+import { Comp, useOvermind } from '../../app.js'
+import { ElementsType } from '../../lib/index.js'
 import {
   ElementOptionsType,
   ElementSizes,
   GroupElementType,
-} from '../../lib/utils/types'
-import { EditorProps } from '../Editor'
-import { ElementTag } from '../ElementTag'
-import { Footer } from '../Footer'
+} from '../../lib/utils/types.js'
+import { EditorProps } from '../Editor.js'
+import { ElementTag } from '../ElementTag/index.js'
+import { Footer } from '../Footer.js'
+import { ElementTagType } from '../index.js'
 
 interface ElemIdWithStart {
   id: string

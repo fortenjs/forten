@@ -1,7 +1,7 @@
 import { build, settings } from '@forten/build'
 import { describe, expect, it } from 'test'
-import { ThemeSettings } from '../src'
-import { theme } from './'
+import { ThemeSettings } from '../src.js'
+import { theme } from './index.js'
 
 describe('theme block', () => {
   it('should parse all themes', () => {

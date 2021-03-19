@@ -1,8 +1,8 @@
-import * as React from 'react'
 import classnames from 'classnames'
+import * as React from 'react'
 import { useState } from 'react'
-import { Comp, styled, theme, useOvermind } from '../app'
-import { wrapTip } from './Tip'
+import { Comp, styled, theme, useOvermind } from '../app.js'
+import { wrapTip } from './Tip.js'
 
 const MOVED_DIST = 10
 

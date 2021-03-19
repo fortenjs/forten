@@ -1,5 +1,5 @@
-import { Children as component, ChildrenProps } from '../..'
-import { config, Stories } from '../helpers'
+import { Children as component, ChildrenProps } from '../../index.js'
+import { config, Stories } from '../helpers.js'
 
 export const children: Stories<ChildrenProps> = {
   name: 'Children',

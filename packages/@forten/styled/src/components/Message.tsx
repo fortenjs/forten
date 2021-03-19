@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { Comp, styled, theme, useOvermind } from '../app'
-import { Icon } from './Icon'
+import { Comp, styled, theme, useOvermind } from '../app.js'
+import { Icon } from './Icon.js'
 
 // import { Markdown } from 'styled/Markdown'
 

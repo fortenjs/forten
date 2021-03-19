@@ -1,5 +1,5 @@
-import { CardTitle as component, CardTitleProps } from '../..'
-import { config, Stories } from '../helpers'
+import { CardTitle as component, CardTitleProps } from '../../index.js'
+import { config, Stories } from '../helpers.js'
 
 export const cardTitleStories: Stories<CardTitleProps> = {
   component,

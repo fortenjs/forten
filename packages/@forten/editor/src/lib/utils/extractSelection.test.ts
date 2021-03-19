@@ -1,9 +1,8 @@
 import { describe, expect, it } from 'test'
-
-import { extractSelection } from './extractSelection'
-import { rangeSelection } from './rangeSelection'
-import { changesResults, mockComposition, mockRef } from './testUtils'
-import { caretSelection } from './caretSelection'
+import { caretSelection } from './caretSelection.js'
+import { extractSelection } from './extractSelection.js'
+import { rangeSelection } from './rangeSelection.js'
+import { changesResults, mockComposition, mockRef } from './testUtils.js'
 
 const composition = mockComposition()
 

@@ -1,14 +1,14 @@
 import { Block } from '@forten/build'
 import { hooks } from '@forten/hooks'
-import * as actions from './actions'
-import { hooksActions } from './hooksActions'
-import { onInitialize } from './onInitialize'
-import { settings } from './settings'
-import { setup } from './setup'
-import { UseragentConfig } from './types'
+import * as actions from './actions/index.js'
+import { hooksActions } from './hooksActions.js'
+import { onInitialize } from './onInitialize.js'
+import { settings } from './settings.js'
+import { setup } from './setup.js'
+import { UseragentConfig } from './types.js'
 
-export * from './helpers'
-export * from './types'
+export * from './helpers/index.js'
+export * from './types.js'
 
 export const useragent: Block<UseragentConfig> = {
   name: 'useragent',

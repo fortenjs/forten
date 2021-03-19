@@ -1,6 +1,6 @@
 import { Children, Icon } from '@forten/styled'
 import * as React from 'react'
-import { Comp, Context, styled, theme, useOvermind } from '../../app'
+import { Comp, Context, styled, theme, useOvermind } from '../../app.js'
 import {
   CaretSelectionType,
   CompositionHolder,
@@ -10,13 +10,13 @@ import {
   isStringElement,
   isTitle,
   RangeSelectionType,
-} from '../../lib/utils/types'
-import { editor_titleExtra, SPACER } from '../../types'
-import { getElementClassName } from '../helpers/getElementClassName'
-import { getElementTag } from '../helpers/getElementTag'
-import { getTextNode, setSelection } from '../helpers/setSelection'
-import { blockEvents } from './CustomTag'
-import { DragBar } from './DragBar'
+} from '../../lib/utils/types.js'
+import { editor_titleExtra, SPACER } from '../../types.js'
+import { getElementClassName } from '../helpers/getElementClassName.js'
+import { getElementTag } from '../helpers/getElementTag.js'
+import { getTextNode, setSelection } from '../helpers/setSelection.js'
+import { blockEvents } from './CustomTag.js'
+import { DragBar } from './DragBar.js'
 
 interface StringTagProps {
   dragged?: boolean

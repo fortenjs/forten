@@ -4,10 +4,10 @@ import { TStories } from '@forten/story'
 import { tree, TreeSettings, TreeType } from '@forten/tree'
 import { createHook } from 'overmind-react'
 import * as React from 'react'
-import { treeView } from '..'
-import { Comp, styled } from '../app'
-import { TreeSVG } from '../components/TreeSVG'
-import { uimap } from '../helpers'
+import { Comp, styled } from '../app.js'
+import { TreeSVG } from '../components/TreeSVG.js'
+import { uimap } from '../helpers/index.js'
+import { treeView } from '../index.js'
 
 export { styled }
 
@@ -24,16 +24,16 @@ const MyArea = styled.textarea`
 
 const contentComponent: Comp<{
   tree: TreeType<{ source: string }>
-  nodeId: string
-}> = ({ tree, nodeId }) => {
+  blockId: string
+}> = ({ tree, blockId }) => {
   const ctx = useOvermind()
-  const content = tree.blocks[nodeId].content
+  const content = tree.blocks[blockId].content
   return (
     <MyArea
       value={content.source}
       onChange={e => {
         const source = e.target.value
-        ctx.actions.tree.setContent({ tree, nodeId, content: { source } })
+        ctx.actions.tree.setContent({ tree, blockId, content: { source } })
       }}
     />
   )

@@ -5,16 +5,16 @@ import { Children, Icon, IconProps } from '@forten/styled'
 import { isCommand } from '@forten/useragent'
 import classnames from 'classnames'
 import * as React from 'react'
-import { Comp, styled, theme, useOvermind } from '../../app'
-import { CompositionHolder, ElementOptionsType } from '../../lib'
+import { Comp, styled, theme, useOvermind } from '../../app.js'
+import { CompositionHolder, ElementOptionsType } from '../../lib/index.js'
 import {
   dragParaType,
   EditorParaDrag,
   EditorParaDrop,
   editor_dragBar,
   isParaRefDrag,
-} from '../../types'
-import { getSelection } from '../helpers/getSelection'
+} from '../../types.js'
+import { getSelection } from '../helpers/getSelection.js'
 
 const USE_V2 = process.env.NODE_ENV === 'development' && false
 

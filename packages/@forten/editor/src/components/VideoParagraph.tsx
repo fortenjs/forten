@@ -1,9 +1,9 @@
 import { Field } from '@forten/styled'
 import * as React from 'react'
-import { Comp, styled, useOvermind } from '../app'
-import { ParagraphProps } from '../lib'
-import { doPasteText } from '../settings/editor/paste/pasteText'
-import { VideoData } from '../settings/editor/videoParagraph'
+import { Comp, styled, useOvermind } from '../app.js'
+import { ParagraphProps } from '../lib/index.js'
+import { doPasteText } from '../settings/editor/paste/pasteText.js'
+import { VideoData } from '../settings/editor/videoParagraph.js'
 
 export type VideoParagraphProps = ParagraphProps<VideoData>
 

@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { Comp, styled, theme } from '../../app'
-import { Children } from '../Children'
+import { Comp, styled, theme } from '../../app.js'
+import { Children } from '../Children.js'
 
 export interface InspectorGroupProps {
   className?: string

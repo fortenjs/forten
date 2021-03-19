@@ -1,6 +1,6 @@
 import { unproxy } from '@forten/build'
-import { Action } from '../app'
-import { WinPosition, winPosition } from '../helpers/winPosition.types'
+import { Action } from '../app.js'
+import { WinPosition, winPosition } from '../helpers/winPosition.types.js'
 
 export const setWinPosition: Action<WinPosition> = (ctx, arg) => {
   const api = window[winPosition]

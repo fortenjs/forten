@@ -1,7 +1,7 @@
 import { Reference, resolve } from '@forten/build'
 import { TreeType } from '@forten/tree-type'
-import { Action } from '../app'
-import { appendGraph, makeId } from '../helpers'
+import { Action } from '../app.js'
+import { appendBranch, makeId } from '../helpers/index.js'
 
 export interface AppendArg {
   // Thing to append
@@ -12,7 +12,7 @@ export interface AppendArg {
 
   // Target
   target: Reference<TreeType>
-  nodeId: string
+  blockId: string
   slotIdx: number
 }
 
@@ -32,7 +32,7 @@ export const append: Action<AppendArg> = (ctx, arg) => {
     ctx.actions.tree.changed({ tree: origin })
   }
 
-  const { tree, nodeId, slotIdx } = arg
-  appendGraph(target, nodeId, slotIdx, tree)
+  const { tree, blockId, slotIdx } = arg
+  appendBranch(target, blockId, slotIdx, tree)
   ctx.actions.tree.changed({ tree: target })
 }

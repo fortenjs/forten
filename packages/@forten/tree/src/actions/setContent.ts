@@ -1,16 +1,25 @@
 import { TreeType } from '@forten/tree-type'
-import { Action } from '../app'
+import { Action } from '../app.js'
 
 export interface SetContentArg {
-  nodeId: string
+  blockId: string
   tree: TreeType
-  // FIXME: how to make this generic ?
   content: any
+  moreEdits?: boolean
 }
 
 export const setContent: Action<SetContentArg> = (ctx, arg) => {
-  const { content, nodeId, tree } = arg
-  const previousContent = tree.blocks[nodeId].content
-  tree.blocks[nodeId].content = content
-  ctx.actions.tree.contentChanged({ tree, nodeId, previousContent })
+  const { content, blockId, tree } = arg
+  const previousContent = tree.blocks[blockId].content
+  tree.blocks[blockId].content = content
+
+  const definition = ctx.state.tree.definitions()[tree.type]
+  if (definition) {
+    definition.contentChanged.forEach(fun =>
+      fun(ctx, { ...arg, previousContent })
+    )
+  }
+  if (!arg.moreEdits) {
+    ctx.actions.tree.changed({ tree })
+  }
 }

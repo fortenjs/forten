@@ -1,6 +1,6 @@
 import { HooksConfig } from '@forten/hooks'
 import { IAction, IContext, IOperator } from 'overmind'
-import { PreferencesConfig } from './types'
+import { PreferencesConfig } from './types.js'
 
 export type Config = HooksConfig & PreferencesConfig
 

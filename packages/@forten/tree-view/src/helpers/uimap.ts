@@ -7,10 +7,10 @@ import {
   UIPosType,
   UISlotType,
   UITreeType,
-} from '../types'
-import { PALETTE_COUNT } from './colors'
-import { minSize } from './minSize'
-import { defaultUILayout } from './uilayout'
+} from '../types/index.js'
+import { PALETTE_COUNT } from './colors.js'
+import { minSize } from './minSize.js'
+import { defaultUILayout } from './uilayout.js'
 type StringMap<T> = { [k: string]: T }
 
 /** Compute svg path of a box with up and down slots.
@@ -88,7 +88,7 @@ function invalidPath(boxdef: UINodeType, layout: UILayoutType) {
 }
 
 export function colorName(objName: string) {
-  const name = objName.split('.')[0]
+  const name = objName.split('/').slice(-1)[0].split('.')[0]
   let num = 9 + stringhash(name)
   return `box${1 + (num % PALETTE_COUNT)}`
 }
@@ -113,7 +113,7 @@ function boxPosition(
     uigraph.slots.push({
       x: slot.pos.x + ctx.x,
       y: slot.pos.y + ctx.y,
-      nodeId: blockId,
+      blockId: blockId,
       slotIdx: slot.idx,
     })
   })

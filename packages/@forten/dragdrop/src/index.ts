@@ -1,16 +1,16 @@
 import { Block, settings } from '@forten/build'
 import { theme, ThemeSettings } from '@forten/theme'
-import * as actions from './actions'
-import { setup } from './setup'
-import { dragdropTheme } from './theme'
-import { DragdropConfig } from './types'
+import * as actions from './actions/index.js'
+import { setup } from './setup.js'
+import { dragdropTheme } from './theme.js'
+import { DragdropConfig } from './types.js'
 
-export * from './components'
-export * from './draggable'
-export * from './droppable'
-export * from './fileDrop'
-export * from './theme'
-export * from './types'
+export * from './components/index.js'
+export * from './draggable.js'
+export * from './droppable.js'
+export * from './fileDrop.js'
+export * from './theme.js'
+export * from './types.js'
 
 export const dragdrop: Block<DragdropConfig> = {
   name: 'dragdrop',

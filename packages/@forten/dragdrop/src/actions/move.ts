@@ -1,6 +1,6 @@
-import { Action } from '../app'
-import { runHook } from '../helpers'
-import { Position } from '../types'
+import { Action } from '../app.js'
+import { runHook } from '../helpers/index.js'
+import { Position } from '../types.js'
 
 export interface MoveArg {
   position: Position

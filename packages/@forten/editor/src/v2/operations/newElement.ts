@@ -1,6 +1,10 @@
-import { isGroupElement, StringElement } from '../types'
-import { makeRef, atPath, siblings } from '../helpers'
-import { ElementRef, Mutation } from '../types'
+import { atPath, makeRef, siblings } from '../helpers/index.js'
+import {
+  ElementRef,
+  isGroupElement,
+  Mutation,
+  StringElement,
+} from '../types/index.js'
 
 export function newElement(
   m: Mutation,

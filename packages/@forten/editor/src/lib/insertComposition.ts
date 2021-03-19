@@ -1,11 +1,11 @@
-import { mapIds } from './mapIds'
-import { caretSelection } from './utils/caretSelection'
-import { deleteRangeSelection } from './utils/deleteSelection'
-import { extractSelection } from './utils/extractSelection'
-import { getLastDescendant, getNeighbours } from './utils/getNeighbours'
-import { addDepth, mergeElements } from './utils/mergeElements'
-import { rangeSelection } from './utils/rangeSelection'
-import { simplify } from './utils/simplify'
+import { mapIds } from './mapIds.js'
+import { caretSelection } from './utils/caretSelection.js'
+import { deleteRangeSelection } from './utils/deleteSelection.js'
+import { extractSelection } from './utils/extractSelection.js'
+import { getLastDescendant, getNeighbours } from './utils/getNeighbours.js'
+import { addDepth, mergeElements } from './utils/mergeElements.js'
+import { rangeSelection } from './utils/rangeSelection.js'
+import { simplify } from './utils/simplify.js'
 import {
   ChangesType,
   CompositionType,
@@ -16,7 +16,7 @@ import {
   isStringElement,
   SelectionType,
   StringElementType,
-} from './utils/types'
+} from './utils/types.js'
 
 export function insertComposition(
   composition: CompositionType,

@@ -1,5 +1,8 @@
-import { DropTarget as component, DropTargetProps as Props } from '../..'
-import { config, Stories, svgWrapper } from '../helper'
+import {
+  DropTarget as component,
+  DropTargetProps as Props,
+} from '../../index.js'
+import { config, Stories, svgWrapper } from '../helper.js'
 
 export const dropTarget: Stories<Props> = {
   name: 'DropTarget',

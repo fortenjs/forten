@@ -1,1 +1,1 @@
-export * from './VTable'
+export * from './VTable.js'

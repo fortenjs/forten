@@ -1,5 +1,5 @@
 import { Setup } from '@forten/build'
-import { ThemeConfig, ThemeSettings } from './types'
+import { ThemeConfig, ThemeSettings } from './types.js'
 
 export const setup: Setup<ThemeConfig, ThemeSettings> = (config, settings) => {
   // Extract all 'themes'

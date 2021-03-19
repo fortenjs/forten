@@ -1,6 +1,6 @@
-import { SelectionType } from '../../lib'
-import { getSelection } from './getSelection'
-import { isRangeSelection } from '../../lib/utils/types'
+import { SelectionType } from '../../lib/index.js'
+import { isRangeSelection } from '../../lib/utils/types.js'
+import { getSelection } from './getSelection.js'
 
 export function getTextNode(node: Element): ChildNode | undefined {
   for (let i = 0; i < node.childNodes.length; i++) {

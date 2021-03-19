@@ -1,5 +1,5 @@
 import { Setup } from '@forten/build'
-import { makeInspector } from './makeInspector'
+import { makeInspector } from './makeInspector.js'
 import {
   Families,
   FamilyComponents,
@@ -8,7 +8,7 @@ import {
   StyledConfig,
   StyledSettings,
   unSugarFamilySetting,
-} from './types'
+} from './types.js'
 
 export const setup: Setup<StyledConfig, StyledSettings> = (
   config,

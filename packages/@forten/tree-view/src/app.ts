@@ -6,8 +6,8 @@ import { IAction, IContext } from 'overmind'
 import { createHook } from 'overmind-react'
 import { FunctionComponent as Comp } from 'react'
 import styled from 'styled-components'
-import { treeViewTheme } from './settings/theme'
-import { TreeViewConfig } from './types'
+import { treeViewTheme } from './settings/theme.js'
+import { TreeViewConfig } from './types/index.js'
 
 export { styled, Comp }
 

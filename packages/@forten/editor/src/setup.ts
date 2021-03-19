@@ -1,8 +1,8 @@
 import { Setup } from '@forten/build'
-import { EditorOptions } from './lib'
-import * as defaultParagraphs from './paragraphs'
-import { parseOptions } from './parseOptions'
-import { EditorConfig, EditorSettings } from './types'
+import { EditorOptions } from './lib/index.js'
+import * as defaultParagraphs from './paragraphs/index.js'
+import { parseOptions } from './parseOptions.js'
+import { EditorConfig, EditorSettings } from './types.js'
 
 type Keys = keyof EditorOptions
 

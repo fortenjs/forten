@@ -1,5 +1,5 @@
-import { siblings } from '../../helpers'
-import { DeleteParagraph, MutateHook, Mutation } from '../../types'
+import { siblings } from '../../helpers/index.js'
+import { DeleteParagraph, MutateHook, Mutation } from '../../types/index.js'
 
 function deleteU({ comp, sortedIds }: Mutation, id: string, direction: number) {
   const pos = sortedIds.indexOf(id)

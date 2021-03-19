@@ -1,8 +1,8 @@
 import { build } from '@forten/build'
 import simple from 'simple-mock'
 import { describe, expect, it, restore } from 'test'
-import { locale } from '..'
-import { foo } from '../index.test'
+import { locale } from '../index.js'
+import { foo } from '../index.test.js'
 
 describe('set', () => {
   afterEach(restore)

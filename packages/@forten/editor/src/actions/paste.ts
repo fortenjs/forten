@@ -1,5 +1,5 @@
-import { AsyncAction } from '../app'
-import { PasteArgs } from '../lib'
+import { AsyncAction } from '../app.js'
+import { PasteArgs } from '../lib/index.js'
 
 export const paste: AsyncAction<PasteArgs> = async (ctx, args) => {
   const { editor } = ctx.effects

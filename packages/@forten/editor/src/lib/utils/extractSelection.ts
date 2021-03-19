@@ -1,7 +1,7 @@
-import { getSiblings } from './getSiblings'
-import { inSelection } from './inSelection'
-import { makeRef } from './makeRef'
-import { splitText } from './splitText'
+import { getSiblings } from './getSiblings.js'
+import { inSelection } from './inSelection.js'
+import { makeRef } from './makeRef.js'
+import { splitText } from './splitText.js'
 import {
   CaretSelectionType,
   ChangesType,
@@ -13,7 +13,7 @@ import {
   PathType,
   RangeSelectionType,
   SelectionType,
-} from './types'
+} from './types.js'
 
 function extractStart(
   composition: CompositionType,

@@ -1,5 +1,5 @@
+import { backspace } from '..js'
 import { describe, makeTest } from 'test'
-import { backspace } from '.'
 
 const it = makeTest(m => backspace(m))
 

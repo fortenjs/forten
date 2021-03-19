@@ -1,5 +1,5 @@
 import { Setup } from '@forten/build'
-import { TreeConfig, TreeHooks, TreeSettings } from './types'
+import { TreeConfig, TreeHooks, TreeSettings } from './types.js'
 
 export const setup: Setup<TreeConfig, TreeSettings> = (config, settings) => {
   const definitions: TreeHooks = {}
@@ -14,16 +14,18 @@ export const setup: Setup<TreeConfig, TreeSettings> = (config, settings) => {
           treeChanged: [],
           selectNode: [],
           contentChanged: [],
+          nameChanged: [],
           contentComponent: () => null,
         }
         definitions[treeType] = definition
       }
       const {
         contentChanged,
+        nameChanged,
         contentComponent,
         newBlock,
         treeChanged,
-        selectNode,
+        selectBlock,
       } = setting
 
       if (contentComponent) {
@@ -32,14 +34,17 @@ export const setup: Setup<TreeConfig, TreeSettings> = (config, settings) => {
       if (newBlock) {
         definition.newBlock = newBlock
       }
-      if (selectNode) {
-        definition.selectNode.push(selectNode)
+      if (selectBlock) {
+        definition.selectNode.push(selectBlock)
       }
       if (treeChanged) {
         definition.treeChanged.push(treeChanged)
       }
       if (contentChanged) {
         definition.contentChanged.push(contentChanged)
+      }
+      if (nameChanged) {
+        definition.nameChanged.push(nameChanged)
       }
     })
   })

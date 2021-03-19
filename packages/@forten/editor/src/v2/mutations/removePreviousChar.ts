@@ -1,10 +1,9 @@
-import { Mutation, StringElement, isStringElement } from '../types'
-import { atPath, caretSelection, split } from '../helpers'
-
-import { closest } from '../helpers/closest'
-import { isGroupElement } from '../../lib'
-import { setSelection } from '.'
-import { simplify } from '../operations'
+import { isGroupElement } from '../../lib/index.js'
+import { closest } from '../helpers/closest.js'
+import { atPath, caretSelection, split } from '../helpers/index.js'
+import { simplify } from '../operations/index.js'
+import { isStringElement, Mutation, StringElement } from '../types/index.js'
+import { setSelection } from './index.js'
 
 export function removePreviousChar(m: Mutation, elem: StringElement) {
   const s = elem.s

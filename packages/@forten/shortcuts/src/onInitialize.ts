@@ -1,7 +1,7 @@
 import { Overmind } from 'overmind'
-import { Action } from './app'
-import { makeCommand } from './command'
-import { ShortcutsConfig } from './types'
+import { Action } from './app.js'
+import { makeCommand } from './command.js'
+import { ShortcutsConfig } from './types.js'
 
 const NO_SHORCUT_TAGS = ['INPUT', 'TEXTAREA', 'SELECT', 'OPTION', 'BUTTON']
 

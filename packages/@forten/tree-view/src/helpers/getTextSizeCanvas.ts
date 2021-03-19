@@ -1,4 +1,4 @@
-import { GetTextSizeType } from '../types'
+import { GetTextSizeType } from '../types/index.js'
 
 function dummy(text: string) {
   return { width: text.length }

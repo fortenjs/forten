@@ -1,5 +1,9 @@
 import { Setup } from '@forten/build'
-import { DragdropConfig, DragdropDefinitions, DragdropSettings } from './types'
+import {
+  DragdropConfig,
+  DragdropDefinitions,
+  DragdropSettings,
+} from './types.js'
 
 interface TwoLevels {
   [key: string]: {

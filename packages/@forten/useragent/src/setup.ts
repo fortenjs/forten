@@ -1,5 +1,9 @@
 import { Setup } from '@forten/build'
-import { UseragentConfig, UseragentSetting, UseragentSettings } from './types'
+import {
+  UseragentConfig,
+  UseragentSetting,
+  UseragentSettings,
+} from './types.js'
 
 export const setup: Setup<
   UseragentConfig,

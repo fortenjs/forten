@@ -1,11 +1,11 @@
-import { addParagraph, emptyComposition, addSpan } from './newComposition'
+import { addParagraph, addSpan, emptyComposition } from './newComposition.js'
 import {
   CompositionType,
   ElementType,
   GroupElementType,
   isStringElement,
   Type,
-} from './utils/types'
+} from './utils/types.js'
 
 const parser = new DOMParser()
 

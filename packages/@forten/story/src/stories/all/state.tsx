@@ -1,8 +1,8 @@
 import { themeProxy } from '@forten/theme'
 import { createHook } from 'overmind-react'
 import * as React from 'react'
-import { Stories } from '../..'
-import { Comp, styled } from '../../app'
+import { Comp, styled } from '../../app.js'
+import { Stories } from '../../index.js'
 
 interface Config {
   state: {

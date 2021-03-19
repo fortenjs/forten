@@ -1,5 +1,5 @@
+import { enter } from '..js'
 import { describe, makeTest, mockRef, restore } from 'test'
-import { enter } from '.'
 
 describe('enter', () => {
   const it = makeTest(m => enter(m, {}))

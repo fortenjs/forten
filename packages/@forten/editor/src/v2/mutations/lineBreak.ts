@@ -1,6 +1,6 @@
-import { getSelection } from '../helpers'
-import { removeRange, applyStyle } from '../operations'
-import { isRangeSelection, Mutation } from '../types'
+import { getSelection } from '../helpers/index.js'
+import { applyStyle, removeRange } from '../operations/index.js'
+import { isRangeSelection, Mutation } from '../types/index.js'
 
 export function lineBreak(m: Mutation) {
   const selection = getSelection(m)

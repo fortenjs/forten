@@ -1,5 +1,5 @@
-import { OperationsKey } from '../doOperation'
-import { EditorProvider, ParagraphPayload } from './types'
+import { OperationsKey } from '../doOperation.js'
+import { EditorProvider, ParagraphPayload } from './types.js'
 
 export function setParaFromText(
   options: EditorProvider,

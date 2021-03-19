@@ -1,6 +1,6 @@
+import { applyStyle } from '..js'
 import { describe, makeTest, mockRef, restore } from 'test'
-import { applyStyle } from '.'
-import { TypeName } from '../types'
+import { TypeName } from '../types/index.js'
 
 describe('applyStyle.B', () => {
   beforeEach(mockRef)

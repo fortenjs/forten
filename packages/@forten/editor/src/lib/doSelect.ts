@@ -1,12 +1,12 @@
-import { getAtPath } from './utils/getAtPath'
-import { isParagraphStart } from './utils/isParagraphStart'
+import { getAtPath } from './utils/getAtPath.js'
+import { isParagraphStart } from './utils/isParagraphStart.js'
 import {
   CompositionType,
   isCustomElement,
   isDocumentTitle,
   OperationType,
   SelectionType,
-} from './utils/types'
+} from './utils/types.js'
 
 /** Return toolbox and selection operations related to selection changes.
  */

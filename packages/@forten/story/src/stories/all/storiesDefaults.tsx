@@ -1,7 +1,7 @@
 import { mutate } from 'overmind'
 import * as React from 'react'
-import { Stories } from '../..'
-import { Comp } from '../../app'
+import { Comp } from '../../app.js'
+import { Stories } from '../../index.js'
 
 const DefaultComponent: Comp<{ name: string }> = ({ name }) => (
   <div>This is {name}</div>
