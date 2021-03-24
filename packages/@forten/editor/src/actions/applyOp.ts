@@ -1,22 +1,13 @@
 import { IContext } from 'overmind'
 import { Action, Config } from '../app.js'
-import { doOperation, makeOps, OperationsKey } from '../lib/doOperation.js'
+import { doOperation, makeOps } from '../lib/doOperation.js'
 import { setParaFromText } from '../lib/utils/setParaFromText.js'
 import {
-  CompositionHolder,
+  ApplyOpArgs,
   InitFunction,
   InitParagraph,
-  ParagraphPayload,
   ProcessOpsArgs,
-  SelectionType,
 } from '../lib/utils/types.js'
-
-export interface ApplyOpArgs {
-  holder: CompositionHolder
-  selection: SelectionType
-  op: OperationsKey
-  opts: ParagraphPayload
-}
 
 export const applyOp: Action<ApplyOpArgs> = (ctx, value) => {
   const { editor } = ctx.effects

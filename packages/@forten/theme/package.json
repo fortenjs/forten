@@ -26,9 +26,9 @@
   ],
   "dependencies": {
     "@forten/build": "next",
-    "overmind-react": "^26.0.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "overmind": "^27.0.0",
+    "overmind-react": "^28.0.0",
+    "react": "^17.0.1",
     "styled-components": "^5.2.0"
   },
   "devDependencies": {

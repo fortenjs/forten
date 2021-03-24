@@ -31,7 +31,7 @@ import { getSelection } from './helpers/getSelection.js'
 import { isInputEvent } from './helpers/isInputEvent.js'
 import { Toolbox } from './Toolbox/index.js'
 
-const USE_V2 = process.env.NODE_ENV === 'development' && false
+const USE_V2 = import.meta.env.NODE_ENV === 'development' && false
 if (USE_V2) {
   console.log('[editor] Using v2')
 }

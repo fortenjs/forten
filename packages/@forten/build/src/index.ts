@@ -1,4 +1,4 @@
-import { IConfiguration, mutate, Overmind } from 'overmind'
+import { createOvermind, IConfiguration, mutate } from 'overmind'
 import { Options } from 'overmind/lib/internalTypes'
 import { addDependencies } from './addDependencies.js'
 import { Block, Initializer, Setup, UnknownObject, Using } from './types.js'
@@ -124,7 +124,7 @@ export function build<T extends Block>(a: T): Using<T> {
     state: new Error(`Please run 'config()' or 'app()' to finish build.`),
     using,
     config: () => parseBlocks(blocks),
-    app: (options?: Options) => new Overmind(parseBlocks(blocks), options),
+    app: (options?: Options) => createOvermind(parseBlocks(blocks), options),
   }
 
   return builder.using(a)

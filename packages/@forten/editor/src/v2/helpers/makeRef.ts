@@ -13,7 +13,7 @@ function rndId(len: number = ID_LEN): string {
 export const mockable = { makeId: rndId }
 
 const makeId =
-  process.env.NODE_ENV === 'test'
+  import.meta.env.NODE_ENV === 'test'
     ? function makeId() {
         return mockable.makeId()
       }

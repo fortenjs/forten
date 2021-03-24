@@ -1,10 +1,13 @@
 import { Action } from '../app.js'
-import { OperationsKey } from '../lib/doOperation.js'
 import { caretSelection, CompositionHolder } from '../lib/index.js'
 import { getAtPath } from '../lib/utils/getAtPath.js'
 import { lastId } from '../lib/utils/lastId.js'
 import { newParagraph } from '../lib/utils/newParagraph.js'
-import { ElementOptionsType, ParagraphPayload } from '../lib/utils/types.js'
+import {
+  ElementOptionsType,
+  OperationsKey,
+  ParagraphPayload,
+} from '../lib/utils/types.js'
 
 export interface CreateCustomParagraphArg {
   holder: CompositionHolder

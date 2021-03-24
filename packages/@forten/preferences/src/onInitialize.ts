@@ -49,5 +49,5 @@ export const onInitialize: AsyncAction<Overmind<any>> = async (ctx, app) => {
     }
   }
   app.addFlushListener(flushCallback)
-  await ctx.actions.preferences.selectDb()
+  await ctx.actions.preferences.selectDb(undefined)
 }

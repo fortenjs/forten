@@ -1,18 +1,17 @@
-import { IContext } from 'overmind'
-
-export interface ShortcutDefinition<Config = any> {
+export interface ShortcutDefinition<Context = any> {
   // Returning `true` indicates that we have dealt with the event.
-  callback: (ctx: IContext<Config>, payload: any, e: KeyboardEvent) => boolean
+  // First argument is the app Context.
+  callback: (ctx: Context, payload: any, e: KeyboardEvent) => boolean
   keys: string[]
   payload?: any
 }
 
-export interface Shortcuts<Config = any> {
-  [name: string]: ShortcutDefinition<Config>
+export interface Shortcuts<Context = any> {
+  [name: string]: ShortcutDefinition<Context>
 }
 
-export interface ShortcutsSettings<Config = any> {
-  shortcuts?: Shortcuts<Config>
+export interface ShortcutsSettings<Context = any> {
+  shortcuts?: Shortcuts<Context>
 }
 
 export interface ShortcutsConfig {

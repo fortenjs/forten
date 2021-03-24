@@ -16,7 +16,7 @@ import {
 } from '../../types.js'
 import { getSelection } from '../helpers/getSelection.js'
 
-const USE_V2 = process.env.NODE_ENV === 'development' && false
+const USE_V2 = import.meta.env.NODE_ENV === 'development' && false
 
 export interface DragDivProps {
   dragged?: boolean

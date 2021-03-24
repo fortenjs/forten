@@ -1,6 +1,10 @@
-import { describe, expect, it, mut, parseKey } from 'test'
+import { describe, expect, it, mut, parseKey } from '../test.js'
 // import { rangeSelection } from ../helpers/index.js'
-import { caretSelection, getSelection, rangeSelection } from ../helpers/index.js'
+import {
+  caretSelection,
+  getSelection,
+  rangeSelection,
+} from './helpers/index.js'
 
 describe('parseKey', () => {
   it('should parse simple key', () => {

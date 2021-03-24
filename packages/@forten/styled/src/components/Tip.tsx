@@ -33,7 +33,7 @@ let TipImpl = function Tip({ disabled, content, tip, ...props }: TipProps) {
   return props.children || null
 }
 
-if (process.env.NODE_ENV !== 'test') {
+if (import.meta.env.NODE_ENV !== 'test') {
   // @ts-ignore
   import('tippy.js/dist/tippy.css')
   TipImpl = function Tip({ disabled, content, tip, ...props }: TipProps) {

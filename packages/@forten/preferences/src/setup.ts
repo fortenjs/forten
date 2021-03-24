@@ -1,5 +1,4 @@
 import { Setup } from '@forten/build'
-import { makeSave } from './actions/makeSave.js'
 import {
   PreferencesConfig,
   PreferencesPaths,
@@ -11,7 +10,7 @@ export const setup: Setup<PreferencesConfig, PreferencesSettings> = (
   settings
 ) => {
   // Extract all 'locale' fields with translations.
-  let throttleDelay = 1000
+  // let throttleDelay = 1000
   const allPaths: PreferencesPaths = {}
   const allDefaults: { [path: string]: any } = {}
 
@@ -23,9 +22,9 @@ export const setup: Setup<PreferencesConfig, PreferencesSettings> = (
     if (defaults) {
       Object.assign(allDefaults, defaults)
     }
-    if (throttle !== undefined) {
-      throttleDelay = throttle
-    }
+    // if (throttle !== undefined) {
+    //   throttleDelay = throttle
+    // }
     Object.assign(config.state.preferences, prefs)
   })
 
@@ -34,5 +33,6 @@ export const setup: Setup<PreferencesConfig, PreferencesSettings> = (
   )
   config.state.preferences.defaults = allDefaults
 
-  config.actions.preferences.save = makeSave(throttleDelay)
+  // save is readonly. Cannot change throttle delay...
+  // config.actions.preferences.save = makeSave(throttleDelay)
 }

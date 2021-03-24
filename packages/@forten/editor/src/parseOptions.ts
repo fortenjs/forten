@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { OperationsKey } from './lib/doOperation.js'
 import { EditorOptions } from './lib/index.js'
 import {
   EditorProvider,
@@ -7,6 +6,7 @@ import {
   isCustomParagraphOption,
   isSelectParagraphOption,
   isSimpleParagraphOption,
+  OperationsKey,
   ParagraphPayload,
   Paragraphs,
 } from './lib/utils/types.js'

@@ -41,7 +41,7 @@ export const onInitialize: Action<Overmind<ShortcutsConfig>> = (ctx, app) => {
   ctx.effects.shortcuts.run = runShortcut
 
   // istanbul ignore next
-  if (process.env.NODE_ENV === 'test') {
+  if (import.meta.env.NODE_ENV === 'test') {
     // @ts-ignore
     global.runShortcut = runShortcut
   } else {

@@ -1,17 +1,12 @@
 import { Reference } from '@forten/build'
 import { Hook } from '@forten/hooks'
-import * as actions from './actions/index.js'
-import * as effects from './effects/index.js'
-import { hooksActions } from './hooksActions.js'
 import {
   CompositionHolder,
   CompositionType,
   EditorOptions,
-  EditorProvider,
 } from './lib/utils/types.js'
-import * as v2 from './v2/overmind/index.js'
 
-export { CompositionHolder } from './lib/utils/types.js'
+export { CompositionHolder, CustomParagraphOption } from './lib/utils/types.js'
 export const editor_pasteEditor = 'editor_pasteEditor'
 export const SPACER = '\u200B'
 
@@ -53,31 +48,6 @@ export interface EditorParaDrop {
   compId: string
   // Target paragraph id (if empty => after current selection)
   id?: string
-}
-
-export interface UndoStore {
-  store: string[]
-  idx: number
-  // Stores the document path. Store is reset if path changes.
-  path: string
-}
-
-export interface EditorConfig {
-  state: {
-    editor: {
-      store: UndoStore
-
-      options: () => EditorProvider
-    }
-  }
-  actions: {
-    hooks: typeof hooksActions
-    editor: typeof actions
-    edit: typeof v2
-  }
-  effects: {
-    editor: typeof effects
-  }
 }
 
 export interface EditorHooks {

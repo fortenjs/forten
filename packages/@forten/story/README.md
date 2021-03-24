@@ -8,4 +8,4 @@
 [travis-image]: https://img.shields.io/travis/fortenjs/forten.svg?style=flat
 [travis-url]: https://travis-ci.org/fortenjs/forten
 
-A simple storybook based on parcel to test components in an Overmind-React app.
+A simple storybook based on parcel to test components in an overmind-react app.

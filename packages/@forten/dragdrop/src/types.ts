@@ -1,4 +1,3 @@
-import { IContext } from 'overmind'
 import * as actions from './actions/index.js'
 
 export type DragdropComponentType =
@@ -24,7 +23,7 @@ export interface DragdropDefinitions {
 }
 
 export interface DragTransform<
-  Context = IContext<any>,
+  Context = any,
   SourcePayload = any,
   TargetPayload = any
 > {

@@ -35,6 +35,9 @@
     "@forten/shortcuts": "next",
     "@forten/theme": "next",
     "@forten/useragent": "next",
+    "overmind": "^27.0.0",
+    "overmind-react": "^28.0.0",
+    "react": "^17.0.1",
     "clipboard-polyfill": "^3.0.1",
     "clipboard-js": "^0.3.6"
   },

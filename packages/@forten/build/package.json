@@ -23,7 +23,7 @@
     "src"
   ],
   "dependencies": {
-    "overmind": "^25.0.2"
+    "overmind": "^27.0.0"
   },
   "devDependencies": {
     "@types/simple-mock": "^0.8.1",

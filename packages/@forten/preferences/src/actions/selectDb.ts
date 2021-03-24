@@ -1,7 +1,7 @@
 import { AsyncAction } from '../app.js'
 import { prefsDb } from '../prefsDb.js'
 
-export const selectDb: AsyncAction<{ userId: string } | void> = async (
+export const selectDb: AsyncAction<{ userId: string } | undefined> = async (
   ctx,
   arg
 ) => {

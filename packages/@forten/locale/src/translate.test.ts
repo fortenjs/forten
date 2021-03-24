@@ -1,4 +1,4 @@
-import { Overmind } from 'overmind'
+import { createOvermind } from 'overmind'
 import simple from 'simple-mock'
 import { describe, expect, it } from 'test'
 import { translate } from './translate.js'
@@ -20,7 +20,7 @@ const config = {
     },
   },
 }
-const app = new Overmind(config)
+const app = createOvermind(config)
 const translateFunc = app.state.locale.translate
 
 describe('translate', () => {
@@ -45,7 +45,7 @@ describe('translate', () => {
   })
 
   it('raise error on missing lang', () => {
-    const app = new Overmind({
+    const app = createOvermind({
       state: {
         locale: {
           locales,
@@ -59,7 +59,7 @@ describe('translate', () => {
   })
 
   it('should raise error on missing dictionary', () => {
-    const app = new Overmind({
+    const app = createOvermind({
       state: {
         locale: {
           lang: 'es',
@@ -85,11 +85,11 @@ describe('translate in production', () => {
       },
     },
   }
-  const app = new Overmind(config)
-  const env = process.env.NODE_ENV
-  process.env.NODE_ENV = 'production'
+  const app = createOvermind(config)
+  const env = import.meta.env.NODE_ENV
+  import.meta.env.NODE_ENV = 'production'
   const translateFunc = app.state.locale.translate
-  process.env.NODE_ENV = env
+  import.meta.env.NODE_ENV = env
 
   it('should return missing key', () => {
     expect(translateFunc('nokey')).toBe('nokey')

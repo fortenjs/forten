@@ -1,4 +1,4 @@
-import { Action } from '../app'
+import { Action } from '../app.js'
 import { sortLibrary } from '../helpers/sortLibrary.js'
 
 export interface LibSelectArg {

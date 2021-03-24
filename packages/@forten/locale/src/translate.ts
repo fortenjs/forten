@@ -19,7 +19,7 @@ export const translate: Translate = derive(parent => {
     throw new Error(`Missing dictionary for lang '${lang}'.`)
   }
 
-  if (process.env.NODE_ENV === 'production') {
+  if (import.meta.env.NODE_ENV === 'production') {
     return function translate(k: string, replace?: { [key: string]: string }) {
       const t = dictionary.hasOwnProperty(k) ? dictionary[k] : common[k]
       if (t === undefined) {

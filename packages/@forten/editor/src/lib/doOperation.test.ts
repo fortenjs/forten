@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'test'
-import { doOperation, makeOps, OperationsKey } from './doOperation.js'
+import { doOperation, makeOps } from './doOperation.js'
 import { caretSelection } from './utils/caretSelection.js'
 import { rangeSelection } from './utils/rangeSelection.js'
 import {
@@ -11,6 +11,7 @@ import {
 import {
   CompositionType,
   EditorProvider,
+  OperationsKey,
   ParagraphPayload,
   SelectionType,
 } from './utils/types.js'

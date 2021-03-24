@@ -1,24 +1,20 @@
-import { Context } from '../../app.js'
+import { EditorConfig } from '../../editorConfig.js'
 import { SortAscending } from './getNeighbours.js'
-import { CompositionHolder, isCustomElement } from './types.js'
-
-export interface CustomParagraphInfo {
-  icon: string
-  title: string
-  id: string
-  data: any
-  type: string
-  exported?: boolean
-}
+import {
+  CompositionHolder,
+  CustomParagraphInfo,
+  isCustomElement,
+} from './types.js'
 
 export function customParagraphs(
   ctx: {
     state: {
-      editor: Context['state']['editor']
+      editor: EditorConfig['state']['editor']
     }
   },
   holder: CompositionHolder
 ): CustomParagraphInfo[] {
+  /*
   const opts = ctx.state.editor.options()
   const { composition } = holder
   if (!composition) {
@@ -53,4 +49,8 @@ export function customParagraphs(
     }
   })
   return list
+  */
+  SortAscending({} as any)
+  isCustomElement({} as any)
+  return []
 }

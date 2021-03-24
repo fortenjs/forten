@@ -78,7 +78,7 @@ export const onInitialize: AsyncAction<
       if (updateCheckInterval && reg) {
         setInterval(() => {
           if (ctx.state.useragent.hasNetwork) {
-            if (process.env.APP_ENV === 'staging') {
+            if (import.meta.env.APP_ENV === 'staging') {
               console.log('CHECK')
             }
             reg.update()

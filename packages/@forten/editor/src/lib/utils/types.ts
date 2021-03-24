@@ -1,7 +1,26 @@
 import * as React from 'react'
-import { ApplyOpArgs } from '../../actions/index.js'
 import { Comp } from '../../app.js'
-import { OperationsKey } from '../doOperation.js'
+
+export type OperationsKey =
+  // changing paragraph opts
+  | 'P'
+  // bold
+  | 'B'
+  // italic
+  | 'I'
+  // forced return
+  | 'E'
+  // delete, etc
+  | 'Backspace'
+  | 'Delete'
+  | 'Input'
+
+export interface ApplyOpArgs {
+  holder: CompositionHolder
+  selection: SelectionType
+  op: OperationsKey
+  opts: ParagraphPayload
+}
 
 // ============== Composition definition
 
@@ -511,6 +530,7 @@ export type GetMarkup = (
     }
   | undefined
 
+// This is really a mess. Once v2 is working, we should simplify all this.
 export interface EditorProvider {
   preload: ComponentType<any>[]
   paragraphs: { [key: string]: InternalParagraphOption }
@@ -577,3 +597,12 @@ export interface PasteOperation<C = any> {
 export const PASTE_EDITOR = 'forten/editor'
 export const PASTE_HTML = 'text/html'
 export const PASTE_TEXT = 'text/plain'
+
+export interface CustomParagraphInfo {
+  icon: string
+  title: string
+  id: string
+  data: any
+  type: string
+  exported?: boolean
+}

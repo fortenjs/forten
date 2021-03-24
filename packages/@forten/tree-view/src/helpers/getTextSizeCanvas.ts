@@ -6,7 +6,7 @@ function dummy(text: string) {
 
 declare var process: any
 export const getTextSizeCanvas = (font: string): GetTextSizeType => {
-  if (process && process.env.NODE_ENV === 'test') {
+  if (process && import.meta.env.NODE_ENV === 'test') {
     return dummy
   }
 

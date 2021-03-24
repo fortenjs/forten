@@ -7,7 +7,7 @@ import {
   Mutation,
   Selection,
 } from '../types/index.js'
-import { getSelection } from './getSelection.js'
+import { getSelection } from './selection.js'
 import { position } from './position.js'
 import { sortAscending } from './sorting.js'
 

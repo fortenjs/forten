@@ -12,7 +12,7 @@ export const setup: Setup<LocaleConfig, LocaleSettings> = (
   Object.keys(settings).forEach(blockName => {
     const dictionaries = settings[blockName]
     // istanbul ignore next
-    if (process.env.NODE_ENV !== 'production') {
+    if (import.meta.env.NODE_ENV !== 'production') {
       sources[blockName] = JSON.parse(JSON.stringify(dictionaries))
     }
     Object.keys(dictionaries).forEach(lang => {
@@ -28,7 +28,7 @@ export const setup: Setup<LocaleConfig, LocaleSettings> = (
     })
   })
   // istanbul ignore next
-  if (process.env.NODE_ENV !== 'production') {
+  if (import.meta.env.NODE_ENV !== 'production') {
     config.state.locale.sources = sources
   }
 }

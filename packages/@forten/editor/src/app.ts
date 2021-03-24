@@ -5,12 +5,14 @@ import { StyledConfig, styledDefaultTheme } from '@forten/styled'
 import { ThemeConfig, themeProxy } from '@forten/theme'
 import { IAction, IContext, IOperator } from 'overmind'
 import { createHook } from 'overmind-react'
-import { FunctionComponent as Comp } from 'react'
+import { FunctionComponent } from 'react'
 import styled from 'styled-components'
+import { EditorConfig } from './editorConfig.js'
 import { editorTheme } from './theme.js'
-import { EditorConfig } from './types.js'
 
-export { Comp, styled }
+export { styled }
+
+export type Comp<T = {}> = FunctionComponent<T>
 
 export type Config = DragdropConfig &
   EditorConfig &

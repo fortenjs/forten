@@ -28,6 +28,9 @@
     "@forten/build": "next",
     "@forten/hooks": "next",
     "@forten/theme": "next",
+    "overmind": "^27.0.0",
+    "overmind-react": "^28.0.0",
+    "react": "^17.0.1",
     "classnames": "^2.2.6"
   },
   "devDependencies": {

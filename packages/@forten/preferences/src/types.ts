@@ -51,9 +51,6 @@ export interface PreferencesHooks {
   [preferences_save]?: Hook<{ path: string; value: any }>
 }
 
-// Remove TS error on action rewrite in setup
-const actionsNotReadonly = { ...actions }
-
 export interface PreferencesConfig {
   state: {
     preferences: {
@@ -74,7 +71,7 @@ export interface PreferencesConfig {
   }
 
   actions: {
-    preferences: typeof actionsNotReadonly
+    preferences: typeof actions
     hooks: typeof hooksActions
   }
 }

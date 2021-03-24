@@ -40,6 +40,6 @@ export interface BranchDefinition<T = any> {
 
 export type TreeType<T = any> = BranchDefinition<T>
 
-export type Source = BlockDefinition<{ file: string }>
+export type Source = BlockDefinition<{ file?: string; value?: any }>
 
-export type Branch = BranchDefinition<{ file: string }>
+export type Branch = BranchDefinition<{ file?: string; value?: any }>

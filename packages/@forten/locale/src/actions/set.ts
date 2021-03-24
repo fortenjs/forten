@@ -56,7 +56,7 @@ export const printMissing: Action<string> = (ctx, value) => {
 
 export const set: Action<string> = (ctx, value) => {
   // istanbul ignore next
-  if (process.env.NODE_ENV !== 'production') {
+  if (import.meta.env.NODE_ENV !== 'production') {
     ctx.actions.locale.print()
     ctx.actions.locale.printMissing(value)
   }

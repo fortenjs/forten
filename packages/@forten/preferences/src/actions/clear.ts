@@ -2,7 +2,7 @@ import { AsyncAction } from '../app.js'
 import { prefsDb } from '../prefsDb.js'
 import { preferences_clear } from '../types.js'
 
-export const clear: AsyncAction<{ userId: string } | void> = async (
+export const clear: AsyncAction<{ userId: string } | undefined> = async (
   ctx,
   arg
 ) => {

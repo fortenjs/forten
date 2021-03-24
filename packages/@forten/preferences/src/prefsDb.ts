@@ -13,7 +13,9 @@ export const dummyDb: PrefsDb = {
 export function dbname(name: string = 'default') {
   return `prefs-${name.slice(0, 10)}${
     // istanbul ignore next
-    process.env.NODE_ENV !== 'production' ? `-${process.env.NODE_ENV}` : ''
+    import.meta.env.NODE_ENV !== 'production'
+      ? `-${import.meta.env.NODE_ENV}`
+      : ''
   }`
 }
 

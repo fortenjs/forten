@@ -1,5 +1,5 @@
 import { DirectThemeProvider, themeProxy } from '@forten/theme'
-import { IAction, IConfiguration, mutate, Overmind } from 'overmind'
+import { createOvermind, IAction, IConfiguration, mutate } from 'overmind'
 import { Provider } from 'overmind-react'
 import * as React from 'react'
 import { Comp, styled, useOvermind } from '../app.js'
@@ -167,7 +167,7 @@ export const StoryDisplay: Comp<StoryDisplayProps> = function StoryDisplay({
   // Init code from modules should not be run (state should be faked in 'state' value
   // of story)
   delete config.onInitialize
-  const overmind = new Overmind(config, {
+  const overmind = createOvermind(config, {
     name,
     devtools: opts ? opts.devtools : undefined,
     logProxies: true,

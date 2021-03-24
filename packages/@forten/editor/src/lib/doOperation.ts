@@ -19,6 +19,7 @@ import {
   isRangeSelection,
   isSpecialElement,
   isStringElement,
+  OperationsKey,
   OperationType,
   ParagraphPayload,
   SelectionType,
@@ -116,19 +117,6 @@ const SIMPLE_OP: SimpleOp = {
   I: true,
   E: true,
 }
-export type OperationsKey =
-  // changing paragraph opts
-  | 'P'
-  // bold
-  | 'B'
-  // italic
-  | 'I'
-  // forced return
-  | 'E'
-  // delete, etc
-  | 'Backspace'
-  | 'Delete'
-  | 'Input'
 
 function doDelete(
   changes: ChangesType,
